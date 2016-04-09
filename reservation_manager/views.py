@@ -240,7 +240,7 @@ class Export:
         reservations = Reservation.objects.all().filter(touched=newest)
 
         response = HttpResponse(content_type='text/csv')
-        response['Content-Description'] = 'attachment; filename="export.xlsx"'
+        response['Content-Description'] = 'attachment; filename="export.xls"'
 
         arr = []
 

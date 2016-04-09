@@ -1,4 +1,5 @@
 from django.db import models
+from monthly_summary.models import MonthlyReport
 
 TRUE_OR_FALSE = (
     (1, "True"),
@@ -26,6 +27,7 @@ class Owner( models.Model ):
 
 class Reservation( models.Model ):
     fk_owner = models.ForeignKey(Owner)
+    fk_monthly_report = models.ForeignKey(MonthlyReport, blank=True, null=True)
     location = models.CharField( blank=True, null=True, max_length=2000)
     date_of_reservation = models.DateField( blank=True, null=True )
     number_of_nights = models.IntegerField( blank=True, null=True )
@@ -38,6 +40,13 @@ class Reservation( models.Model ):
     upgrade_status = models.CharField( blank=True, null=True, max_length = 2000)
     guest_certificate = models.CharField( blank=True, null=True, max_length = 2000)
     touched = models.DateField( blank=True, null=True )
+
+
+    @property
+    def owed_owner(self):
+        return (fk_owner.owner_reimbursement_rate * self.points_required_for_reservation)
+
+
 
     def __str__(self):
         return str(self.fk_owner.username) + "   " + str(self.date_of_reservation) + " , " + str(self.location)
