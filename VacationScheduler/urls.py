@@ -18,10 +18,12 @@ from django.contrib import admin
 from reservation_manager.views import Update
 from reservation_manager.views import Export
 from reservation_manager.views import View
+from monthly_summary.views import Report
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^update/', Update.get),
     url(r'^export/', Export.get),
+    url(r'^report/', Report.get),
     url(r'^$', View.get)
 ]

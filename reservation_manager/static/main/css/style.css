@@ -50,7 +50,7 @@ h2 a {
 .container th h1 {
 	  font-weight: bold;
 	  font-size: 1em;
-  text-align: center;
+  /*text-align: center;*/
   color: white;
 }
 

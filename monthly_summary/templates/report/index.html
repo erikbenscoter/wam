@@ -1,0 +1,100 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title><Table> Responsive</title>
+
+
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+
+
+
+
+  </head>
+
+  <body>
+
+    <h1><span class="blue"></span>Monthly<span class="blue"></span> <span class="yellow">Summary</pan></h1>
+
+<select>
+  <option>Please Select Month</option>
+</select>
+<select>
+  <option>Please Select Year</option>
+</select>
+<br>
+<select>
+  <option>Please Select Owner</option>
+</select>
+
+
+<table class="container">
+  <thead>
+    <tr>
+      <th>
+        <h1>Booked</h1></th>
+      <th>
+        <h1>Checkin</h1></th>
+      <th>
+        <h1>Nights</h1></th>
+      <th>
+        <h1>Resort</h1></th>
+      <th>
+        <h1>Unit Size</h1></th>
+      <th>
+        <h1>Conf#</h1></th>
+      <th>
+        <h1>Points</h1></th>
+      <th>
+        <h1>Traveler</h1></th>
+      <th>
+        <h1>Owner Rate</h1></th>
+      <th>
+        <h1>Owed Owner</h1></th>
+      <th>
+        <h1>Check No</h1>
+      </th>
+       <th>
+        <h1>Amt Paid</h1>
+      </th>
+       <th>
+        <h1>Date Paid</h1>
+      </th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    {%for reservation in reservations%}
+      <tr>
+        <td>{{reservation.date_booked}}</td>
+        <td>{{reservation.date_of_reservation}}</td>
+        <td>{{reservation.number_of_nights}}</td>
+        <td>{{reservation.location}}</td>
+        <td>{{reservation.unit_size}}</td>
+        <td>{{reservation.confirmation_number}}</td>
+        <td>{{reservation.points_required_for_reservation}}</td>
+        <td>{{reservation.guest_certificate}}</td>
+        <td>{{reservation.fk_owner.owner_reimbursement_rate}}</td>
+        <td>calc</td>
+        <td></td>
+        <td></td>
+        <td><button class = "make_payment_button"> Make Payment </button></td>
+      </tr>
+    {%endfor%}
+
+  </tbody>
+</table>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+        <script src="{% static 'summary/js/index.js'%}"></script>
+
+
+
+
+  </body>
+</html>
