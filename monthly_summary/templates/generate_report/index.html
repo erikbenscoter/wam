@@ -1,0 +1,84 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>A Pen by  Erik Benscoter</title>
+
+
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="{% static 'generate_report/css/style.css' %}">
+
+
+
+
+  </head>
+
+  <body>
+
+    <html>
+<h1><center>Please Select Options For Report</center></h1>
+
+
+<div id="option_box">
+  <button id="admin" class="btn btn-large btn-primary">
+      Admin
+    </button>
+  <button id="root" class="btn btn-large btn-primary">
+      View All Reservations
+    </button>
+  <br>
+  <br>
+  <center>
+    <table>
+      <th>Owner</th>
+      <th>Month</th>
+      <th>Year</th>
+      <tbody>
+        <tr>
+          <td>
+            <select id = "username">
+            <option>Select Owner Username</option>
+            {%for owner in owners%}
+              <option>{{owner}}</option>
+            {%endfor%}
+          </select>
+          </td>
+          <td>
+            <select id = "month">
+            <option>Select Month</option>
+            {%for month in months%}
+              <option>{{month}}</option>
+            {%endfor%}
+          </select>
+          </td>
+          <td>
+            <select id = "year">
+            <option>Select Year</option>
+            {%for year in years%}
+              <option>{{year}}</option>
+            {%endfor%}
+          </select>
+          </td>
+          <td>
+            <button id="generate_report" class="btn btn-success large-btn"> Generate Report</button>
+          </td>
+        </tr>
+
+      
+
+      </tbody>
+    </table>
+</div>
+</center>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+        <script src="{% static 'generate_report/js/index.js' %}"></script>
+
+
+
+
+  </body>
+</html>

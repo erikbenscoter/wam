@@ -11,6 +11,8 @@ from django.http import HttpResponse
 from datetime import datetime
 import csv
 from threading import Thread
+from monthly_summary.models import MonthlyReport
+from monthly_summary.views import Report
 
 def handleOwner(owner):
 
@@ -23,17 +25,19 @@ def handleOwner(owner):
         confirmation_numbers_points_dict[reservation.confirmation_number] = reservation.points_required_for_reservation
 
 
-
-    scrape_wyndham = ScrapeWyndham()
-    time.sleep(2)
-    scrape_wyndham.login(owner.username, owner.password)
-    time.sleep(2)
-    scrape_wyndham.getToOwnershipSummaryPage()
-    time.sleep(2)
-    src = scrape_wyndham.getConfirmationPages(owner, confirmation_numbers_points_dict)
-    time.sleep(2)
-    scrape_wyndham.logout()
-    scrape_wyndham.browser.close()
+    try:
+        scrape_wyndham = ScrapeWyndham()
+        time.sleep(2)
+        scrape_wyndham.login(owner.username, owner.password)
+        time.sleep(2)
+        scrape_wyndham.getToOwnershipSummaryPage()
+        time.sleep(2)
+        src = scrape_wyndham.getConfirmationPages(owner, confirmation_numbers_points_dict)
+        time.sleep(2)
+        scrape_wyndham.logout()
+        scrape_wyndham.browser.close()
+    except Exception as e:
+        handleOwner(owner)
 
 class ScrapeWyndham:
 
@@ -173,6 +177,7 @@ class ScrapeWyndham:
 
 
 
+
 class Update:
 
 
@@ -190,6 +195,9 @@ class Update:
 
         for thread in threadArray:
             thread.join()
+
+        r = Report()
+        r.updateSummaries()
 
         return redirect("/")
 

@@ -18,7 +18,6 @@
 
   <body>
 
-    <h1><span class="blue"></span>Monthly<span class="blue"></span> <span class="yellow">Summary</pan></h1><br>
     <h1><span class="blue"></span>{{owner.username}}, {{month}} , {{year}}<span class="blue"></span> <span class="yellow">Summary</pan></h1>
 
  <button class="btn btn-large btn-primary">Generate New Report </button>
@@ -87,15 +86,18 @@
       <td class="monthly_report not_used"></td>
       <td class="monthly_report not_used"></td>
       <td class="monthly_report not_used"></td>
-      <td class="monthly_report">{{reservations.0.fk_owner.owner_reimbursement_rate}}</td>
-      <td class="monthly_report"></td>
-      <td class="monthly_report"></td>
-      <td class="monthly_report"></td>
+      <td class="monthly_report">{{monthly_summary.owner.owner_reimbursement_rate}}</td>
+      <td class="monthly_report">{{monthly_summary.total_owed_owner_month}}</td>
+      <td class="monthly_report">{{monthly_summary.check_number}}</td>
+      <td class="monthly_report">{{monthly_summary.amount_paid}}</td>
       <td class="monthly_report"><button class = "make_payment_button"> Make Payment </button></td>
     </tr>
 
+
+
   </tbody>
 </table>
+<input type = "hidden" id = "monthly_summary" value = "{{monthly_summary.id}}"></input>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 
         <script src="{% static 'summary/js/index.js'%}"></script>

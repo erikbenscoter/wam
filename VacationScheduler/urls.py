@@ -19,11 +19,14 @@ from reservation_manager.views import Update
 from reservation_manager.views import Export
 from reservation_manager.views import View
 from monthly_summary.views import Report
+from monthly_summary.views import GenerateReport
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^update/', Update.get),
     url(r'^export/', Export.get),
-    url(r'^report/(?P<p_owner_username>.*)/(?P<p_month>[0-9][0-9])/(?P<p_year>[0-9][0-9][0-9][0-9])', Report.get),
+    url(r'^report/(?P<p_owner_username>.*)/(?P<p_month>[0-9][0-9]?)/(?P<p_year>[0-9][0-9][0-9][0-9])', Report.get),
+    url(r'^save_payment/(?P<p_check_number>[0-9]*)/(?P<p_amt_paid>[0-9]*.?[0-9]*)/(?P<p_monthly_summary>.*)', Report.savePayment),
+    url(r'^generate_report/', GenerateReport.get),
     url(r'^$', View.get)
 ]
