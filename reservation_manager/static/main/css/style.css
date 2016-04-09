@@ -133,6 +133,18 @@ h2 a {
   color:white;
 }
 
+.monthly_report{
+  border-top-color: black;
+  border-top-style: double;
+  border-top-width: thick;
+  background-color: LightGoldenRodYellow;
+  color:darkblue;
+}
+
+.not_used{
+  background-color:#1F2739;
+}
+
 @media (max-width: 800px) {
 .container td:nth-child(4),
 .container th:nth-child(4) { display: none; }

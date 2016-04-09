@@ -18,18 +18,10 @@
 
   <body>
 
-    <h1><span class="blue"></span>Monthly<span class="blue"></span> <span class="yellow">Summary</pan></h1>
+    <h1><span class="blue"></span>Monthly<span class="blue"></span> <span class="yellow">Summary</pan></h1><br>
+    <h1><span class="blue"></span>{{owner.username}}, {{month}} , {{year}}<span class="blue"></span> <span class="yellow">Summary</pan></h1>
 
-<select>
-  <option>Please Select Month</option>
-</select>
-<select>
-  <option>Please Select Year</option>
-</select>
-<br>
-<select>
-  <option>Please Select Owner</option>
-</select>
+ <button class="btn btn-large btn-primary">Generate New Report </button>
 
 
 <table class="container">
@@ -80,12 +72,27 @@
         <td>{{reservation.points_required_for_reservation}}</td>
         <td>{{reservation.guest_certificate}}</td>
         <td>{{reservation.fk_owner.owner_reimbursement_rate}}</td>
-        <td>calc</td>
-        <td></td>
-        <td></td>
-        <td><button class = "make_payment_button"> Make Payment </button></td>
+        <td>{{reservation.owed_owner}}</td>
+        <td class = "not_used"></td>
+        <td class = "not_used"></td>
+        <td class = "not_used"></td>
       </tr>
     {%endfor%}
+    <tr>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report">{{reservations.0.fk_owner.owner_reimbursement_rate}}</td>
+      <td class="monthly_report"></td>
+      <td class="monthly_report"></td>
+      <td class="monthly_report"></td>
+      <td class="monthly_report"><button class = "make_payment_button"> Make Payment </button></td>
+    </tr>
 
   </tbody>
 </table>

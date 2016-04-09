@@ -44,7 +44,7 @@ class Reservation( models.Model ):
 
     @property
     def owed_owner(self):
-        return (fk_owner.owner_reimbursement_rate * self.points_required_for_reservation)
+        return (self.fk_owner.owner_reimbursement_rate/1000.00 * self.points_required_for_reservation)
 
 
 

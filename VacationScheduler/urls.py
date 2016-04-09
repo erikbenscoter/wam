@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^update/', Update.get),
     url(r'^export/', Export.get),
-    url(r'^report/', Report.get),
+    url(r'^report/(?P<p_owner_username>.*)/(?P<p_month>[0-9][0-9])/(?P<p_year>[0-9][0-9][0-9][0-9])', Report.get),
     url(r'^$', View.get)
 ]
