@@ -3,6 +3,7 @@ from reservation_manager.models import Reservation
 from reservation_manager.models import Owner
 from monthly_summary.models import MonthlyReport
 from datetime import datetime
+from django.utils import timezone
 
 # Create your views here.
 class GenerateReport:
@@ -53,9 +54,10 @@ class Report:
 
             matching_summary = "none found"
 
-            for summary in matching_summaries:
-                if(summary and summary.owner == owner and summary.month == month and summary.year == year):
-                    matching_summary = summary
+            if(matching_summaries):
+                for summary in matching_summaries:
+                    if(summary and summary.owner == owner and summary.month == month and summary.year == year):
+                        matching_summary = summary
 
 
 

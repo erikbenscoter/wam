@@ -20,7 +20,9 @@
 
     <h1><span class="blue"></span>{{owner.username}}, {{month}} , {{year}}<span class="blue"></span> <span class="yellow">Summary</pan></h1>
 
- <button class="btn btn-large btn-primary">Generate New Report </button>
+ <a href="/generate_report"><button class="btn btn-large btn-primary"> &lt&lt Generate New Report </button></a>
+ <a href="/admin"><button class="btn btn-large btn-primary">  Admin </button></a>
+ <a href="/"><button class="btn btn-large btn-primary">  View All Reservations </button></a>
 
 
 <table class="container">
@@ -90,7 +92,13 @@
       <td class="monthly_report">{{monthly_summary.total_owed_owner_month}}</td>
       <td class="monthly_report">{{monthly_summary.check_number}}</td>
       <td class="monthly_report">{{monthly_summary.amount_paid}}</td>
-      <td class="monthly_report"><button class = "make_payment_button"> Make Payment </button></td>
+      {% if monthly_summary.date_paid %}
+        <td class="monthly_report">{{monthly_summary.date_paid}}</td>
+      {% else %}
+        <td class="monthly_report">
+          <button class = "make_payment_button"> Make Payment </button>
+        </td>
+      {% endif %}
     </tr>
 
 

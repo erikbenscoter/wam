@@ -26,8 +26,8 @@ class Owner( models.Model ):
         return self.username
 
 class Reservation( models.Model ):
-    fk_owner = models.ForeignKey(Owner)
-    fk_monthly_report = models.ForeignKey(MonthlyReport, blank=True, null=True, default=None)
+    fk_owner = models.ForeignKey(Owner, on_delete=models.SET_NULL, null=True, blank=True)
+    fk_monthly_report = models.ForeignKey(MonthlyReport, blank=True, null=True, default=None, on_delete=models.SET_NULL)
     location = models.CharField( blank=True, null=True, max_length=2000)
     date_of_reservation = models.DateField( blank=True, null=True )
     number_of_nights = models.IntegerField( blank=True, null=True )

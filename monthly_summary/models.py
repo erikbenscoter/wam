@@ -28,26 +28,39 @@ class MonthlyReport(models.Model):
     def owner(self):
         from reservation_manager.models import Reservation
 
-        reservation = Reservation.objects.filter(fk_monthly_report=self)[0]
+        reservation = Reservation.objects.filter(fk_monthly_report=self)
 
-        return reservation.fk_owner
+        if(len(reservation) != 0):
+            reservation = reservation[0]
+            return reservation.fk_owner
+        else:
+            return None
+
 
     @property
     def month(self):
         from reservation_manager.models import Reservation
 
-        reservation = Reservation.objects.filter(fk_monthly_report=self)[0]
+        reservation = Reservation.objects.filter(fk_monthly_report=self)
 
-        return reservation.date_of_reservation.month
+        if(len(reservation) != 0):
+            reservation = reservation[0]
+            return reservation.date_of_reservation.month
+        else:
+            return None
+
 
     @property
     def year(self):
         from reservation_manager.models import Reservation
 
-        reservation = Reservation.objects.filter(fk_monthly_report=self)[0]
+        reservation = Reservation.objects.filter(fk_monthly_report=self)
 
-        return reservation.date_of_reservation.year
-
+        if(len(reservation) != 0):
+            reservation = reservation[0]
+            return reservation.date_of_reservation.year
+        else:
+            return None
 
 
     def __str__(self):
