@@ -41,6 +41,17 @@ class GenerateReport:
         return render(request,"generate_report/index.html", context)
 
 class Report:
+    def removeExcessSummaries(self):
+        all_reports = MonthlyReport.objects.all()
+
+        for report in all_reports:
+            if(report.owner is None):
+                report.delete()
+
+
+
+
+
     def updateSummaries(self):
 
         all_reservations = Reservation.objects.filter(fk_monthly_report__isnull=True)
@@ -54,10 +65,9 @@ class Report:
 
             matching_summary = "none found"
 
-            if(matching_summaries):
-                for summary in matching_summaries:
-                    if(summary and summary.owner == owner and summary.month == month and summary.year == year):
-                        matching_summary = summary
+            for summary in matching_summaries:
+                if(summary and summary.owner == owner and summary.month == month and summary.year == year):
+                    matching_summary = summary
 
 
 
@@ -68,28 +78,35 @@ class Report:
                 reservation.fk_monthly_report = new_monthly_report
                 reservation.save()
             else:
-                reservation.fk_monthly_report = matching_summaries[0]
+                reservation.fk_monthly_report = matching_summary
                 reservation.save()
+
+        self.removeExcessSummaries()
 
     def get(request, p_owner_username, p_year, p_month):
 
-        reservations = Reservation.objects.filter( date_of_reservation__year=p_year,
-                                    date_of_reservation__month=p_month).order_by('-date_of_reservation')
-        owner = Owner.objects.get(username=p_owner_username)
-
-        monthly_summaries = MonthlyReport.objects.all()
+        all_reports = list(MonthlyReport.objects.all())
+        all_reservations = list(Reservation.objects.all())
+        matching_reservations = []
 
         desired_summary = None
 
-        for monthly_summary in monthly_summaries:
-            if(monthly_summary.owner.username == p_owner_username):
-                if(int(monthly_summary.year) == int(p_year)):
-                    if(int(monthly_summary.month) == int(p_month)):
-                        desired_summary = monthly_summary
+        for report in all_reports:
+            if(int(report.month) == int(p_month) and int(report.year) == int(p_year) and str(report.owner.username) == str(p_owner_username)):
+                desired_summary = report
+
+
+        for reservation in all_reservations:
+            if(str(reservation.fk_monthly_report.id) == str(desired_summary.id)):
+                matching_reservations.append(reservation)
+
+        reservations = matching_reservations
+
+
 
         context = {
             "reservations" : reservations,
-            "owner" : owner,
+            "owner" : desired_summary.owner,
             "year" : p_year,
             "month" : p_month,
             "monthly_summary" : desired_summary
