@@ -8,7 +8,7 @@ from django.utils import timezone
 # Create your views here.
 class GenerateReport:
 
-    def get(request):
+    def get(request, error=0):
 
         monthly_summaries = MonthlyReport.objects.all()
 
@@ -30,8 +30,12 @@ class GenerateReport:
         owners = set(owners)
         owners = list(owners)
 
+        if(error==0):
+            error=None
+
 
         context = {
+            "error" : error,
             "owners" : owners,
             "months" : months,
             "years" : years
@@ -95,6 +99,8 @@ class Report:
             if(int(report.month) == int(p_month) and int(report.year) == int(p_year) and str(report.owner.username) == str(p_owner_username)):
                 desired_summary = report
 
+        if(desired_summary is None):
+            return GenerateReport.get(request,1)
 
         for reservation in all_reservations:
             if(str(reservation.fk_monthly_report.id) == str(desired_summary.id)):
