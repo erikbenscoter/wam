@@ -30,10 +30,10 @@ class MonthlyReport(models.Model):
 
         reservation = Reservation.objects.filter(fk_monthly_report=self)
 
-        if(len(reservation) != 0):
+        try:
             reservation = reservation[0]
             return reservation.fk_owner
-        else:
+        except:
             return None
 
 
@@ -43,10 +43,10 @@ class MonthlyReport(models.Model):
 
         reservation = Reservation.objects.filter(fk_monthly_report=self)
 
-        if(len(reservation) != 0):
+        try:
             reservation = reservation[0]
             return reservation.date_of_reservation.month
-        else:
+        except:
             return None
 
 
@@ -56,10 +56,10 @@ class MonthlyReport(models.Model):
 
         reservation = Reservation.objects.filter(fk_monthly_report=self)
 
-        if(len(reservation) != 0):
+        try:
             reservation = reservation[0]
             return reservation.date_of_reservation.year
-        else:
+        except:
             return None
 
 
