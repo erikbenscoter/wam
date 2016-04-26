@@ -1,5 +1,6 @@
 from django.db import models
 from monthly_summary.models import MonthlyReport
+import re
 
 TRUE_OR_FALSE = (
     (1, "True"),
@@ -45,6 +46,13 @@ class Reservation( models.Model ):
     @property
     def owed_owner(self):
         return (self.fk_owner.owner_reimbursement_rate/1000.00 * self.points_required_for_reservation)
+
+    @property
+    def is_rented(self):
+        if( re.search("Owner:",self.guest_certificate) ):
+            return False
+        else:
+            return True
 
 
 

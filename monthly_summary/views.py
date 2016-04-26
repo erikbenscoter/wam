@@ -53,37 +53,37 @@ class Report:
                 report.delete()
 
 
-
-
-
     def updateSummaries(self):
 
         all_reservations = Reservation.objects.filter(fk_monthly_report__isnull=True)
 
         for reservation in all_reservations:
-            month = reservation.date_of_reservation.month
-            year = reservation.date_of_reservation.year
-            owner = reservation.fk_owner
 
-            matching_summaries = list(MonthlyReport.objects.all())
+            if(reservation.is_rented):
 
-            matching_summary = "none found"
+                month = reservation.date_of_reservation.month
+                year = reservation.date_of_reservation.year
+                owner = reservation.fk_owner
 
-            for summary in matching_summaries:
-                if(summary and summary.owner == owner and summary.month == month and summary.year == year):
-                    matching_summary = summary
+                matching_summaries = list(MonthlyReport.objects.all())
+
+                matching_summary = "none found"
+
+                for summary in matching_summaries:
+                    if(summary and summary.owner == owner and summary.month == month and summary.year == year):
+                        matching_summary = summary
 
 
 
-            if( matching_summary == "none found" ):
-                new_monthly_report = MonthlyReport()
-                new_monthly_report.save()
+                if( matching_summary == "none found" ):
+                    new_monthly_report = MonthlyReport()
+                    new_monthly_report.save()
 
-                reservation.fk_monthly_report = new_monthly_report
-                reservation.save()
-            else:
-                reservation.fk_monthly_report = matching_summary
-                reservation.save()
+                    reservation.fk_monthly_report = new_monthly_report
+                    reservation.save()
+                else:
+                    reservation.fk_monthly_report = matching_summary
+                    reservation.save()
 
         self.removeExcessSummaries()
 
@@ -103,8 +103,10 @@ class Report:
             return GenerateReport.get(request,1)
 
         for reservation in all_reservations:
-            if(str(reservation.fk_monthly_report.id) == str(desired_summary.id)):
-                matching_reservations.append(reservation)
+            if(reservation.fk_monthly_report):
+                if(reservation.fk_monthly_report.id):
+                    if(str(reservation.fk_monthly_report.id) == str(desired_summary.id)):
+                        matching_reservations.append(reservation)
 
         reservations = matching_reservations
 
