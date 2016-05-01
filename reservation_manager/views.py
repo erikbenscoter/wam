@@ -198,16 +198,28 @@ class Update:
             Update.update_in_progress = True
 
             owners = Owner.objects.all()
-            threadArray = []
+            thread_array = []
 
             for owner in owners:
-                threadArray.append(Thread(target=handleOwner, args=(owner,)))
+                thread_array.append(Thread(target=handleOwner, args=(owner,)))
 
-            for thread in threadArray:
-                thread.start()
+            while (thread_array != []):
+                left_in_thread_array = len(thread_array)
 
-            for thread in threadArray:
-                thread.join()
+                #run 3 threads at once or whatever is left in the array
+                if(left_in_thread_array < 3):
+                    threads_to_run_at_once = left_in_thread_array
+                else:
+                    threads_to_run_at_once = 3
+
+                for i in range(0,threads_to_run_at_once):
+                    thread_array[i].start()
+
+                for i in range(0,threads_to_run_at_once):
+                    thread_array[i].join()
+
+                for i in range(0,threads_to_run_at_once):
+                    thread_array.pop(0)
 
             r = Report()
             r.updateSummaries()
