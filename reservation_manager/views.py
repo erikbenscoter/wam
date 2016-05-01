@@ -37,7 +37,8 @@ def handleOwner(owner):
         scrape_wyndham.logout()
         scrape_wyndham.browser.close()
     except Exception as e:
-            handleOwner(owner)
+        scrape_wyndham.browser.close()
+        handleOwner(owner)
 
 
 class ScrapeWyndham:
