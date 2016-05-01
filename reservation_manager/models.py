@@ -17,7 +17,6 @@ class Owner( models.Model ):
     first_name = models.CharField( blank=True, null=True, max_length=2000)
     last_name = models.CharField( blank=True, null=True, max_length=2000)
     phone_number = models.CharField( blank=True, null=True, max_length=2000)
-    avail_points = models.IntegerField( blank=True, null=True )
     owner_reimbursement_rate = models.FloatField( blank=True, null=True )
 
     def __str__(self):
