@@ -182,27 +182,38 @@ class ScrapeWyndham:
 
 
 class Update:
-
+    update_in_progress = False
 
 
     def get(request):
 
-        owners = Owner.objects.all()
-        threadArray = []
+        if( Update.update_in_progress):
+            while( Update.update_in_progress):
+                pass
 
-        for owner in owners:
-            threadArray.append(Thread(target=handleOwner, args=(owner,)))
+            return redirect("/")
 
-        for thread in threadArray:
-            thread.start()
+        else:
+            Update.update_in_progress = True
 
-        for thread in threadArray:
-            thread.join()
+            owners = Owner.objects.all()
+            threadArray = []
 
-        r = Report()
-        r.updateSummaries()
+            for owner in owners:
+                threadArray.append(Thread(target=handleOwner, args=(owner,)))
 
-        return redirect("/")
+            for thread in threadArray:
+                thread.start()
+
+            for thread in threadArray:
+                thread.join()
+
+            r = Report()
+            r.updateSummaries()
+
+            Update.update_in_progress = False
+
+            return redirect("/")
 
 class View:
     def get(request):
