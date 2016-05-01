@@ -14,7 +14,7 @@ from threading import Thread
 from monthly_summary.models import MonthlyReport
 from monthly_summary.views import Report
 
-def handleOwner(owner, attempts=1):
+def handleOwner(owner):
 
     Reservation.objects.filter(points_required_for_reservation=-1).delete()
     reservations = Reservation.objects.all()
@@ -37,10 +37,8 @@ def handleOwner(owner, attempts=1):
         scrape_wyndham.logout()
         scrape_wyndham.browser.close()
     except Exception as e:
-        if(attempts <=5):
-            scrape_wyndham.browser.close()
-            attempts += 1
-            handleOwner(owner, attempts)
+            handleOwner(owner)
+
 
 class ScrapeWyndham:
 
