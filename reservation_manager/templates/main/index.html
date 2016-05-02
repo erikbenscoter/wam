@@ -115,7 +115,11 @@
 	</thead>
 	<tbody>
     {%for reservation in reservations%}
-  		<tr>
+      {%if reservation.canceled%}
+        <tr class = "canceled">
+      {%else%}
+        <tr>
+      {%endif%}
   			<td class = "username">{{reservation.fk_owner.username}}</td>
   			<td class = "conf">{{reservation.confirmation_number}}</td>
   			<td class = "checkin">{{reservation.date_of_reservation}}</td>

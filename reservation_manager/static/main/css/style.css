@@ -44,6 +44,12 @@ h2 a {
   text-decoration: none;
 }
 
+tr.canceled{
+  background-color: #400000  !important;
+  color: white !important;
+}
+
+
 .blue { color: cyan; }
 .yellow { color: #FFF842; }
 

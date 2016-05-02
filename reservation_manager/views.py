@@ -207,6 +207,12 @@ class Update:
 
     def get(request):
 
+        do_not_update_this_time = False
+
+        if( datetime.now().hour >= 0 and datetime.now().hour < 7 ):
+            redirect("/")
+
+
         if( Update.update_in_progress):
             while( Update.update_in_progress):
                 pass
