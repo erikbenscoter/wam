@@ -7,7 +7,8 @@ TRUE_OR_FALSE = (
     (0, "False")
 )
 
-
+class ApplicationSettings(models.Model):
+    last_checked = models.DateTimeField(blank=True, null=True)
 
 # Create your models here.
 class Owner( models.Model ):
@@ -39,7 +40,9 @@ class Reservation( models.Model ):
     date_booked = models.DateField( blank=True, null=True )
     upgrade_status = models.CharField( blank=True, null=True, max_length = 2000)
     guest_certificate = models.CharField( blank=True, null=True, max_length = 2000)
-    touched = models.DateField( blank=True, null=True )
+    touched = models.DateField( blank=True, null=True,default=None )
+    touched_bool = models.NullBooleanField(blank=True,null=True,default=None)
+    canceled = models.NullBooleanField(blank=True, null=True, default=None)
 
 
     @property

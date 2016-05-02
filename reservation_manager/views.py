@@ -5,14 +5,15 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import re
-from .models import Reservation
-from .models import Owner
+from .models import Reservation, Owner, ApplicationSettings
 from django.http import HttpResponse
 from datetime import datetime
 import csv
 from threading import Thread
 from monthly_summary.models import MonthlyReport
 from monthly_summary.views import Report
+from datetime import timedelta
+
 
 def handleOwner(owner):
 
@@ -131,14 +132,14 @@ class ScrapeWyndham:
             reservation = Reservation(confirmation_number = conf, date_of_reservation=checkin,
                 number_of_nights=nights, location=resort, unit_size=unit, date_booked=booked,
                 guest_certificate=traveler, upgrade_status=upgrade,
-                fk_owner=p_owner,touched=datetime.today(),points_required_for_reservation = pts)
+                fk_owner=p_owner,touched_bool=True,points_required_for_reservation = pts)
             reservation.save()
 
         else:
             rsrv = Reservation.objects.filter(confirmation_number=conf).update(date_of_reservation = checkin,
                 number_of_nights = nights,
                 guest_certificate = traveler,
-                upgrade_status = upgrade, touched=datetime.today())
+                upgrade_status = upgrade, touched_bool=True)
 
 
 
@@ -183,7 +184,25 @@ class ScrapeWyndham:
 
 
 class Update:
+
+    #static variables
     update_in_progress = False
+
+    def updateCanceled():
+
+        todays_date = datetime.today()
+        future_reservations = Reservation.objects.filter(date_of_reservation__gte=todays_date)
+
+        for i in range(0,len(future_reservations)):
+            reservation = future_reservations[i]
+
+            if(reservation.touched_bool==True):
+                Reservation.objects.filter(id=reservation.id).update(canceled=False, touched_bool=False)
+            else:
+                Reservation.objects.filter(id=reservation.id).update(canceled=True, touched_bool=False)
+
+
+
 
 
     def get(request):
@@ -207,10 +226,10 @@ class Update:
                 left_in_thread_array = len(thread_array)
 
                 #run 3 threads at once or whatever is left in the array
-                if(left_in_thread_array < 3):
+                if(left_in_thread_array < 5):
                     threads_to_run_at_once = left_in_thread_array
                 else:
-                    threads_to_run_at_once = 3
+                    threads_to_run_at_once = 5
 
                 for i in range(0,threads_to_run_at_once):
                     thread_array[i].start()
@@ -224,6 +243,15 @@ class Update:
             r = Report()
             r.updateSummaries()
 
+            Update.updateCanceled()
+
+            application_settings = ApplicationSettings.objects.all()
+            for application_setting in application_settings:
+                application_setting.delete()
+
+            application = ApplicationSettings(last_checked=datetime.now()).save()
+
+
             Update.update_in_progress = False
 
             return redirect("/")
@@ -236,8 +264,17 @@ class View:
         travelers = []
         upgrades = []
 
-        newest_date = Reservation.objects.all().latest("touched").touched
-        reservations = Reservation.objects.all().filter(touched=newest_date)
+        newest_date = ApplicationSettings.objects.all()
+        newest_date = newest_date[0].last_checked
+        print (newest_date)
+        newest_date = newest_date + timedelta(hours=-4)
+        newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
+
+
+
+
+
+        reservations = Reservation.objects.filter(date_of_reservation__gte=datetime.today())
 
         for reservation in reservations:
             usernames.append(reservation.fk_owner.username)
@@ -271,8 +308,7 @@ class View:
 class Export:
     def get(request):
 
-        newest = Reservation.objects.all().latest("touched").touched
-        reservations = Reservation.objects.all().filter(touched=newest)
+        reservations = Reservation.objects.all()
 
         response = HttpResponse(content_type='text/csv')
         response['Content-Description'] = 'attachment; filename="export.xls"'
@@ -292,7 +328,7 @@ class Export:
         arr.append("date_booked")
         arr.append("upgrade_status")
         arr.append("guest_certificate")
-        arr.append("touched")
+        arr.append("canceled")
         writer.writerow(arr)
         arr = []
         for reservation in reservations:
@@ -308,7 +344,7 @@ class Export:
             arr.append(reservation.date_booked)
             arr.append(reservation.upgrade_status)
             arr.append(reservation.guest_certificate)
-            arr.append(reservation.touched)
+            arr.append(reservation.canceled)
 
             writer.writerow(arr)
             arr = []
