@@ -17,6 +17,10 @@ from datetime import timedelta
 
 def handleOwner(owner):
 
+    if(ScrapeWyndham.isOffHours()):
+        return
+
+
     Reservation.objects.filter(points_required_for_reservation=-1).delete()
     reservations = Reservation.objects.all()
 
@@ -47,6 +51,12 @@ class ScrapeWyndham:
     def __init__(self):
         self.browser = webdriver.Firefox()
         self.browser.get("https://www.myclubwyndham.com/ffr/index.do")
+
+    def isOffHours():
+        if( datetime.now().hour == 23 or (datetime.now().hour >= 0 and datetime.now().hour < 7) ):
+            return True
+        else:
+            return False
 
     def reformatDate(self, p_date):
         new_date = p_date.replace("/", "-")
@@ -209,7 +219,7 @@ class Update:
 
         do_not_update_this_time = False
 
-        if( datetime.now().hour == 23 or (datetime.now().hour >= 0 and datetime.now().hour < 7) ):
+        if ( ScrapeWyndham.isOffHours() ):
             return HttpResponse(
                 "<h1><center>You tried to update during off-hours, please try again after 7:00am</center></h1><br>" +
                 "<h2><center>You can still view the views page, just cannot update until after 7:00am</h2></center>" )
