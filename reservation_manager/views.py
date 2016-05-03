@@ -211,8 +211,8 @@ class Update:
 
         if( datetime.now().hour == 23 or (datetime.now().hour >= 0 and datetime.now().hour < 7) ):
             return HttpResponse(
-            "<h1><center>You tried to update during off-hours, please try again after 7:00am</center></h1><br>" +
-            "<h2><center>You can still view the views page, just cannot update until after 7:00am</h2></center>" )
+                "<h1><center>You tried to update during off-hours, please try again after 7:00am</center></h1><br>" +
+                "<h2><center>You can still view the views page, just cannot update until after 7:00am</h2></center>" )
 
 
 
