@@ -17,10 +17,6 @@ from datetime import timedelta
 
 def handleOwner(owner):
 
-    if(ScrapeWyndham.isOffHours()):
-        return
-
-
     Reservation.objects.filter(points_required_for_reservation=-1).delete()
     reservations = Reservation.objects.all()
 
