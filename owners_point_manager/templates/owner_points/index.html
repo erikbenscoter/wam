@@ -1,0 +1,72 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Available Owners' Points </title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
+  </head>
+
+  <body>
+
+    <h1><span class="yellow">Available Points View</span></h1>
+<br>
+<br>
+  <br>
+  <br>
+<a href="/updatepoints"><button class = "btn btn-large btn-primary">Update Points Available</button></a>
+<a href="/"><button class = "btn btn-large btn-primary">View All Reservation</button></a>
+
+  <div class = "filters">
+    <span class = "filter_title">Owner =</span>
+    <select id = "owner_filter">
+      <option> --- </option>
+      {%for username in usernames%}
+        <option>{{username}}</option>
+      {%endfor%}
+    </select><br>
+</div>
+
+<br>
+<center>
+  <b>
+    <span id = "id_num_match" class = "filter_title">
+      <span id="num_match"></span>
+      matching results
+    </span>
+  </b>
+</center>
+<br>
+
+
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>Owner</h1></th>
+			<th><h1>Travel From</h1></th>
+			<th><h1>Expiration</h1></th>
+			<th><h1>Points Description</h1></th>
+			<th><h1>Points Available</h1></th>
+			<th><h1>Housekeeping Available</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+    {%for ownerspointsstatus in ownerspointsstatuss%}
+  		<tr>
+  			<td class = "username">{{ownerspointsstatus.fk_owner.username}}</td>
+  			<td class = "travelfrom">{{ownerspointsstatus.Travel_From}}</td>
+  			<td class = "expiration">{{ownerspointsstatus.Expiration}}</td>
+  			<td class = "pointsdesc">{{ownerspointsstatus.Points_Description}}</td>
+  			<td class = "pointsavail">{{ownerspointsstatus.Points_Available}}</td>
+  			<td class = "housekeepingavail">{{ownerspointsstatus.Housekeeping_Available}}</td>
+  		</tr>
+    {%endfor%}
+	</tbody>
+</table>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src = "{%static 'main/js/index.js'%}"></script>
+</html>

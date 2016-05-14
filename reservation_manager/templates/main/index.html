@@ -1,0 +1,127 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Reservations View</title>
+
+
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
+
+
+
+  </head>
+
+  <body>
+
+    <h1><span class="blue">Reservations</span><span class="blue"></span> <span class="yellow">Table</span></h1>
+
+<br>
+<br>
+    <a href = "/admin"><button type="button" class = "btn btn-primary btn-lg" id = "btn_apply_filter">Admin</button></a>
+    <a href = "/update"><button type="button" class = "btn btn-primary btn-lg" id = "btn_apply_filter">Update</button></a>
+    <a href = "/export"><button type="button" class = "btn btn-primary btn-lg" id = "btn_apply_filter">Export</button></a>
+  <br>
+  <br>
+  <div class = "filters">
+    <span class = "filter_title">Owner =</span>
+    <select id = "owner_filter">
+      <option> --- </option>
+      {%for username in usernames%}
+        <option>{{username}}</option>
+      {%endfor%}
+    </select><br>
+
+    <span class = "filter_title">Resort = </span>
+    <select id = "resort_filter">
+      <option> --- </option>
+      {%for resort in resorts%}
+        <option>{{resort}}</option>
+      {%endfor%}
+    </select><br>
+
+    <span class = "filter_title">Unit Size = </span>
+    <select id = "unit_size_filter">
+      <option> --- </option>
+      {%for unit_size in unit_sizes%}
+        <option>{{unit_size}}</option>
+      {%endfor%}
+    </select><br>
+
+    <span class = "filter_title">Traveler = </span>
+    <select id = "traveler_filter">
+      <option> --- </option>
+      {%for traveler in travelers%}
+        <option>{{traveler}}</option>
+      {%endfor%}
+    </select><br>
+
+    <span class = "filter_title">Upgrades = </span>
+    <select id = "upgrades_filter">
+      <option> --- </option>
+      {%for upgrade in upgrades%}
+        <option>{{upgrade}}</option>
+      {%endfor%}
+    </select><br>
+
+    <span class = "filter_title">Within the next days = </span>
+    <input type = "number" id = "days_filter" default = ""></input>
+
+  <br>
+  <br>
+  <br>
+
+
+</div>
+
+<br>
+<center>
+  <b>
+    <span id = "id_num_match" class = "filter_title">
+      <span id="num_match"></span>
+      matching results
+    </span>
+  </b>
+</center>
+<br>
+
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>Owner</h1></th>
+			<th><h1>Conf#</h1></th>
+			<th><h1>Checkin</h1></th>
+			<th><h1>Nights</h1></th>
+			<th><h1>Resort</h1></th>
+			<th><h1>Unit Size</h1></th>
+			<th><h1>Booked</h1></th>
+			<th><h1>Traveler</h1></th>
+			<th><h1>Upgrade Status</h1></th>
+			<th><h1>Points</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+    {%for reservation in reservations%}
+  		<tr>
+  			<td class = "username">{{reservation.fk_owner.username}}</td>
+  			<td class = "conf">{{reservation.confirmation_number}}</td>
+  			<td class = "checkin">{{reservation.date_of_reservation}}</td>
+  			<td class = "nights">{{reservation.number_of_nights}}</td>
+  			<td class = "location">{{reservation.location}}</td>
+  			<td class = "size">{{reservation.unit_size}}</td>
+  			<td class = "booked">{{reservation.date_booked}}</td>
+  			<td class = "traveler">{{reservation.guest_certificate}}</td>
+  			<td class = "upgrade">{{reservation.upgrade_status}}</td>
+  			<td class = "points">{{reservation.points_required_for_reservation}}</td>
+  		</tr>
+    {%endfor%}
+	</tbody>
+</table>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src = "{%static 'main/js/index.js'%}"></script>
+</html>
