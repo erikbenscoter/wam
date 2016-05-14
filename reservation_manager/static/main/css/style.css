@@ -44,13 +44,19 @@ h2 a {
   text-decoration: none;
 }
 
-.blue { color: #185875; }
+tr.canceled{
+  background-color: #400000  !important;
+  color: white !important;
+}
+
+
+.blue { color: cyan; }
 .yellow { color: #FFF842; }
 
 .container th h1 {
 	  font-weight: bold;
 	  font-size: 1em;
-  text-align: center;
+  /*text-align: center;*/
   color: white;
 }
 
@@ -131,6 +137,18 @@ h2 a {
   width : 250px;
   display : inline-block;
   color:white;
+}
+
+.monthly_report{
+  border-top-color: black;
+  border-top-style: double;
+  border-top-width: thick;
+  background-color: LightGoldenRodYellow;
+  color:darkblue;
+}
+
+.not_used{
+  background-color:#1F2739;
 }
 
 @media (max-width: 800px) {

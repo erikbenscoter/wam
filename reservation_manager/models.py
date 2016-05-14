@@ -1,11 +1,14 @@
 from django.db import models
+from monthly_summary.models import MonthlyReport
+import re
 
 TRUE_OR_FALSE = (
     (1, "True"),
     (0, "False")
 )
 
-
+class ApplicationSettings(models.Model):
+    last_checked = models.DateTimeField(blank=True, null=True)
 
 # Create your models here.
 class Owner( models.Model ):
@@ -15,7 +18,6 @@ class Owner( models.Model ):
     first_name = models.CharField( blank=True, null=True, max_length=2000)
     last_name = models.CharField( blank=True, null=True, max_length=2000)
     phone_number = models.CharField( blank=True, null=True, max_length=2000)
-    avail_points = models.IntegerField( blank=True, null=True )
     owner_reimbursement_rate = models.FloatField( blank=True, null=True )
 
     def __str__(self):
@@ -25,7 +27,8 @@ class Owner( models.Model ):
         return self.username
 
 class Reservation( models.Model ):
-    fk_owner = models.ForeignKey(Owner)
+    fk_owner = models.ForeignKey(Owner, on_delete=models.SET_NULL, null=True, blank=True)
+    fk_monthly_report = models.ForeignKey(MonthlyReport, blank=True, null=True, default=None, on_delete=models.SET_NULL)
     location = models.CharField( blank=True, null=True, max_length=2000)
     date_of_reservation = models.DateField( blank=True, null=True )
     number_of_nights = models.IntegerField( blank=True, null=True )
@@ -37,7 +40,23 @@ class Reservation( models.Model ):
     date_booked = models.DateField( blank=True, null=True )
     upgrade_status = models.CharField( blank=True, null=True, max_length = 2000)
     guest_certificate = models.CharField( blank=True, null=True, max_length = 2000)
-    touched = models.DateField( blank=True, null=True )
+    touched = models.DateField( blank=True, null=True,default=None )
+    touched_bool = models.NullBooleanField(blank=True,null=True,default=None)
+    canceled = models.NullBooleanField(blank=True, null=True, default=None)
+
+
+    @property
+    def owed_owner(self):
+        return (self.fk_owner.owner_reimbursement_rate/1000.00 * self.points_required_for_reservation)
+
+    @property
+    def is_rented(self):
+        if( re.search("Owner:",self.guest_certificate) ):
+            return False
+        else:
+            return True
+
+
 
     def __str__(self):
         return str(self.fk_owner.username) + "   " + str(self.date_of_reservation) + " , " + str(self.location)

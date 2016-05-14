@@ -1,16 +1,46 @@
-import csv
-import re
-import time
-from datetime import datetime
-from django.http import HttpResponse
-from django.shortcuts import redirect
 from django.shortcuts import render
+from django.shortcuts import redirect
 from selenium import webdriver
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+import time
+import re
+from .models import Reservation, Owner, ApplicationSettings
+from django.http import HttpResponse
+from datetime import datetime
+import csv
+from threading import Thread
+from monthly_summary.models import MonthlyReport
+from monthly_summary.views import Report
+from datetime import timedelta
+from django.contrib.auth.decorators import login_required
 
-from .models import Owner
-from .models import Reservation
+
+def handleOwner(owner):
+
+    Reservation.objects.filter(points_required_for_reservation=-1).delete()
+    reservations = Reservation.objects.all()
+
+    confirmation_numbers_points_dict = dict()
+
+    for reservation in reservations:
+        confirmation_numbers_points_dict[reservation.confirmation_number] = reservation.points_required_for_reservation
+
+
+    try:
+        scrape_wyndham = ScrapeWyndham()
+        time.sleep(2)
+        scrape_wyndham.login(owner.username, owner.password)
+        time.sleep(2)
+        scrape_wyndham.getToOwnershipSummaryPage()
+        time.sleep(2)
+        src = scrape_wyndham.getConfirmationPages(owner, confirmation_numbers_points_dict)
+        time.sleep(2)
+        scrape_wyndham.logout()
+        scrape_wyndham.browser.close()
+    except Exception as e:
+        scrape_wyndham.browser.close()
+        handleOwner(owner)
 
 
 class ScrapeWyndham:
@@ -19,6 +49,11 @@ class ScrapeWyndham:
         self.browser = webdriver.Firefox()
         self.browser.get("https://www.myclubwyndham.com/ffr/index.do")
 
+    def isOffHours():
+        if( datetime.now().hour == 23 or (datetime.now().hour >= 0 and datetime.now().hour < 7) ):
+            return True
+        else:
+            return False
 
     def reformatDate(self, p_date):
         new_date = p_date.replace("/", "-")
@@ -28,8 +63,6 @@ class ScrapeWyndham:
 
         new_date = str(year) + "-" + str(month) + "-" + str(day)
         return new_date
-
-
 
     def login(self, username, password):
 
@@ -41,6 +74,8 @@ class ScrapeWyndham:
 
         element = self.browser.find_element_by_class_name("owner-signin-btn")
         element.click()
+
+
 
     def logout(self):
 
@@ -58,13 +93,19 @@ class ScrapeWyndham:
         element.click()
 
     def parsePointsPage(self, p_src):
-        points = re.split("Points Used",p_src)[1]
-        points = re.split("</strong>", points)[1]
-        points = re.split("</p>", points)[0]
-        points = points.strip()
+        allInformationIsNotOnline = re.search("Please allow 48 hours for", p_src)
+        allInformationIsOnline = not allInformationIsNotOnline
+
+        if(allInformationIsOnline):
+            points = re.split("Points Used", p_src)[1]
+            points = re.split("</strong>", points)[1]
+            points = re.split("</p>", points)[0]
+            points = points.strip()
+        else:
+            points = -1
         return points
 
-    def getToPointsPage (self, p_confirmaion_number):
+    def getToPointsPage(self, p_confirmaion_number):
         time.sleep(1)
         element = self.browser.find_element_by_link_text(str(p_confirmaion_number))
         element.click()
@@ -74,7 +115,7 @@ class ScrapeWyndham:
         time.sleep(1)
         return points
 
-    def parseConfirmationRow(self,p_row_text,p_owner, p_confirmaion_numbers):
+    def parseConfirmationRow(self,p_row_text,p_owner, p_confirmaion_numbers_pts_dict):
         conf = p_row_text[0]
         checkin = p_row_text[1]
         nights = p_row_text[2]
@@ -87,20 +128,25 @@ class ScrapeWyndham:
         booked = self.reformatDate(booked)
         checkin = self.reformatDate(checkin)
 
-        if( conf not in p_confirmaion_numbers ):
-            time.sleep(1)
-            pts = self.getToPointsPage(conf)
+        if( conf not in p_confirmaion_numbers_pts_dict.keys() ):
+
+            if( conf != 'N/A' ):
+                time.sleep(1)
+                pts = self.getToPointsPage(conf)
+            else:
+                pts = -1
+
             reservation = Reservation(confirmation_number = conf, date_of_reservation=checkin,
                 number_of_nights=nights, location=resort, unit_size=unit, date_booked=booked,
                 guest_certificate=traveler, upgrade_status=upgrade,
-                fk_owner=p_owner,touched=datetime.today(),points_required_for_reservation = pts)
+                fk_owner=p_owner,touched_bool=True,points_required_for_reservation = pts)
             reservation.save()
 
         else:
             rsrv = Reservation.objects.filter(confirmation_number=conf).update(date_of_reservation = checkin,
                 number_of_nights = nights,
                 guest_certificate = traveler,
-                upgrade_status = upgrade, touched=datetime.today())
+                upgrade_status = upgrade, touched_bool=True)
 
 
 
@@ -108,7 +154,7 @@ class ScrapeWyndham:
 
 
 
-    def parseConfirmationPage(self, p_owner, p_confirmaion_numbers):
+    def parseConfirmationPage(self, p_owner, p_confirmaion_numbers_pts_dict):
         time.sleep(3)
         columns = self.browser.find_elements_by_tag_name("td")
 
@@ -125,16 +171,16 @@ class ScrapeWyndham:
 
         for row_itterator in range( 0, int(rows) ):
             rsrv = self.parseConfirmationRow(columns_text[beg_slice_index:end_slice_index],
-                p_owner, p_confirmaion_numbers)
+                p_owner, p_confirmaion_numbers_pts_dict)
             reservations.append(rsrv)
             beg_slice_index += 9
             end_slice_index += 9
 
-    def getConfirmationPages(self, p_owner, p_confirmaion_numbers):
+    def getConfirmationPages(self, p_owner, p_confirmaion_numbers_pts_dict):
         more_pages_exist = True
         while more_pages_exist:
             time.sleep(2)
-            self.parseConfirmationPage( p_owner, p_confirmaion_numbers)
+            self.parseConfirmationPage( p_owner, p_confirmaion_numbers_pts_dict)
             try:
                 element = self.browser.find_element_by_link_text("Next")
                 element.click()
@@ -145,48 +191,108 @@ class ScrapeWyndham:
 
 
 class Update:
+
+    #static variables
+    update_in_progress = False
+
+    def updateCanceled():
+
+        todays_date = datetime.today()
+        future_reservations = Reservation.objects.filter(date_of_reservation__gte=todays_date)
+
+        for i in range(0,len(future_reservations)):
+            reservation = future_reservations[i]
+
+            if(reservation.touched_bool==True):
+                Reservation.objects.filter(id=reservation.id).update(canceled=False, touched_bool=False)
+            else:
+                Reservation.objects.filter(id=reservation.id).update(canceled=True, touched_bool=False)
+
+
+
+
+    @login_required(redirect_field_name="/admin", login_url="/login/")
     def get(request):
 
-        owners = Owner.objects.all()
-        reservations = Reservation.objects.all()
+        do_not_update_this_time = False
 
-        confirmation_numbers = []
-
-        for reservation in reservations:
-            confirmation_numbers.append(reservation.confirmation_number)
-
-        scrape_wyndham = ScrapeWyndham()
+        if ( ScrapeWyndham.isOffHours() ):
+            return HttpResponse(
+                "<h1><center>You tried to update during off-hours, please try again after 7:00am</center></h1><br>" +
+                "<h2><center>You can still view the views page, just cannot update until after 7:00am</h2></center>" )
 
 
-        for owner in owners:
-            time.sleep(2)
-            scrape_wyndham.login(owner.username, owner.password)
-            time.sleep(2)
-            scrape_wyndham.getToOwnershipSummaryPage()
-            time.sleep(2)
-            src = scrape_wyndham.getConfirmationPages(owner, confirmation_numbers)
-            time.sleep(2)
-            scrape_wyndham.logout()
 
-        scrape_wyndham.browser.close()
+        if( Update.update_in_progress):
+            while( Update.update_in_progress):
+                pass
+
+            return redirect("/")
+
+        else:
+            Update.update_in_progress = True
+
+            owners = Owner.objects.all()
+            thread_array = []
+
+            for owner in owners:
+                thread_array.append(Thread(target=handleOwner, args=(owner,)))
+
+            while (thread_array != []):
+                left_in_thread_array = len(thread_array)
+
+                #run 3 threads at once or whatever is left in the array
+                if(left_in_thread_array < 5):
+                    threads_to_run_at_once = left_in_thread_array
+                else:
+                    threads_to_run_at_once = 5
+
+                for i in range(0,threads_to_run_at_once):
+                    thread_array[i].start()
+
+                for i in range(0,threads_to_run_at_once):
+                    thread_array[i].join()
+
+                for i in range(0,threads_to_run_at_once):
+                    thread_array.pop(0)
+
+            r = Report()
+            r.updateSummaries()
+
+            Update.updateCanceled()
+
+            application_settings = ApplicationSettings.objects.all()
+            for application_setting in application_settings:
+                application_setting.delete()
+
+            application = ApplicationSettings(last_checked=datetime.now()).save()
 
 
-        context = {
-            "src" : src
-        }
-        return redirect("/")
+            Update.update_in_progress = False
+
+            return redirect("/")
 
 class View:
+
+    @login_required(redirect_field_name="/admin", login_url="/login/")
     def get(request):
         usernames = []
         resorts = []
         unit_sizes = []
         travelers = []
         upgrades = []
-        print ("in eriks view")
 
-        newest_date = Reservation.objects.all().latest("touched").touched
-        reservations = Reservation.objects.all().filter(touched=newest_date)
+        newest_date = ApplicationSettings.objects.all()
+        newest_date = newest_date[0].last_checked
+        print (newest_date)
+        newest_date = newest_date + timedelta(hours=-4)
+        newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
+
+
+
+
+
+        reservations = Reservation.objects.filter(date_of_reservation__gte=datetime.today())
 
         for reservation in reservations:
             usernames.append(reservation.fk_owner.username)
@@ -205,27 +311,27 @@ class View:
 
 
 
-
         context = {
-            "reservations" : reservations,
+            "reservations" : reservations.order_by('date_of_reservation'),
             "usernames" : set(usernames),
             "resorts" : set(resorts),
             "unit_sizes" : set(unit_sizes),
             "travelers" : set(travelers),
-            "upgrades" : set(upgrades)
-
+            "upgrades" : set(upgrades),
+            "last_updated" : str(newest_date)
         }
 
         return render( request, "main/index.html", context)
 
 class Export:
+
+    @login_required(redirect_field_name="/admin", login_url="/login/")
     def get(request):
 
-        newest = Reservation.objects.all().latest("touched").touched
-        reservations = Reservation.objects.all().filter(touched=newest)
+        reservations = Reservation.objects.all()
 
         response = HttpResponse(content_type='text/csv')
-        response['Content-Description'] = 'attachment; filename="export.xlsx"'
+        response['Content-Description'] = 'attachment; filename="export.xls"'
 
         arr = []
 
@@ -242,7 +348,7 @@ class Export:
         arr.append("date_booked")
         arr.append("upgrade_status")
         arr.append("guest_certificate")
-        arr.append("touched")
+        arr.append("canceled")
         writer.writerow(arr)
         arr = []
         for reservation in reservations:
@@ -258,7 +364,7 @@ class Export:
             arr.append(reservation.date_booked)
             arr.append(reservation.upgrade_status)
             arr.append(reservation.guest_certificate)
-            arr.append(reservation.touched)
+            arr.append(reservation.canceled)
 
             writer.writerow(arr)
             arr = []

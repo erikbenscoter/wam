@@ -3,7 +3,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Reservations View</title>
+    <title>View Reservations</title>
 
 
 
@@ -17,13 +17,14 @@
 
   <body>
 
-    <h1><span class="blue">Reservations</span><span class="blue"></span> <span class="yellow">Table</span></h1>
+    <h1><span class="cyan">Reservations</span><span class="cyan"></span> <span class="yellow">Table</pean></h1>
 
 <br>
 <br>
     <a href = "/admin"><button type="button" class = "btn btn-primary btn-lg" id = "btn_apply_filter">Admin</button></a>
     <a href = "/update"><button type="button" class = "btn btn-primary btn-lg" id = "btn_apply_filter">Update</button></a>
     <a href = "/export"><button type="button" class = "btn btn-primary btn-lg" id = "btn_apply_filter">Export</button></a>
+    <a href = "/generate_report"><button type="button" class = "btn btn-primary btn-lg" id = "btn_apply_filter">Generate Monthly Report</button></a>
   <br>
   <br>
   <div class = "filters">
@@ -59,6 +60,13 @@
       {%endfor%}
     </select><br>
 
+    <span class = "filter_title">Show Canclations = </span>
+    <select id = "cancelations_filter">
+      <option value = 0> Don't Show Cancelations </option>
+      <option value = 1> Show Cancleations </option>
+
+    </select><br>
+
     <span class = "filter_title">Upgrades = </span>
     <select id = "upgrades_filter">
       <option> --- </option>
@@ -87,6 +95,15 @@
   </b>
 </center>
 <br>
+<center>
+  <b>
+    <span id = "id_num_match" class = "filter_title">
+      <span id="num_match"></span>
+      Last Successful Update : {{last_updated}}
+    </span>
+  </b>
+</center>
+<br>
 
 <table class="container">
 	<thead>
@@ -105,7 +122,11 @@
 	</thead>
 	<tbody>
     {%for reservation in reservations%}
-  		<tr>
+      {%if reservation.canceled%}
+        <tr class = "canceled">
+      {%else%}
+        <tr>
+      {%endif%}
   			<td class = "username">{{reservation.fk_owner.username}}</td>
   			<td class = "conf">{{reservation.confirmation_number}}</td>
   			<td class = "checkin">{{reservation.date_of_reservation}}</td>

@@ -1,0 +1,26 @@
+body{
+  background-color:darkblue;
+  color: white;
+}
+#option_box{
+  display:inline-block;
+  padding:50px;
+  min-height:100px;
+  width:80%;
+  margin-left:10%;
+  background-color:white;
+  color:black;
+}
+th, td{
+  font-size: 32px;
+  padding:10px;
+  
+  
+}
+th{
+  border-bottom:solid;
+  border-top:solid;
+}
+select{
+  font-size: 16px;
+}

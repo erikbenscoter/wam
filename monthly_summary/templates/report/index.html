@@ -1,0 +1,117 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Monthly Summary</title>
+
+
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+
+
+
+
+  </head>
+
+  <body>
+
+    <h1><span class="blue"></span>{{owner.username}}, {{month}} , {{year}}<span class="blue"></span> <span class="yellow">Summary</pan></h1>
+
+ <a href="/generate_report"><button class="btn btn-large btn-primary"> &lt&lt Generate New Report </button></a>
+ <a href="/admin"><button class="btn btn-large btn-primary">  Admin </button></a>
+ <a href="/"><button class="btn btn-large btn-primary">  View All Reservations </button></a>
+
+
+<table class="container">
+  <thead>
+    <tr>
+      <th>
+        <h1>Booked</h1></th>
+      <th>
+        <h1>Checkin</h1></th>
+      <th>
+        <h1>Nights</h1></th>
+      <th>
+        <h1>Resort</h1></th>
+      <th>
+        <h1>Unit Size</h1></th>
+      <th>
+        <h1>Conf#</h1></th>
+      <th>
+        <h1>Points</h1></th>
+      <th>
+        <h1>Traveler</h1></th>
+      <th>
+        <h1>Owner Rate</h1></th>
+      <th>
+        <h1>Owed Owner</h1></th>
+      <th>
+        <h1>Check No</h1>
+      </th>
+       <th>
+        <h1>Amt Paid</h1>
+      </th>
+       <th>
+        <h1>Date Paid</h1>
+      </th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    {%for reservation in reservations%}
+      <tr>
+        <td>{{reservation.date_booked}}</td>
+        <td>{{reservation.date_of_reservation}}</td>
+        <td>{{reservation.number_of_nights}}</td>
+        <td>{{reservation.location}}</td>
+        <td>{{reservation.unit_size}}</td>
+        <td>{{reservation.confirmation_number}}</td>
+        <td>{{reservation.points_required_for_reservation}}</td>
+        <td>{{reservation.guest_certificate}}</td>
+        <td>{{reservation.fk_owner.owner_reimbursement_rate}}</td>
+        <td>{{reservation.owed_owner}}</td>
+        <td class = "not_used"></td>
+        <td class = "not_used"></td>
+        <td class = "not_used"></td>
+      </tr>
+    {%endfor%}
+    <tr>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report not_used"></td>
+      <td class="monthly_report">{{monthly_summary.owner.owner_reimbursement_rate}}</td>
+      <td class="monthly_report">{{monthly_summary.total_owed_owner_month}}</td>
+      <td class="monthly_report">{{monthly_summary.check_number}}</td>
+      <td class="monthly_report">{{monthly_summary.amount_paid}}</td>
+      {% if monthly_summary.date_paid %}
+        <td class="monthly_report">{{monthly_summary.date_paid}}</td>
+      {% else %}
+        <td class="monthly_report">
+          <button class = "make_payment_button"> Make Payment </button>
+        </td>
+      {% endif %}
+    </tr>
+
+
+
+  </tbody>
+</table>
+<input type = "hidden" id = "monthly_summary" value = "{{monthly_summary.id}}"></input>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+        <script src="{% static 'summary/js/index.js'%}"></script>
+
+
+
+
+  </body>
+</html>

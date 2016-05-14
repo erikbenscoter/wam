@@ -1,0 +1,18 @@
+from django.contrib import admin
+<<<<<<< HEAD
+
+from .models import Owner
+from .models import Reservation
+=======
+from .models import Owner
+from .models import Reservation
+from .models import ApplicationSettings
+>>>>>>> 7ddcc0dafe09ff3bc31d7a77d740d4119ebd9f6d
+
+# Register your models here.
+admin.site.register( Owner )
+admin.site.register( Reservation )
+<<<<<<< HEAD
+=======
+admin.site.register( ApplicationSettings )
+>>>>>>> 7ddcc0dafe09ff3bc31d7a77d740d4119ebd9f6d
