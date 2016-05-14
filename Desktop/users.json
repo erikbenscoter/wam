@@ -1,0 +1,93 @@
+[
+{
+    "fields": {
+        "is_superuser": true,
+        "first_name": "",
+        "username": "erikbenscoter",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$20000$NCR4Git4kzzb$vUu95QO+lZTla7m6ECYumLEyNIa7HfoPNX761WJkdRM=",
+        "last_name": "",
+        "is_staff": true,
+        "date_joined": "2016-04-10T01:49:37.264Z",
+        "is_active": true,
+        "email": "",
+        "last_login": "2016-05-02T01:53:45.674Z"
+    },
+    "pk": 1,
+    "model": "auth.user"
+},
+{
+    "fields": {
+        "is_superuser": false,
+        "first_name": "",
+        "username": "RuthHunt",
+        "groups": [],
+        "user_permissions": [
+            25,
+            26,
+            27,
+            19,
+            20,
+            21,
+            22,
+            23
+        ],
+        "password": "pbkdf2_sha256$24000$bGsTs9Ck7VXP$1fLAo3NNj4dYRKs7zLR76LsPdXae0c3Z3rVbZb3VN/o=",
+        "last_name": "",
+        "is_staff": true,
+        "date_joined": "2016-04-10T18:32:01Z",
+        "is_active": true,
+        "email": "",
+        "last_login": null
+    },
+    "pk": 2,
+    "model": "auth.user"
+},
+{
+    "fields": {
+        "is_superuser": true,
+        "first_name": "",
+        "username": "glennbenscoter",
+        "groups": [],
+        "user_permissions": [
+            1,
+            2,
+            3,
+            7,
+            8,
+            9,
+            4,
+            5,
+            6,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            25,
+            26,
+            27,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            16,
+            17,
+            18
+        ],
+        "password": "pbkdf2_sha256$24000$x7cJnbq7p9Ch$ZsvlKUw81Qdzvh99U5CzonDNl9Nf8OUTIw7C43B62Tc=",
+        "last_name": "",
+        "is_staff": true,
+        "date_joined": "2016-04-10T18:33:12Z",
+        "is_active": true,
+        "email": "",
+        "last_login": "2016-04-27T21:54:36.902Z"
+    },
+    "pk": 3,
+    "model": "auth.user"
+}
+]
