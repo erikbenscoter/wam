@@ -3,6 +3,8 @@ var resort;
 var unit_size;
 var traveler;
 var upgrades;
+var show_cancelations;
+
 var in_days;
 
 function getAllFilterValues() {
@@ -12,10 +14,19 @@ function getAllFilterValues() {
   traveler = $("#traveler_filter").val();
   upgrades = $("#upgrades_filter").val();
   in_days = $("#days_filter").val();
+  show_cancelations = $("#cancelations_filter").val();
+
+  show_cancelations = parseInt(show_cancelations)
   if(in_days == ""){
     in_days = -1
   }else {
     int_days = parseInt(in_days);
+  }
+
+  if(show_cancelations == 0){
+    show_cancelations = false;
+  }else{
+    show_cancelations = true;
   }
 
 }
@@ -58,6 +69,13 @@ function showAllRowsThatMatchFilter() {
     if(upgrades != "---"){
       var row_upgrades = $(this).children(".upgrade").html();
       if(row_upgrades != upgrades){
+        $(this).hide();
+      }
+    }
+
+    if(show_cancelations == false){
+      var is_canceled_row = $(this).hasClass("canceled")
+      if(is_canceled_row){
         $(this).hide();
       }
     }

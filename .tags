@@ -1,0 +1,219 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOWED_HOSTS	VacationScheduler/settings.py	/^ALLOWED_HOSTS = []$/;"	v
+AUTH_PASSWORD_VALIDATORS	VacationScheduler/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	v
+ApplicationSettings	reservation_manager/models.py	/^class ApplicationSettings(models.Model):$/;"	c
+BASE_DIR	VacationScheduler/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v
+DATABASES	VacationScheduler/settings.py	/^DATABASES = {$/;"	v
+DEBUG	VacationScheduler/settings.py	/^DEBUG = True$/;"	v
+Export	reservation_manager/views.py	/^class Export:$/;"	c
+GenerateReport	monthly_summary/views.py	/^class GenerateReport:$/;"	c
+INSTALLED_APPS	VacationScheduler/settings.py	/^INSTALLED_APPS = [$/;"	v
+LANGUAGE_CODE	VacationScheduler/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
+MIDDLEWARE_CLASSES	VacationScheduler/settings.py	/^MIDDLEWARE_CLASSES = [$/;"	v
+Migration	monthly_summary/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	monthly_summary/migrations/0002_auto_20160409_2312.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0002_auto_20160325_0204.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0003_reservation_fk_monthly_report.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0004_auto_20160409_0017.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0005_auto_20160409_0017.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0006_remove_reservation_fk_monthly_report.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0007_reservation_fk_monthly_report.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0008_auto_20160409_2102.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0009_auto_20160410_1027.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0010_remove_owner_avail_points.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0011_reservation_canceled.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0012_applicationsettings.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0013_auto_20160501_2042.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	reservation_manager/migrations/0014_auto_20160501_2142.py	/^class Migration(migrations.Migration):$/;"	c
+MonthlyReport	monthly_summary/models.py	/^class MonthlyReport(models.Model):$/;"	c
+Owner	reservation_manager/models.py	/^class Owner( models.Model ):$/;"	c
+ROOT_URLCONF	VacationScheduler/settings.py	/^ROOT_URLCONF = 'VacationScheduler.urls'$/;"	v
+Report	monthly_summary/views.py	/^class Report:$/;"	c
+Reservation	reservation_manager/models.py	/^class Reservation( models.Model ):$/;"	c
+ReservationManagerConfig	reservation_manager/apps.py	/^class ReservationManagerConfig(AppConfig):$/;"	c
+STATIC_URL	VacationScheduler/settings.py	/^STATIC_URL = '\/static\/'$/;"	v
+ScrapeWyndham	reservation_manager/views.py	/^class ScrapeWyndham:$/;"	c
+TEMPLATES	VacationScheduler/settings.py	/^TEMPLATES = [$/;"	v
+TIME_ZONE	VacationScheduler/settings.py	/^TIME_ZONE = 'America\/New_York'$/;"	v
+TRUE_OR_FALSE	reservation_manager/models.py	/^TRUE_OR_FALSE = ($/;"	v
+USE_I18N	VacationScheduler/settings.py	/^USE_I18N = True$/;"	v
+USE_L10N	VacationScheduler/settings.py	/^USE_L10N = True$/;"	v
+USE_TZ	VacationScheduler/settings.py	/^USE_TZ = True$/;"	v
+Update	reservation_manager/views.py	/^class Update:$/;"	c
+View	reservation_manager/views.py	/^class View:$/;"	c
+WSGI_APPLICATION	VacationScheduler/settings.py	/^WSGI_APPLICATION = 'VacationScheduler.wsgi.application'$/;"	v
+__init__	reservation_manager/views.py	/^    def __init__(self):$/;"	m	class:ScrapeWyndham
+__str__	monthly_summary/models.py	/^    def __str__(self):$/;"	m	class:MonthlyReport	file:
+__str__	reservation_manager/models.py	/^    def __str__(self):$/;"	m	class:Owner	file:
+__str__	reservation_manager/models.py	/^    def __str__(self):$/;"	m	class:Reservation	file:
+__unicode__	reservation_manager/models.py	/^    def __unicode__(self):$/;"	m	class:Owner	file:
+__unicode__	reservation_manager/models.py	/^    def __unicode__(self):$/;"	m	class:Reservation	file:
+amount_paid	monthly_summary/models.py	/^    amount_paid = models.FloatField( default=0.00 )$/;"	v	class:MonthlyReport
+amount_paid	reservation_manager/models.py	/^    amount_paid = models.FloatField( blank=True, null=True )$/;"	v	class:Reservation
+application	VacationScheduler/wsgi.py	/^application = get_wsgi_application()$/;"	v
+canceled	reservation_manager/models.py	/^    canceled = models.NullBooleanField(blank=True, null=True, default=None)$/;"	v	class:Reservation
+check_number	monthly_summary/models.py	/^    check_number = models.CharField( blank=True, null=True, max_length=2000 )$/;"	v	class:MonthlyReport
+confirmation_number	reservation_manager/models.py	/^    confirmation_number = models.CharField( max_length=2000)$/;"	v	class:Reservation
+date_booked	reservation_manager/models.py	/^    date_booked = models.DateField( blank=True, null=True )$/;"	v	class:Reservation
+date_of_reservation	reservation_manager/models.py	/^    date_of_reservation = models.DateField( blank=True, null=True )$/;"	v	class:Reservation
+date_paid	monthly_summary/models.py	/^    date_paid = models.DateTimeField( null=True, default=None, blank=True )$/;"	v	class:MonthlyReport
+dependencies	monthly_summary/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	monthly_summary/migrations/0002_auto_20160409_2312.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0002_auto_20160325_0204.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0003_reservation_fk_monthly_report.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0004_auto_20160409_0017.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0005_auto_20160409_0017.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0006_remove_reservation_fk_monthly_report.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0007_reservation_fk_monthly_report.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0008_auto_20160409_2102.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0009_auto_20160410_1027.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0010_remove_owner_avail_points.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0011_reservation_canceled.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0012_applicationsettings.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0013_auto_20160501_2042.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	reservation_manager/migrations/0014_auto_20160501_2142.py	/^    dependencies = [$/;"	v	class:Migration
+email	reservation_manager/models.py	/^    email = models.EmailField( blank=True, null=True )$/;"	v	class:Owner
+field	monthly_summary/migrations/0002_auto_20160409_2312.py	/^            field=models.DateTimeField(null=True, default=None, blank=True),$/;"	v	class:Migration
+field	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            field=models.DateField(blank=True, null=True),$/;"	v	class:Migration
+field	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            field=models.EmailField(blank=True, max_length=254, null=True),$/;"	v	class:Migration
+field	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            field=models.FloatField(blank=True, null=True),$/;"	v	class:Migration
+field	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            field=models.IntegerField(blank=True, null=True),$/;"	v	class:Migration
+field	reservation_manager/migrations/0003_reservation_fk_monthly_report.py	/^            field=models.ForeignKey(default='', to='monthly_summary.MonthlyReport'),$/;"	v	class:Migration
+field	reservation_manager/migrations/0004_auto_20160409_0017.py	/^            field=models.ForeignKey(to='monthly_summary.MonthlyReport', blank=True),$/;"	v	class:Migration
+field	reservation_manager/migrations/0005_auto_20160409_0017.py	/^            field=models.ForeignKey(null=True, to='monthly_summary.MonthlyReport', blank=True),$/;"	v	class:Migration
+field	reservation_manager/migrations/0007_reservation_fk_monthly_report.py	/^            field=models.ForeignKey(blank=True, null=True, to='monthly_summary.MonthlyReport'),$/;"	v	class:Migration
+field	reservation_manager/migrations/0008_auto_20160409_2102.py	/^            field=models.ForeignKey(null=True, blank=True, default=None, to='monthly_summary.MonthlyReport'),$/;"	v	class:Migration
+field	reservation_manager/migrations/0009_auto_20160410_1027.py	/^            field=models.ForeignKey(blank=True, on_delete=django.db.models.deletion.SET_NULL, null=True, to='reservation_manager.Owner'),$/;"	v	class:Migration
+field	reservation_manager/migrations/0009_auto_20160410_1027.py	/^            field=models.ForeignKey(default=None, blank=True, on_delete=django.db.models.deletion.SET_NULL, null=True, to='monthly_summary.MonthlyReport'),$/;"	v	class:Migration
+field	reservation_manager/migrations/0011_reservation_canceled.py	/^            field=models.NullBooleanField(default=None),$/;"	v	class:Migration
+field	reservation_manager/migrations/0013_auto_20160501_2042.py	/^            field=models.DateField(default=None, blank=True, null=True),$/;"	v	class:Migration
+field	reservation_manager/migrations/0013_auto_20160501_2042.py	/^            field=models.NullBooleanField(default=None),$/;"	v	class:Migration
+field	reservation_manager/migrations/0014_auto_20160501_2142.py	/^            field=models.DateTimeField(null=True, blank=True),$/;"	v	class:Migration
+fields	monthly_summary/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
+fields	reservation_manager/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
+fields	reservation_manager/migrations/0012_applicationsettings.py	/^            fields=[$/;"	v	class:Migration
+first_name	reservation_manager/models.py	/^    first_name = models.CharField( blank=True, null=True, max_length=2000)$/;"	v	class:Owner
+fk_monthly_report	reservation_manager/models.py	/^    fk_monthly_report = models.ForeignKey(MonthlyReport, blank=True, null=True, default=None, on_delete=models.SET_NULL)$/;"	v	class:Reservation
+fk_owner	reservation_manager/models.py	/^    fk_owner = models.ForeignKey(Owner, on_delete=models.SET_NULL, null=True, blank=True)$/;"	v	class:Reservation
+get	monthly_summary/views.py	/^    def get(request, error=0):$/;"	m	class:GenerateReport
+get	monthly_summary/views.py	/^    def get(request, p_owner_username, p_year, p_month):$/;"	m	class:Report
+get	reservation_manager/views.py	/^    def get(request):$/;"	m	class:Export
+get	reservation_manager/views.py	/^    def get(request):$/;"	m	class:Update
+get	reservation_manager/views.py	/^    def get(request):$/;"	m	class:View
+getAllFilterValues.countMatchingRows	reservation_manager/static/main/js/index.js	/^function countMatchingRows() {$/;"	f
+getAllFilterValues.showAllRows	reservation_manager/static/main/js/index.js	/^function showAllRows(){$/;"	f
+getAllFilterValues.showAllRowsThatMatchFilter	reservation_manager/static/main/js/index.js	/^function showAllRowsThatMatchFilter() {$/;"	f
+getAllFilterValues.updateTable	reservation_manager/static/main/js/index.js	/^function updateTable() {$/;"	f
+getConfirmationPages	reservation_manager/views.py	/^    def getConfirmationPages(self, p_owner, p_confirmaion_numbers_pts_dict):$/;"	m	class:ScrapeWyndham
+getToOwnershipSummaryPage	reservation_manager/views.py	/^    def getToOwnershipSummaryPage(self):$/;"	m	class:ScrapeWyndham
+getToPointsPage	reservation_manager/views.py	/^    def getToPointsPage(self, p_confirmaion_number):$/;"	m	class:ScrapeWyndham
+guest_certificate	reservation_manager/models.py	/^    guest_certificate = models.CharField( blank=True, null=True, max_length = 2000)$/;"	v	class:Reservation
+handleOwner	reservation_manager/views.py	/^def handleOwner(owner):$/;"	f
+in_days	reservation_manager/static/main/js/index.js	/^var in_days;$/;"	v
+initial	reservation_manager/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+inputData	monthly_summary/static/summary/js/index.js	/^function inputData(){$/;"	f
+isOffHours	reservation_manager/views.py	/^    def isOffHours():$/;"	m	class:ScrapeWyndham
+is_buyer_lined_up	reservation_manager/models.py	/^    is_buyer_lined_up = models.IntegerField( blank=True, null=True, choices = TRUE_OR_FALSE)$/;"	v	class:Reservation
+is_rented	reservation_manager/models.py	/^    def is_rented(self):$/;"	m	class:Reservation
+last_checked	reservation_manager/models.py	/^    last_checked = models.DateTimeField(blank=True, null=True)$/;"	v	class:ApplicationSettings
+last_name	reservation_manager/models.py	/^    last_name = models.CharField( blank=True, null=True, max_length=2000)$/;"	v	class:Owner
+location	reservation_manager/models.py	/^    location = models.CharField( blank=True, null=True, max_length=2000)$/;"	v	class:Reservation
+login	reservation_manager/views.py	/^    def login(self, username, password):$/;"	m	class:ScrapeWyndham
+logout	reservation_manager/views.py	/^    def logout(self):$/;"	m	class:ScrapeWyndham
+model_name	monthly_summary/migrations/0002_auto_20160409_2312.py	/^            model_name='monthlyreport',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            model_name='owner',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0003_reservation_fk_monthly_report.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0004_auto_20160409_0017.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0005_auto_20160409_0017.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0006_remove_reservation_fk_monthly_report.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0007_reservation_fk_monthly_report.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0008_auto_20160409_2102.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0009_auto_20160410_1027.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0010_remove_owner_avail_points.py	/^            model_name='owner',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0011_reservation_canceled.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0013_auto_20160501_2042.py	/^            model_name='reservation',$/;"	v	class:Migration
+model_name	reservation_manager/migrations/0014_auto_20160501_2142.py	/^            model_name='applicationsettings',$/;"	v	class:Migration
+month	monthly_summary/models.py	/^    def month(self):$/;"	m	class:MonthlyReport
+name	monthly_summary/migrations/0001_initial.py	/^            name='MonthlyReport',$/;"	v	class:Migration
+name	monthly_summary/migrations/0002_auto_20160409_2312.py	/^            name='date_paid',$/;"	v	class:Migration
+name	reservation_manager/apps.py	/^    name = 'reservation_manager'$/;"	v	class:ReservationManagerConfig
+name	reservation_manager/migrations/0001_initial.py	/^            name='Owner',$/;"	v	class:Migration
+name	reservation_manager/migrations/0001_initial.py	/^            name='Reservation',$/;"	v	class:Migration
+name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            name='amount_paid',$/;"	v	class:Migration
+name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            name='avail_points',$/;"	v	class:Migration
+name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            name='date_booked',$/;"	v	class:Migration
+name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            name='date_of_reservation',$/;"	v	class:Migration
+name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            name='email',$/;"	v	class:Migration
+name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            name='number_of_nights',$/;"	v	class:Migration
+name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            name='owner_reimbursement_rate',$/;"	v	class:Migration
+name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            name='points_required_for_reservation',$/;"	v	class:Migration
+name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            name='touched',$/;"	v	class:Migration
+name	reservation_manager/migrations/0003_reservation_fk_monthly_report.py	/^            name='fk_monthly_report',$/;"	v	class:Migration
+name	reservation_manager/migrations/0004_auto_20160409_0017.py	/^            name='fk_monthly_report',$/;"	v	class:Migration
+name	reservation_manager/migrations/0005_auto_20160409_0017.py	/^            name='fk_monthly_report',$/;"	v	class:Migration
+name	reservation_manager/migrations/0006_remove_reservation_fk_monthly_report.py	/^            name='fk_monthly_report',$/;"	v	class:Migration
+name	reservation_manager/migrations/0007_reservation_fk_monthly_report.py	/^            name='fk_monthly_report',$/;"	v	class:Migration
+name	reservation_manager/migrations/0008_auto_20160409_2102.py	/^            name='fk_monthly_report',$/;"	v	class:Migration
+name	reservation_manager/migrations/0009_auto_20160410_1027.py	/^            name='fk_monthly_report',$/;"	v	class:Migration
+name	reservation_manager/migrations/0009_auto_20160410_1027.py	/^            name='fk_owner',$/;"	v	class:Migration
+name	reservation_manager/migrations/0010_remove_owner_avail_points.py	/^            name='avail_points',$/;"	v	class:Migration
+name	reservation_manager/migrations/0011_reservation_canceled.py	/^            name='canceled',$/;"	v	class:Migration
+name	reservation_manager/migrations/0012_applicationsettings.py	/^            name='ApplicationSettings',$/;"	v	class:Migration
+name	reservation_manager/migrations/0013_auto_20160501_2042.py	/^            name='touched',$/;"	v	class:Migration
+name	reservation_manager/migrations/0013_auto_20160501_2042.py	/^            name='touched_bool',$/;"	v	class:Migration
+name	reservation_manager/migrations/0014_auto_20160501_2142.py	/^            name='last_checked',$/;"	v	class:Migration
+number_of_nights	reservation_manager/models.py	/^    number_of_nights = models.IntegerField( blank=True, null=True )$/;"	v	class:Reservation
+operations	monthly_summary/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+operations	monthly_summary/migrations/0002_auto_20160409_2312.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0002_auto_20160325_0204.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0003_reservation_fk_monthly_report.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0004_auto_20160409_0017.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0005_auto_20160409_0017.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0006_remove_reservation_fk_monthly_report.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0007_reservation_fk_monthly_report.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0008_auto_20160409_2102.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0009_auto_20160410_1027.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0010_remove_owner_avail_points.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0011_reservation_canceled.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0012_applicationsettings.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0013_auto_20160501_2042.py	/^    operations = [$/;"	v	class:Migration
+operations	reservation_manager/migrations/0014_auto_20160501_2142.py	/^    operations = [$/;"	v	class:Migration
+owed_owner	reservation_manager/models.py	/^    def owed_owner(self):$/;"	m	class:Reservation
+owner	monthly_summary/models.py	/^    def owner(self):$/;"	m	class:MonthlyReport
+owner	reservation_manager/static/main/js/index.js	/^var owner;$/;"	v
+owner_reimbursement_rate	reservation_manager/models.py	/^    owner_reimbursement_rate = models.FloatField( blank=True, null=True )$/;"	v	class:Owner
+parseConfirmationPage	reservation_manager/views.py	/^    def parseConfirmationPage(self, p_owner, p_confirmaion_numbers_pts_dict):$/;"	m	class:ScrapeWyndham
+parseConfirmationRow	reservation_manager/views.py	/^    def parseConfirmationRow(self,p_row_text,p_owner, p_confirmaion_numbers_pts_dict):$/;"	m	class:ScrapeWyndham
+parsePointsPage	reservation_manager/views.py	/^    def parsePointsPage(self, p_src):$/;"	m	class:ScrapeWyndham
+password	reservation_manager/models.py	/^    password = models.CharField(  max_length=2000)$/;"	v	class:Owner
+phone_number	reservation_manager/models.py	/^    phone_number = models.CharField( blank=True, null=True, max_length=2000)$/;"	v	class:Owner
+points_required_for_reservation	reservation_manager/models.py	/^    points_required_for_reservation = models.IntegerField( blank=True, null=True )$/;"	v	class:Reservation
+preserve_default	reservation_manager/migrations/0003_reservation_fk_monthly_report.py	/^            preserve_default=False,$/;"	v	class:Migration
+reformatDate	reservation_manager/views.py	/^    def reformatDate(self, p_date):$/;"	m	class:ScrapeWyndham
+removeExcessSummaries	monthly_summary/views.py	/^    def removeExcessSummaries(self):$/;"	m	class:Report
+resort	reservation_manager/static/main/js/index.js	/^var resort;$/;"	v
+savePayment	monthly_summary/views.py	/^    def savePayment(request,p_check_number, p_amt_paid, p_monthly_summary):$/;"	m	class:Report
+show_cancelations	reservation_manager/static/main/js/index.js	/^var show_cancelations;$/;"	v
+total_owed_owner_month	monthly_summary/models.py	/^    def total_owed_owner_month(self):$/;"	m	class:MonthlyReport
+touched	reservation_manager/models.py	/^    touched = models.DateField( blank=True, null=True,default=None )$/;"	v	class:Reservation
+touched_bool	reservation_manager/models.py	/^    touched_bool = models.NullBooleanField(blank=True,null=True,default=None)$/;"	v	class:Reservation
+traveler	reservation_manager/static/main/js/index.js	/^var traveler;$/;"	v
+unit_size	reservation_manager/models.py	/^    unit_size = models.CharField( blank=True, null=True, max_length=2000)$/;"	v	class:Reservation
+unit_size	reservation_manager/static/main/js/index.js	/^var unit_size;$/;"	v
+updateCanceled	reservation_manager/views.py	/^    def updateCanceled():$/;"	m	class:Update
+updateSummaries	monthly_summary/views.py	/^    def updateSummaries(self):$/;"	m	class:Report
+update_in_progress	reservation_manager/views.py	/^    update_in_progress = False$/;"	v	class:Update
+upgrade_status	reservation_manager/models.py	/^    upgrade_status = models.CharField( blank=True, null=True, max_length = 2000)$/;"	v	class:Reservation
+upgrades	reservation_manager/static/main/js/index.js	/^var upgrades;$/;"	v
+urlpatterns	VacationScheduler/urls.py	/^urlpatterns = [$/;"	v
+username	reservation_manager/models.py	/^    username = models.CharField(  max_length=2000)$/;"	v	class:Owner
+year	monthly_summary/models.py	/^    def year(self):$/;"	m	class:MonthlyReport
