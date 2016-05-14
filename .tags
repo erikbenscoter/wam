@@ -126,6 +126,7 @@ last_checked	reservation_manager/models.py	/^    last_checked = models.DateTimeF
 last_name	reservation_manager/models.py	/^    last_name = models.CharField( blank=True, null=True, max_length=2000)$/;"	v	class:Owner
 location	reservation_manager/models.py	/^    location = models.CharField( blank=True, null=True, max_length=2000)$/;"	v	class:Reservation
 login	reservation_manager/views.py	/^    def login(self, username, password):$/;"	m	class:ScrapeWyndham
+login_user	login/views.py	/^def login_user(request):$/;"	f
 logout	reservation_manager/views.py	/^    def logout(self):$/;"	m	class:ScrapeWyndham
 model_name	monthly_summary/migrations/0002_auto_20160409_2312.py	/^            model_name='monthlyreport',$/;"	v	class:Migration
 model_name	reservation_manager/migrations/0002_auto_20160325_0204.py	/^            model_name='owner',$/;"	v	class:Migration

@@ -4,10 +4,12 @@ from reservation_manager.models import Owner
 from monthly_summary.models import MonthlyReport
 from datetime import datetime
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 class GenerateReport:
 
+    @login_required(redirect_field_name="/admin", login_url="/login/")
     def get(request, error=0):
 
         monthly_summaries = MonthlyReport.objects.all()
@@ -87,6 +89,7 @@ class Report:
 
         self.removeExcessSummaries()
 
+    @login_required(redirect_field_name="/admin", login_url="/login/")
     def get(request, p_owner_username, p_year, p_month):
 
         all_reports = list(MonthlyReport.objects.all())
@@ -121,6 +124,7 @@ class Report:
         }
         return render(request, "report/index.html",context)
 
+    @login_required(redirect_field_name="/admin", login_url="/login/")
     def savePayment(request,p_check_number, p_amt_paid, p_monthly_summary):
         summary = MonthlyReport.objects.filter(id=p_monthly_summary)
         summary.update(check_number = p_check_number, amount_paid=p_amt_paid, date_paid=datetime.now())

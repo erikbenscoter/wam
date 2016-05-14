@@ -13,6 +13,7 @@ from threading import Thread
 from monthly_summary.models import MonthlyReport
 from monthly_summary.views import Report
 from datetime import timedelta
+from django.contrib.auth.decorators import login_required
 
 
 def handleOwner(owner):
@@ -210,7 +211,7 @@ class Update:
 
 
 
-
+    @login_required(redirect_field_name="/admin", login_url="/login/")
     def get(request):
 
         do_not_update_this_time = False
@@ -272,6 +273,8 @@ class Update:
             return redirect("/")
 
 class View:
+
+    @login_required(redirect_field_name="/admin", login_url="/login/")
     def get(request):
         usernames = []
         resorts = []
@@ -321,6 +324,8 @@ class View:
         return render( request, "main/index.html", context)
 
 class Export:
+
+    @login_required(redirect_field_name="/admin", login_url="/login/")
     def get(request):
 
         reservations = Reservation.objects.all()
