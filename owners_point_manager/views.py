@@ -8,7 +8,7 @@ from django.shortcuts import render
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-
+from datetime import datetime
 from .models import Owner
 from .models import Owners_Points_Status
 
@@ -172,6 +172,14 @@ class Update:
             scrape_wyndham.logout()
 
         scrape_wyndham.browser.close()
+
+        opmas = OwnerPointsManagerApplicationSettings.objects.all()
+
+        for opma in opmas:
+            opma.delete()
+
+        opma = OwnerPointsManagerApplicationSettings(last_updated = datetime.now())
+        opma.save()
 
         return redirect("/updatepointsview")
 
