@@ -7,8 +7,8 @@ TRUE_OR_FALSE = (
     (0, "False")
 )
 
-class ApplicationSettings(models.Model):
-    last_checked = models.DateTimeField(blank=True, null=True)
+class ReservationManagerApplicationSettings(models.Model):
+    last_updated = models.DateTimeField(blank=True, null=True)
 
 # Create your models here.
 class Owner( models.Model ):

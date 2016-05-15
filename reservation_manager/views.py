@@ -5,7 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import re
-from .models import Reservation, Owner, ApplicationSettings
+from .models import Reservation, Owner, ReservationManagerApplicationSettings
 from django.http import HttpResponse
 from datetime import datetime
 import csv
@@ -261,11 +261,11 @@ class Update:
 
             Update.updateCanceled()
 
-            application_settings = ApplicationSettings.objects.all()
+            application_settings = ReservationManagerApplicationSettings.objects.all()
             for application_setting in application_settings:
                 application_setting.delete()
 
-            application = ApplicationSettings(last_checked=datetime.now()).save()
+            application = ReservationManagerApplicationSettings(last_updated=datetime.now()).save()
 
 
             Update.update_in_progress = False
@@ -282,8 +282,8 @@ class View:
         travelers = []
         upgrades = []
 
-        newest_date = ApplicationSettings.objects.all()
-        newest_date = newest_date[0].last_checked
+        newest_date = ReservationManagerApplicationSettings.objects.all()
+        newest_date = newest_date[0].last_updated
         print (newest_date)
         newest_date = newest_date + timedelta(hours=-4)
         newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")

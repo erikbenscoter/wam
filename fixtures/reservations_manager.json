@@ -1,9 +1,9 @@
 [
 {
     "fields": {
-        "last_checked": "2016-05-14T11:11:26.350Z"
+        "last_updated": "2016-05-14T11:11:26.350Z"
     },
-    "model": "reservation_manager.applicationsettings",
+    "model": "reservation_manager.ReservationManagerApplicationSettings",
     "pk": 33
 },
 {
