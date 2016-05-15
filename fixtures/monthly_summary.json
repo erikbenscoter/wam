@@ -2,81 +2,81 @@
 {
     "model": "monthly_summary.monthlyreport",
     "fields": {
-        "check_number": null,
+        "date_paid": null,
         "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": null
     },
     "pk": 132
 },
 {
     "model": "monthly_summary.monthlyreport",
     "fields": {
-        "check_number": null,
+        "date_paid": null,
         "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": null
     },
     "pk": 133
 },
 {
     "model": "monthly_summary.monthlyreport",
     "fields": {
-        "check_number": null,
+        "date_paid": null,
         "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": null
     },
     "pk": 134
 },
 {
     "model": "monthly_summary.monthlyreport",
     "fields": {
-        "check_number": null,
+        "date_paid": null,
         "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": null
     },
     "pk": 135
 },
 {
     "model": "monthly_summary.monthlyreport",
     "fields": {
-        "check_number": null,
+        "date_paid": null,
         "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": null
     },
     "pk": 136
 },
 {
     "model": "monthly_summary.monthlyreport",
     "fields": {
-        "check_number": null,
+        "date_paid": null,
         "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": null
     },
     "pk": 137
 },
 {
     "model": "monthly_summary.monthlyreport",
     "fields": {
-        "check_number": null,
+        "date_paid": null,
         "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": null
     },
     "pk": 138
 },
 {
     "model": "monthly_summary.monthlyreport",
     "fields": {
-        "check_number": null,
+        "date_paid": null,
         "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": null
     },
     "pk": 139
 },
 {
     "model": "monthly_summary.monthlyreport",
     "fields": {
-        "check_number": null,
+        "date_paid": null,
         "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": null
     },
     "pk": 140
 }

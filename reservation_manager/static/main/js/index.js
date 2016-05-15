@@ -4,8 +4,74 @@ var unit_size;
 var traveler;
 var upgrades;
 var show_cancelations;
-
 var in_days;
+
+var cb_Owner;
+var cb_Conf;
+var cb_Checkin;
+var cb_Nights;
+var cb_Resort;
+var cb_Unit;
+var cb_Booked;
+var cb_Traveler;
+var cb_Upgrade;
+var cb_Points;
+
+function getCheckboxes(){
+  var checkboxes = [
+    "#cb_Owner",
+    "#cb_Conf",
+    "#cb_Checkin",
+    "#cb_Nights",
+    "#cb_Resort",
+    "#cb_Unit",
+    "#cb_Booked",
+    "#cb_Traveler",
+    "#cb_Upgrade",
+    "#cb_Points",
+  ]
+
+  var column_classes = [
+    ".username",
+    ".conf",
+    ".checkin",
+    ".nights",
+    ".location",
+    ".size",
+    ".booked",
+    ".traveler",
+    ".upgrade",
+    ".points"
+  ]
+
+
+  for (var i = 0; i < column_classes.length; i++) {
+    if ($(checkboxes[i]).prop("checked")) {
+      $(column_classes[i]).show();
+      $(checkboxes[i]).parent().removeClass("pink");
+    }else{
+      $(column_classes[i]).hide();
+      $(checkboxes[i]).parent().addClass("pink");
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
 
 function getAllFilterValues() {
   owner = $("#owner_filter").val();
@@ -117,6 +183,7 @@ $("#btn_apply_filter").click(function(){
 
 $("input").change(function(){
   updateTable();
+  getCheckboxes();
 });
 
 $("select").change(function(){
