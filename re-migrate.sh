@@ -1,12 +1,16 @@
 #!/bin/bash
-makemigrations
-migrate
+source /home/erikbenscoter/.bashrc
 
-makemigrations reservation_manager
-makemigrations login
-makemigrations monthly_summary
-makemigrations owners_point_manager
+python3 manage.py makemigrations
+python3 manage.py migrate
 
-migrate
+python3 manage.py makemigrations reservation_manager
+python3 manage.py migrate
 
-py3 manage.py loaddata ./fixtures/*
+python3 manage.py makemigrations login
+python3 manage.py makemigrations monthly_summary
+python3 manage.py makemigrations owners_point_manager
+
+python3 manage.py migrate
+
+python3 manage.py loaddata ./fixtures/*
