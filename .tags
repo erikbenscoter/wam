@@ -19,9 +19,6 @@ Housekeeping_Available	owners_point_manager/models.py	/^    Housekeeping_Availab
 INSTALLED_APPS	VacationScheduler/settings.py	/^INSTALLED_APPS = [$/;"	v
 LANGUAGE_CODE	VacationScheduler/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
 MIDDLEWARE_CLASSES	VacationScheduler/settings.py	/^MIDDLEWARE_CLASSES = [$/;"	v
-Migration	monthly_summary/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
-Migration	owners_point_manager/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
-Migration	reservation_manager/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
 MonthlyReport	monthly_summary/models.py	/^class MonthlyReport(models.Model):$/;"	c
 Owner	reservation_manager/models.py	/^class Owner( models.Model ):$/;"	c
 OwnersPointManagerConfig	owners_point_manager/apps.py	/^class OwnersPointManagerConfig(AppConfig):$/;"	c
@@ -1558,9 +1555,6 @@ date_of_reservation	reservation_manager/models.py	/^    date_of_reservation = mo
 date_paid	Desktop/monthly_summary.json	/^        "date_paid": null$/;"	f
 date_paid	fixtures/monthly_summary.json	/^        "date_paid": null$/;"	f
 date_paid	monthly_summary/models.py	/^    date_paid = models.DateTimeField( null=True, default=None, blank=True )$/;"	v	class:MonthlyReport
-dependencies	monthly_summary/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
-dependencies	owners_point_manager/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
-dependencies	reservation_manager/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
 email	Desktop/reservations_manager.json	/^        "email": "",$/;"	f
 email	Desktop/users.json	/^        "email": "",$/;"	f
 email	fixtures/reservations_manager.json	/^        "email": "",$/;"	f
@@ -1572,9 +1566,6 @@ fields	Desktop/users.json	/^    "fields": {$/;"	f
 fields	fixtures/monthly_summary.json	/^    "fields": {$/;"	f
 fields	fixtures/reservations_manager.json	/^    "fields": {$/;"	f
 fields	fixtures/users.json	/^    "fields": {$/;"	f
-fields	monthly_summary/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
-fields	owners_point_manager/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
-fields	reservation_manager/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
 first_name	Desktop/reservations_manager.json	/^        "first_name": ""$/;"	f
 first_name	Desktop/reservations_manager.json	/^        "first_name": "Mellena"$/;"	f
 first_name	Desktop/users.json	/^        "first_name": "",$/;"	f
@@ -1859,13 +1850,8 @@ model	fixtures/reservations_manager.json	/^    "model": "reservation_manager.own
 model	fixtures/reservations_manager.json	/^    "model": "reservation_manager.reservation",$/;"	f
 model	fixtures/users.json	/^    "model": "auth.user"$/;"	f
 month	monthly_summary/models.py	/^    def month(self):$/;"	m	class:MonthlyReport
-name	monthly_summary/migrations/0001_initial.py	/^            name='MonthlyReport',$/;"	v	class:Migration
 name	owners_point_manager/apps.py	/^    name = 'owners_point_manager'$/;"	v	class:OwnersPointManagerConfig
-name	owners_point_manager/migrations/0001_initial.py	/^            name='Owners_Points_Status',$/;"	v	class:Migration
 name	reservation_manager/apps.py	/^    name = 'reservation_manager'$/;"	v	class:ReservationManagerConfig
-name	reservation_manager/migrations/0001_initial.py	/^            name='ApplicationSettings',$/;"	v	class:Migration
-name	reservation_manager/migrations/0001_initial.py	/^            name='Owner',$/;"	v	class:Migration
-name	reservation_manager/migrations/0001_initial.py	/^            name='Reservation',$/;"	v	class:Migration
 number_of_nights	Desktop/reservations_manager.json	/^        "number_of_nights": 1,$/;"	f
 number_of_nights	Desktop/reservations_manager.json	/^        "number_of_nights": 2,$/;"	f
 number_of_nights	Desktop/reservations_manager.json	/^        "number_of_nights": 3,$/;"	f
@@ -1881,9 +1867,6 @@ number_of_nights	fixtures/reservations_manager.json	/^        "number_of_nights"
 number_of_nights	fixtures/reservations_manager.json	/^        "number_of_nights": 6,$/;"	f
 number_of_nights	fixtures/reservations_manager.json	/^        "number_of_nights": 7,$/;"	f
 number_of_nights	reservation_manager/models.py	/^    number_of_nights = models.IntegerField( blank=True, null=True )$/;"	v	class:Reservation
-operations	monthly_summary/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
-operations	owners_point_manager/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
-operations	reservation_manager/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
 owed_owner	reservation_manager/models.py	/^    def owed_owner(self):$/;"	m	class:Reservation
 owner	monthly_summary/models.py	/^    def owner(self):$/;"	m	class:MonthlyReport
 owner	reservation_manager/static/main/js/index.js	/^var owner;$/;"	v

@@ -1,0 +1,9 @@
+makemigrations
+migrate
+
+makemigrations reservation_manager
+makemigrations login
+makemigrations monthly_summary
+makemigrations owners_point_manager
+
+migrate
