@@ -1,3 +1,4 @@
+#!/bin/sh
 makemigrations
 migrate
 
@@ -7,3 +8,5 @@ makemigrations monthly_summary
 makemigrations owners_point_manager
 
 migrate
+
+py3 manage.py loaddata ./fixtures/*
