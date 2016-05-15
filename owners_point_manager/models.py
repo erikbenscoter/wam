@@ -8,6 +8,9 @@ TRUE_OR_FALSE = (
 )
 
 
+class OwnerPointsManagerApplicationSettings(models.Model):
+    last_updated = models.DateTimeField(blank=True, null=True)
+
 # Create your models here.
 class Owners_Points_Status(models.Model):
     fk_owner = models.ForeignKey(Owner)
