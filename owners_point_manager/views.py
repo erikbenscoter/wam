@@ -11,6 +11,9 @@ from selenium.webdriver.common.keys import Keys
 from datetime import datetime
 from .models import Owner
 from .models import Owners_Points_Status
+from .models import OwnerPointsManagerApplicationSettings
+from datetime import timedelta
+
 
 
 # Create your views here.
@@ -193,6 +196,11 @@ class View:
         pointsavail = []
         housekeepingavail = []
 
+        newest_date = OwnerPointsManagerApplicationSettings.objects.all()
+        newest_date = newest_date[0].last_updated
+        print (newest_date)
+        newest_date = newest_date + timedelta(hours=-4)
+        newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
 
         Owners_Points_Statuss = Owners_Points_Status.objects.order_by('Travel_From')
 
@@ -228,7 +236,8 @@ class View:
             "expiration": set(expiration),
             "pointsdesc": set(pointsdesc),
             "pointsavail": set(pointsavail),
-            "housekeepingavail": set(housekeepingavail)
+            "housekeepingavail": set(housekeepingavail),
+            "last_updated" : str(newest_date)
         }
 
         return render(request, "owner_points/index.html", context)
