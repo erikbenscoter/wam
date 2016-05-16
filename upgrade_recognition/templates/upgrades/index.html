@@ -35,7 +35,7 @@
 
   {%for dict in array_of_dictionaries_by_date%}
     {%for key,values in dict.items%}
-      <li class="accord">{{key}} , {{values.0.location}}<i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></li>
+      <li class="accord">{{key}} , {{values.0.location}}, num nights : {{values.0.number_of_nights}}<i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></li>
       <ul class="list-unstyled drob-list">
           <li class="data">
             <span class = "tabbed_table">username</span>
