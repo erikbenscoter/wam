@@ -24,6 +24,7 @@ from reservation_manager.views import View
 from monthly_summary.views import Report
 from monthly_summary.views import GenerateReport
 from login import views as login_views
+from upgrade_recognition import views as upgrade_recognition_views
 
 
 urlpatterns = [
@@ -37,6 +38,8 @@ urlpatterns = [
 	url(r'^$', View.get),
 
     url(r'^updatepoints/', update_owners_points_update.get),
-    url(r'^updatepointsview/', update_owners_points_view.get)
+    url(r'^updatepointsview/', update_owners_points_view.get),
+    url(r'^upgrades/', upgrade_recognition_views.main)
+
 
 ]

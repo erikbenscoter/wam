@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'reservation_manager',
     'monthly_summary',
     'login',
-    'owners_point_manager'
+    'owners_point_manager',
+    'upgrade_recognition'
 ]
 
 MIDDLEWARE_CLASSES = [

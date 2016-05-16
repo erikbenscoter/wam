@@ -1,0 +1,83 @@
+{%load staticfiles%}
+
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title> Possible upgrades </title>
+
+
+
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="{% static 'upgrades/css/style.css'%}">
+
+
+
+
+  </head>
+
+  <body>
+
+    <head>
+  <meta charset="utf-8">
+  <title>Accordian list</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</head>
+<body>
+  <h1>Possible Upgrades</h1>
+  <center>
+
+  <aside>
+    <ul id="father list-unstyled">
+
+  {%for dict in array_of_dictionaries_by_date%}
+    {%for key,values in dict.items%}
+      <li class="accord">{{key}} , {{values.0.location}}<i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></li>
+      <ul class="list-unstyled drob-list">
+          <li class="data">
+            <span class = "tabbed_table">username</span>
+            <span class = "tabbed_table">conf#</span>
+            <span class = "tabbed_table">date of rsrv </span>
+            <span class = "tabbed_table">#nights</span>
+            <span class = "tabbed_table">location of rsrv</span>
+            <span class = "tabbed_table">room size</span>
+            <span class = "tabbed_table">guest cert applied</span>
+          </li>
+          {%for value in values%}
+          <li class="data">
+            {%if value.canceled%}
+              <tr class = "canceled">
+            {%else%}
+              <tr>
+            {%endif%}
+        			<span class = "tabbed_table">{{value.fk_owner.username}}</span>
+        			<span class = "tabbed_table">{{value.confirmation_number}}</span>
+        			<span class = "tabbed_table">{{value.date_of_reservation}}</span>
+        			<span class = "tabbed_table">{{value.number_of_nights}}</span>
+        			<span class = "tabbed_table">{{value.location}}</span>
+        			<span class = "tabbed_table">{{value.unit_size}}</span>
+        			<span class = "tabbed_table">{{value.guest_certificate}}</span>
+        		</tr>
+          </li>
+        {%endfor%}
+      </ul>
+    {%endfor%}
+  {%endfor%}
+
+
+
+    </ul>
+  </aside>
+</center>
+</body>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+<script src="{% static 'upgrades/js/index.js'%}"></script>
+
+
+  </body>
+</html>

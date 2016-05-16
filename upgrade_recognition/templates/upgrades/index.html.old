@@ -1,0 +1,63 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Swanky little accordian list</title>
+
+
+
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="{% static 'upgrades/css/style.css'%}">
+
+
+
+
+  </head>
+
+  <body>
+
+    <div class='title'>
+  <h1>
+    Swanky little accordian list
+  </h1>
+  <h2>
+    Made in pure CSS, click on the items to see it in action!
+  </h2>
+</div>
+
+{%for dict in array_of_dictionaries_by_date%}
+  {%for key,value in dict.items%}
+    <div class='wrapper'>
+      <input id='pictures' type='checkbox'>
+      <label for='pictures'>
+        <p>{{key}} , {{value.0.location}}</p>
+        <div class='lil_arrow'></div>
+        <div class='content'>
+          <ul>
+            <li>
+              <a href='#'>Design briefs</a>
+            </li>
+            <li>
+              <a href='#'>Non Disclosure</a>
+            </li>
+            <li>
+              <a href='#'>Company Brochure</a>
+            </li>
+          </ul>
+        </div>
+        <span></span>
+      </label>
+    {%endfor%}
+{%endfor%}
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+    <script src="{% static 'summary/js/index.js'%}"></script>
+
+
+
+  </body>
+</html>
