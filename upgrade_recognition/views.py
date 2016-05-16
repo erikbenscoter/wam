@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from reservation_manager.models import Reservation
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def printLocationDictionary(dictionary):
@@ -73,6 +75,8 @@ def groupByLocation(request):
 
     return array_of_dictionaries_by_date
 
+
+@login_required(redirect_field_name="/admin", login_url="/login/")
 def main(request):
     array_of_dictionaries_by_date = groupByLocation(request)
 
