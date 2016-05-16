@@ -10,6 +10,23 @@ def printLocationDictionary(dictionary):
 
     print("\n")
 
+def groupByNights(reservation_array):
+    numNights = []
+
+    for reservation in reservation_array:
+        numNights.append(reservation.number_of_nights)
+
+    numNights = set(numNights)
+
+    grouped_reservations_by_nights = {}
+
+    for numNight in numNights:
+        grouped_reservations_by_nights[numNight] = []
+        for reservation in reservation_array:
+            if(reservation.number_of_nights == numNight):
+                grouped_reservations_by_nights[numNight].append(reservation)
+
+    return grouped_reservations_by_nights;
 def groupByDate(reservation_array):
     dates = []
 
@@ -26,9 +43,11 @@ def groupByDate(reservation_array):
             if(reservation.date_of_reservation == date):
                 grouped_reservations_by_date[date].append(reservation)
 
-    printLocationDictionary(grouped_reservations_by_date)
+    array_of_dict = []
+    for key in grouped_reservations_by_date:
+        array_of_dict.append(groupByNights(grouped_reservations_by_date[key]))
 
-    return grouped_reservations_by_date
+    return array_of_dict
 
 
 def groupByLocation(request):
@@ -50,7 +69,7 @@ def groupByLocation(request):
 
 
     for key in grouped_reservations_by_location:
-        array_of_dictionaries_by_date.append(groupByDate(grouped_reservations_by_location[key]))
+        array_of_dictionaries_by_date.extend(groupByDate(grouped_reservations_by_location[key]))
 
     return array_of_dictionaries_by_date
 
