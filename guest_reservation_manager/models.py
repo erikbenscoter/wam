@@ -30,7 +30,6 @@ class GuestReservation(models.Model):
     sleeps = models.IntegerField( blank=True, null=True )
 
 #                 data ruth will add along the way
-    reservation = models.ForeignKey(Reservation, blank=True, null=True, default = None)
     unit_size_notes = models.CharField ( blank=True, null=True, max_length=2000 )
     rent = models.FloatField( default=0.00 )
     ad = models.CharField( blank=True, null=True, max_length=2000)
@@ -55,6 +54,9 @@ class GuestReservation(models.Model):
 #      system will supply when original is cancelled
     prior_confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
 
+    @property
+    def reservations(self):
+        # TODO implement this after making the Reservation model changes
 
 
     def __str__(self):
