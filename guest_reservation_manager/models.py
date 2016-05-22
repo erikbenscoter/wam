@@ -14,7 +14,7 @@ TRUE_OR_FALSE = (
 #    last_updated = models.DateTimeField(blank=True, null=True)
 
 # Create your models here.
-class guest_reservation(models.Model):
+class GuestReservation(models.Model):
 #                   data from Reservations once ruth enters confimation_number
 #    fk_owner = models.ForeignKey(Owner)
     username = models.CharField(  max_length=2000)
