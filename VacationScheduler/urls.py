@@ -27,6 +27,7 @@ from login import views as login_views
 from upgrade_recognition import views as upgrade_recognition_views
 
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^update/', Update.get),
@@ -36,6 +37,8 @@ urlpatterns = [
     url(r'^generate_report/', GenerateReport.get),
 	url(r'^login/$', login_views.login_user),
 	url(r'^$', View.get),
+
+    url(r'^guest/makeWish/$','guest_reservation_manager.views.makeNewWish'),
 
     url(r'^updatepoints/', update_owners_points_update.get),
     url(r'^updatepointsview/', update_owners_points_view.get),

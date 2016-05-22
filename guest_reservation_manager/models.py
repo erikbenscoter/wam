@@ -1,4 +1,6 @@
 from django.db import models
+from django.forms import ModelForm
+from reservation_manager.models import *
 
 # Create your models here.
 
@@ -15,10 +17,10 @@ TRUE_OR_FALSE = (
 
 # Create your models here.
 class GuestReservation(models.Model):
+
 #                   data from Reservations once ruth enters confimation_number
-#    fk_owner = models.ForeignKey(Owner)
-    username = models.CharField(  max_length=2000)
-    id = models.AutoField(primary_key=True)
+    optional_username_to_aim_for = models.CharField( max_length=2000, blank=True, null=True, default = None)
+
 #                 data ruth enters initial
     guest = models.CharField( blank=True, null=True, max_length = 2000)
     date_rquested = models.DateField( blank=True, null=True )
@@ -26,9 +28,10 @@ class GuestReservation(models.Model):
     location_requested = models.CharField( blank=True, null=True, max_length=2000)
     unit_size = models.CharField( blank=True, null=True, max_length=2000)
     sleeps = models.IntegerField( blank=True, null=True )
+
 #                 data ruth will add along the way
+    reservation = models.ForeignKey(Reservation, blank=True, null=True, default = None)
     unit_size_notes = models.CharField ( blank=True, null=True, max_length=2000 )
-    confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
     rent = models.FloatField( default=0.00 )
     ad = models.CharField( blank=True, null=True, max_length=2000)
     notes = models.CharField( blank=True, null=True, max_length=2000)
@@ -47,8 +50,9 @@ class GuestReservation(models.Model):
     netPercent = models.FloatField( default=0.00 )
     Jen = models.CharField( blank=True, null=True, max_length=2000)
     Lauren = models.CharField( blank=True, null=True, max_length=2000)
+
+
 #      system will supply when original is cancelled
-    username = models.CharField( blank=True, null=True, max_length=2000)
     prior_confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
 
 
@@ -60,3 +64,9 @@ class GuestReservation(models.Model):
     def __unicode__(self):
         return str(self.username) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + str(
             self.confirmation_number) + " , " + str(self.location_requested) + " , " + str(self.id)
+
+
+class CreateGuestWishForm(ModelForm):
+    class Meta:
+        model = GuestReservation
+        exclude = []
