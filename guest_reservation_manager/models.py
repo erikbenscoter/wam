@@ -57,6 +57,7 @@ class GuestReservation(models.Model):
     @property
     def reservations(self):
         # TODO implement this after making the Reservation model changes
+        pass
 
 
     def __str__(self):
