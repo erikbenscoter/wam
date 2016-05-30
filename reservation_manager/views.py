@@ -18,7 +18,6 @@ from django.contrib.auth.decorators import login_required
 
 def handleOwner(owner):
 
-    Reservation.objects.filter(points_required_for_reservation=-1).delete()
     reservations = Reservation.objects.all()
 
     confirmation_numbers_points_dict = dict()
@@ -234,6 +233,8 @@ class Update:
 
             owners = Owner.objects.all()
             thread_array = []
+
+            Reservation.objects.filter(points_required_for_reservation=-1).delete()
 
             for owner in owners:
                 thread_array.append(Thread(target=handleOwner, args=(owner,)))

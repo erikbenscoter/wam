@@ -202,7 +202,7 @@ class View:
         newest_date = newest_date + timedelta(hours=-4)
         newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
 
-        Owners_Points_Statuss = Owners_Points_Status.objects.order_by('Travel_From')
+        Owners_Points_Statuss = Owners_Points_Status.objects.order_by('Travel_From','Expiration')
 
         for ownerspointsstatus in Owners_Points_Statuss:
             usernames.append(ownerspointsstatus.fk_owner.username)
