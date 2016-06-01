@@ -288,6 +288,9 @@ class View:
 
         updated_by = ReservationManagerApplicationSettings.objects.all().order_by('-last_updated')[0].last_updated_by
 
+        if(last_updated_by==None):
+            last_updated_by="WAM Admin"
+
 
 
         reservations = Reservation.objects.filter(date_of_reservation__gte=datetime.today())

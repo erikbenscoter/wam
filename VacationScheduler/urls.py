@@ -25,6 +25,7 @@ from monthly_summary.views import Report
 from monthly_summary.views import GenerateReport
 from login import views as login_views
 from upgrade_recognition import views as upgrade_recognition_views
+from VacationScheduler.custom_startup import setUpToRunHourly
 
 
 
@@ -46,3 +47,5 @@ urlpatterns = [
 
 
 ]
+
+setUpToRunHourly()
