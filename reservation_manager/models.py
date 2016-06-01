@@ -1,5 +1,6 @@
 from django.db import models
 from monthly_summary.models import MonthlyReport
+from django.contrib.auth.models import User
 import re
 
 TRUE_OR_FALSE = (
@@ -7,8 +8,6 @@ TRUE_OR_FALSE = (
     (0, "False")
 )
 
-class ReservationManagerApplicationSettings(models.Model):
-    last_updated = models.DateTimeField(blank=True, null=True)
 
 # Create your models here.
 class Owner( models.Model ):
@@ -25,6 +24,10 @@ class Owner( models.Model ):
 
     def __unicode__(self):
         return self.username
+
+class ReservationManagerApplicationSettings(models.Model):
+    last_updated = models.DateTimeField(blank=True, null=True)
+    last_updated_by = models.ForeignKey(User, blank=True, null=True)
 
 class Reservation( models.Model ):
     fk_owner = models.ForeignKey(Owner, on_delete=models.SET_NULL, null=True, blank=True)

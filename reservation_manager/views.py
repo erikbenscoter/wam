@@ -257,16 +257,13 @@ class Update:
                 for i in range(0,threads_to_run_at_once):
                     thread_array.pop(0)
 
-            r = Report()
-            r.updateSummaries()
+
+            Report.updateSummaries()
 
             Update.updateCanceled()
 
-            application_settings = ReservationManagerApplicationSettings.objects.all()
-            for application_setting in application_settings:
-                application_setting.delete()
+            application = ReservationManagerApplicationSettings(last_updated=datetime.now(), last_updated_by=request.user).save()
 
-            application = ReservationManagerApplicationSettings(last_updated=datetime.now()).save()
 
 
             Update.update_in_progress = False
@@ -283,13 +280,13 @@ class View:
         travelers = []
         upgrades = []
 
-        newest_date = ReservationManagerApplicationSettings.objects.all()
+        newest_date = ReservationManagerApplicationSettings.objects.all().order_by('-last_updated')
         newest_date = newest_date[0].last_updated
         print (newest_date)
         newest_date = newest_date + timedelta(hours=-4)
         newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
 
-
+        updated_by = ReservationManagerApplicationSettings.objects.all().order_by('-last_updated')[0].last_updated_by
 
 
 
@@ -319,7 +316,8 @@ class View:
             "unit_sizes" : set(unit_sizes),
             "travelers" : set(travelers),
             "upgrades" : set(upgrades),
-            "last_updated" : str(newest_date)
+            "last_updated" : str(newest_date),
+            "updated_by" : str(updated_by)
         }
 
         return render( request, "main/index.html", context)
