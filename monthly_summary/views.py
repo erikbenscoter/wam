@@ -48,10 +48,11 @@ class GenerateReport:
 
 class Report:
     def removeExcessSummaries():
-        all_reports = MonthlyReport.objects.filter(owner=None)
+        all_reports = MonthlyReport.objects.all()
 
         for report in all_reports:
-            report.delete()
+            if(report.owner is None):
+                report.delete()
 
 
     def updateSummaries():
