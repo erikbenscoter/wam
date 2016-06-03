@@ -127,7 +127,7 @@ class ScrapeWyndham:
         booked = self.reformatDate(booked)
         checkin = self.reformatDate(checkin)
 
-        if( conf not in p_confirmaion_numbers_pts_dict.keys() ):
+        if( conf not in p_confirmaion_numbers_pts_dict.keys() or conf == 'N/A'):
 
             if( conf != 'N/A' ):
                 time.sleep(1)
@@ -193,7 +193,7 @@ class Update:
 
     #static variables
     update_in_progress = False
-    
+
 
     def updateCanceled():
 
@@ -289,7 +289,7 @@ class View:
 
         updated_by = ReservationManagerApplicationSettings.objects.all().order_by('-last_updated')[0].last_updated_by
 
-        if(last_updated_by==None):
+        if(updated_by==None):
             last_updated_by="WAM Admin"
 
 
