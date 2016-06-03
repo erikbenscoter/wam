@@ -193,6 +193,7 @@ class Update:
 
     #static variables
     update_in_progress = False
+    
 
     def updateCanceled():
 
