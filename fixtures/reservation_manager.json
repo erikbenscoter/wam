@@ -136,6 +136,14 @@
     }
 },
 {
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 78,
+    "fields": {
+        "last_updated": "2016-06-04T11:14:57.188Z",
+        "last_updated_by": 3
+    }
+},
+{
     "model": "reservation_manager.reservation",
     "pk": 356,
     "fields": {
@@ -2024,7 +2032,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -2090,7 +2098,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10600,7 +10608,7 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-05-04",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
@@ -10622,7 +10630,7 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-05-04",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
@@ -14146,7 +14154,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15000,7 +15008,7 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-02",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
@@ -16197,9 +16205,9 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 1992,
+    "pk": 2025,
     "fields": {
-        "fk_owner": 1,
+        "fk_owner": 6,
         "fk_monthly_report": null,
         "location": "Wyndham Inn on Long Wharf",
         "date_of_reservation": "2016-06-12",
@@ -16209,9 +16217,9 @@
         "points_required_for_reservation": -1,
         "is_buyer_lined_up": null,
         "amount_paid": null,
-        "date_booked": "2016-06-03",
+        "date_booked": "2016-06-04",
         "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: SUNNY VACATIONS LLC",
+        "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
         "canceled": false
@@ -16219,9 +16227,9 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 1993,
+    "pk": 2026,
     "fields": {
-        "fk_owner": 1,
+        "fk_owner": 6,
         "fk_monthly_report": null,
         "location": "Wyndham Long Wharf",
         "date_of_reservation": "2016-06-12",
@@ -16231,9 +16239,9 @@
         "points_required_for_reservation": -1,
         "is_buyer_lined_up": null,
         "amount_paid": null,
-        "date_booked": "2016-06-03",
+        "date_booked": "2016-06-04",
         "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: SUNNY VACATIONS LLC",
+        "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
         "canceled": false
@@ -16241,9 +16249,9 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 1994,
+    "pk": 2027,
     "fields": {
-        "fk_owner": 1,
+        "fk_owner": 6,
         "fk_monthly_report": null,
         "location": "Wyndham Long Wharf",
         "date_of_reservation": "2016-06-13",
@@ -16253,9 +16261,9 @@
         "points_required_for_reservation": -1,
         "is_buyer_lined_up": null,
         "amount_paid": null,
-        "date_booked": "2016-06-03",
+        "date_booked": "2016-06-04",
         "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: SUNNY VACATIONS LLC",
+        "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
         "canceled": false
@@ -16263,9 +16271,9 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 1995,
+    "pk": 2028,
     "fields": {
-        "fk_owner": 1,
+        "fk_owner": 6,
         "fk_monthly_report": null,
         "location": "Wyndham Long Wharf",
         "date_of_reservation": "2016-06-14",
@@ -16275,9 +16283,9 @@
         "points_required_for_reservation": -1,
         "is_buyer_lined_up": null,
         "amount_paid": null,
-        "date_booked": "2016-06-03",
+        "date_booked": "2016-06-04",
         "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: SUNNY VACATIONS LLC",
+        "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
         "canceled": false
@@ -16285,7 +16293,73 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 1996,
+    "pk": 2029,
+    "fields": {
+        "fk_owner": 6,
+        "fk_monthly_report": null,
+        "location": "Wyndham Inn on the Harbor",
+        "date_of_reservation": "2016-06-18",
+        "number_of_nights": 7,
+        "unit_size": "1 Bedroom Plus",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Robert Fondren",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2030,
+    "fields": {
+        "fk_owner": 3,
+        "fk_monthly_report": null,
+        "location": "Wyndham Nashville",
+        "date_of_reservation": "2016-06-23",
+        "number_of_nights": 2,
+        "unit_size": "1 Bedroom Suite",
+        "confirmation_number": "934211",
+        "points_required_for_reservation": 14250,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-03",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Carolyn Benscoter",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2031,
+    "fields": {
+        "fk_owner": 3,
+        "fk_monthly_report": null,
+        "location": "Wyndham Nashville",
+        "date_of_reservation": "2016-06-25",
+        "number_of_nights": 2,
+        "unit_size": "1 Bedroom Suite",
+        "confirmation_number": "934212",
+        "points_required_for_reservation": 14250,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-03",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Carolyn Benscoter",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2032,
     "fields": {
         "fk_owner": 6,
         "fk_monthly_report": null,
@@ -16293,8 +16367,8 @@
         "date_of_reservation": "2016-07-10",
         "number_of_nights": 5,
         "unit_size": "1 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "935562",
+        "points_required_for_reservation": 50000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16307,7 +16381,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 1997,
+    "pk": 2033,
     "fields": {
         "fk_owner": 6,
         "fk_monthly_report": null,
@@ -16315,8 +16389,8 @@
         "date_of_reservation": "2016-07-31",
         "number_of_nights": 2,
         "unit_size": "3 Bedroom Lockoff",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "935561",
+        "points_required_for_reservation": 18000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16329,7 +16403,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 1998,
+    "pk": 2034,
     "fields": {
         "fk_owner": 6,
         "fk_monthly_report": null,
@@ -16337,8 +16411,8 @@
         "date_of_reservation": "2016-08-02",
         "number_of_nights": 3,
         "unit_size": "3 Bedroom Lockoff",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "935560",
+        "points_required_for_reservation": 27000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16351,7 +16425,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 1999,
+    "pk": 2035,
     "fields": {
         "fk_owner": 9,
         "fk_monthly_report": null,
@@ -16363,7 +16437,7 @@
         "points_required_for_reservation": -1,
         "is_buyer_lined_up": null,
         "amount_paid": null,
-        "date_booked": "2016-06-03",
+        "date_booked": "2016-06-04",
         "upgrade_status": "Reservation Upgraded",
         "guest_certificate": "Owner: Mellena Burke",
         "touched": null,
@@ -16373,173 +16447,19 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2000,
-    "fields": {
-        "fk_owner": 9,
-        "fk_monthly_report": null,
-        "location": "Wyndham Old Town Alexandria",
-        "date_of_reservation": "2016-06-12",
-        "number_of_nights": 2,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Mellena Burke",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2001,
-    "fields": {
-        "fk_owner": 9,
-        "fk_monthly_report": null,
-        "location": "Wyndham Old Town Alexandria",
-        "date_of_reservation": "2016-06-14",
-        "number_of_nights": 3,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Mellena Burke",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2002,
-    "fields": {
-        "fk_owner": 9,
-        "fk_monthly_report": null,
-        "location": "Wyndham Kingsgate",
-        "date_of_reservation": "2016-06-17",
-        "number_of_nights": 7,
-        "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Reservation Upgraded",
-        "guest_certificate": "Owner: Mellena Burke",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2003,
-    "fields": {
-        "fk_owner": 10,
-        "fk_monthly_report": null,
-        "location": "Wyndham Old Town Alexandria",
-        "date_of_reservation": "2016-06-17",
-        "number_of_nights": 7,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Stanley Hoffman",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2004,
-    "fields": {
-        "fk_owner": 10,
-        "fk_monthly_report": null,
-        "location": "Wyndham Skyline Tower",
-        "date_of_reservation": "2016-06-19",
-        "number_of_nights": 5,
-        "unit_size": "1 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Reservation Upgraded",
-        "guest_certificate": "Owner: Stanley Hoffman",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2005,
-    "fields": {
-        "fk_owner": 10,
-        "fk_monthly_report": null,
-        "location": "Wyndham Nashville",
-        "date_of_reservation": "2016-06-23",
-        "number_of_nights": 2,
-        "unit_size": "1 Bedroom Suite",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Stanley Hoffman",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2006,
-    "fields": {
-        "fk_owner": 10,
-        "fk_monthly_report": null,
-        "location": "Wyndham Kingsgate",
-        "date_of_reservation": "2016-06-23",
-        "number_of_nights": 2,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Stanley Hoffman",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2007,
+    "pk": 2036,
     "fields": {
         "fk_owner": 9,
         "fk_monthly_report": null,
         "location": "Wyndham Kingsgate",
         "date_of_reservation": "2016-06-18",
-        "number_of_nights": 6,
+        "number_of_nights": 7,
         "unit_size": "2 Bedroom Deluxe",
         "confirmation_number": "N/A",
         "points_required_for_reservation": -1,
         "is_buyer_lined_up": null,
         "amount_paid": null,
-        "date_booked": "2016-06-03",
+        "date_booked": "2016-06-04",
         "upgrade_status": "Reservation Upgraded",
         "guest_certificate": "Owner: Mellena Burke",
         "touched": null,
@@ -16549,7 +16469,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2008,
+    "pk": 2037,
     "fields": {
         "fk_owner": 9,
         "fk_monthly_report": null,
@@ -16561,7 +16481,7 @@
         "points_required_for_reservation": -1,
         "is_buyer_lined_up": null,
         "amount_paid": null,
-        "date_booked": "2016-06-03",
+        "date_booked": "2016-06-04",
         "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Mellena Burke",
         "touched": null,
@@ -16571,73 +16491,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2009,
-    "fields": {
-        "fk_owner": 10,
-        "fk_monthly_report": null,
-        "location": "Wyndham Nashville",
-        "date_of_reservation": "2016-06-25",
-        "number_of_nights": 2,
-        "unit_size": "1 Bedroom Suite",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Stanley Hoffman",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2010,
-    "fields": {
-        "fk_owner": 10,
-        "fk_monthly_report": null,
-        "location": "Wyndham Kingsgate",
-        "date_of_reservation": "2016-06-25",
-        "number_of_nights": 1,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Stanley Hoffman",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2011,
-    "fields": {
-        "fk_owner": 10,
-        "fk_monthly_report": null,
-        "location": "Wyndham Kingsgate",
-        "date_of_reservation": "2016-06-26",
-        "number_of_nights": 5,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Stanley Hoffman",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2012,
+    "pk": 2038,
     "fields": {
         "fk_owner": 9,
         "fk_monthly_report": null,
@@ -16649,6 +16503,94 @@
         "points_required_for_reservation": -1,
         "is_buyer_lined_up": null,
         "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2039,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Skyline Tower",
+        "date_of_reservation": "2016-06-19",
+        "number_of_nights": 5,
+        "unit_size": "1 Bedroom Deluxe",
+        "confirmation_number": "941180",
+        "points_required_for_reservation": 45000,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-03",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2040,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Wyndham Old Town Alexandria",
+        "date_of_reservation": "2016-06-19",
+        "number_of_nights": 1,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2041,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Wyndham Old Town Alexandria",
+        "date_of_reservation": "2016-06-20",
+        "number_of_nights": 4,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2042,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-06-23",
+        "number_of_nights": 2,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "934431",
+        "points_required_for_reservation": 14250,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
         "date_booked": "2016-06-03",
         "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Mellena Burke",
@@ -16659,7 +16601,29 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2013,
+    "pk": 2043,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-06-26",
+        "number_of_nights": 5,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "941170",
+        "points_required_for_reservation": 22500,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-03",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2044,
     "fields": {
         "fk_owner": 9,
         "fk_monthly_report": null,
@@ -16667,8 +16631,8 @@
         "date_of_reservation": "2016-06-23",
         "number_of_nights": 2,
         "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "934432",
+        "points_required_for_reservation": 14250,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16681,7 +16645,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2014,
+    "pk": 2045,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -16689,8 +16653,8 @@
         "date_of_reservation": "2016-07-01",
         "number_of_nights": 7,
         "unit_size": "1 Bedroom Suite",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941167",
+        "points_required_for_reservation": 38500,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16703,7 +16667,29 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2015,
+    "pk": 2046,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-06-25",
+        "number_of_nights": 1,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "934433",
+        "points_required_for_reservation": 9750,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-03",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2047,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -16711,8 +16697,8 @@
         "date_of_reservation": "2016-07-03",
         "number_of_nights": 7,
         "unit_size": "1 Bedroom Suite",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941168",
+        "points_required_for_reservation": 38500,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16725,29 +16711,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2016,
-    "fields": {
-        "fk_owner": 10,
-        "fk_monthly_report": null,
-        "location": "Wyndham Kingsgate",
-        "date_of_reservation": "2016-07-13",
-        "number_of_nights": 1,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-03",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Stanley Hoffman",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2017,
+    "pk": 2048,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -16755,8 +16719,8 @@
         "date_of_reservation": "2016-07-13",
         "number_of_nights": 1,
         "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941172",
+        "points_required_for_reservation": 4500,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16769,16 +16733,16 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2018,
+    "pk": 2049,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
         "location": "Wyndham Kingsgate",
-        "date_of_reservation": "2016-07-14",
+        "date_of_reservation": "2016-07-13",
         "number_of_nights": 1,
         "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941174",
+        "points_required_for_reservation": 4500,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16791,7 +16755,29 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2019,
+    "pk": 2050,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-07-14",
+        "number_of_nights": 1,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "941171",
+        "points_required_for_reservation": 4500,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-03",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2051,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -16799,8 +16785,8 @@
         "date_of_reservation": "2016-07-14",
         "number_of_nights": 1,
         "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941173",
+        "points_required_for_reservation": 4500,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16813,7 +16799,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2020,
+    "pk": 2052,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -16821,8 +16807,8 @@
         "date_of_reservation": "2016-07-15",
         "number_of_nights": 7,
         "unit_size": "3 Bedroom Deluxe with Balcony",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941181",
+        "points_required_for_reservation": 162500,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16835,7 +16821,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2021,
+    "pk": 2053,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -16843,8 +16829,8 @@
         "date_of_reservation": "2016-07-20",
         "number_of_nights": 4,
         "unit_size": "1 Bedroom Suite",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941175",
+        "points_required_for_reservation": 28500,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16857,7 +16843,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2022,
+    "pk": 2054,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -16865,8 +16851,8 @@
         "date_of_reservation": "2016-08-02",
         "number_of_nights": 3,
         "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941176",
+        "points_required_for_reservation": 13500,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16879,7 +16865,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2023,
+    "pk": 2055,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -16887,8 +16873,8 @@
         "date_of_reservation": "2016-08-08",
         "number_of_nights": 3,
         "unit_size": "1 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941177",
+        "points_required_for_reservation": 36000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
@@ -16901,7 +16887,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2024,
+    "pk": 2056,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -16909,8 +16895,8 @@
         "date_of_reservation": "2016-08-15",
         "number_of_nights": 4,
         "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "941178",
+        "points_required_for_reservation": 72000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
