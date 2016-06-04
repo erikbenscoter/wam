@@ -97,5 +97,14 @@
         "amount_paid": 0.0,
         "date_paid": null
     }
+},
+{
+    "model": "monthly_summary.monthlyreport",
+    "pk": 143,
+    "fields": {
+        "check_number": null,
+        "amount_paid": 0.0,
+        "date_paid": null
+    }
 }
 ]
