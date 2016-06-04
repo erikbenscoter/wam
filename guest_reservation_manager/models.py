@@ -50,6 +50,11 @@ class GuestReservation(models.Model):
     Jen = models.CharField( blank=True, null=True, max_length=2000)
     Lauren = models.CharField( blank=True, null=True, max_length=2000)
 
+#  data that can come from reservations
+    confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
+    date_booked = models.DateField( blank=True, null=True )
+    location = models.CharField( blank=True, null=True, max_length=2000)
+    points_required_for_reservation = models.IntegerField( blank=True, null=True )
 
 #      system will supply when original is cancelled
     prior_confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
@@ -61,12 +66,10 @@ class GuestReservation(models.Model):
 
 
     def __str__(self):
-        return str(self.username) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + str(
-            self.confirmation_number) + " , " + str(self.location_requested) + " , " + str(self.id)
+        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
 
     def __unicode__(self):
-        return str(self.username) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + str(
-            self.confirmation_number) + " , " + str(self.location_requested) + " , " + str(self.id)
+        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
 
 
 class CreateGuestWishForm(ModelForm):

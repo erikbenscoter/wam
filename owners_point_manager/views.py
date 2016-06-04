@@ -114,7 +114,7 @@ class ScrapeWyndham:
             points = self.parsePointStatusRow(columns_text[beg_slice_index:end_slice_index],
                                               p_owner)
             ownerspointsstatus.append(points)
-            print("ownerspointsstatus at 123 ", ownerspointsstatus)
+#            print("ownerspointsstatus at 123 ", ownerspointsstatus)
             beg_slice_index += 5
             end_slice_index += 5
 
@@ -202,7 +202,7 @@ class View:
         newest_date = newest_date + timedelta(hours=-4)
         newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
 
-        Owners_Points_Statuss = Owners_Points_Status.objects.order_by('Travel_From')
+        Owners_Points_Statuss = Owners_Points_Status.objects.order_by('Travel_From','Expiration')
 
         for ownerspointsstatus in Owners_Points_Statuss:
             usernames.append(ownerspointsstatus.fk_owner.username)
@@ -210,8 +210,8 @@ class View:
 
         for ownerspointsstatus in Owners_Points_Statuss:
             travelfrom.append(ownerspointsstatus.Travel_From)
-            print("travel from = ", travelfrom)
-        print("travel from at 297", travelfrom)
+#            print("travel from = ", travelfrom)
+#        print("travel from at 297", travelfrom)
 
         for ownerspointsstatus in Owners_Points_Statuss:
             expiration.append(ownerspointsstatus.Expiration)

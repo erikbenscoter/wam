@@ -15,3 +15,197 @@ def makeNewWish(request):
         "form" : wish_form
     }
     return render(request, 'new_wish/index.html', context)
+class View:
+
+#    @login_required(redirect_field_name="/admin", login_url="/login/")
+    def get(request):
+        guestreservation = []
+
+        ad = []
+        addName = []
+        balanceDue_paid = []
+        ccFee = []
+        confirmation_number = []
+        date_booked = []
+        date_rquested = []
+        downDue_paid = []
+        guest = []
+        guestCertCost = []
+        guestCertYr_number = []
+        guestSent = []
+        Jen = []
+        Lauren = []
+        location = []
+        location_requested = []
+        netDollars = []
+        netPercent = []
+        nights_requested = []
+        notes = []
+        otherFees = []
+        points_required_for_reservation = []
+        pointsCost = []
+        RA_Sent_Rec = []
+        rent = []
+        sleeps = []
+        totalCost = []
+        unit_size = []
+        unit_size_notes = []
+
+
+#        newest_date = ReservationManagerApplicationSettings.objects.all()
+#        newest_date = newest_date[0].last_updated
+#        print (newest_date)
+#        newest_date = newest_date + timedelta(hours=-4)
+#        newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
+
+
+#        reservations = Reservation.objects.filter(date_of_reservation__gte=datetime.today())
+
+        GuestReservations = GuestReservation.objects.order_by("date_rquested")
+
+        for guestreservation in GuestReservations:
+            ad.append(guestreservation.ad)
+
+        for guestreservation in GuestReservations:
+            addName.append(guestreservation.addName)
+
+        for guestreservation in GuestReservations:
+            balanceDue_paid.append(guestreservation.balanceDue_paid)
+
+        for guestreservation in GuestReservations:
+            ccFee.append(guestreservation.ccFee)
+
+        for guestreservation in GuestReservations:
+            confirmation_number.append(guestreservation.confirmation_number)
+
+        for guestreservation in GuestReservations:
+            date_booked.append(guestreservation.date_booked)
+
+        for guestreservation in GuestReservations:
+            date_rquested.append(guestreservation.date_rquested)
+
+        for guestreservation in GuestReservations:
+            downDue_paid.append(guestreservation.downDue_paid)
+
+        for guestreservation in GuestReservations:
+            guest.append(guestreservation.guest)
+
+        for guestreservation in GuestReservations:
+            guestCertCost.append(guestreservation.guestCertCost)
+
+        for guestreservation in GuestReservations:
+            guestCertYr_number.append(guestreservation.guestCertYr_number)
+
+        for guestreservation in GuestReservations:
+            guestSent.append(guestreservation.guestSent)
+
+        for guestreservation in GuestReservations:
+            Jen.append(guestreservation.Jen)
+
+        for guestreservation in GuestReservations:
+            Lauren.append(guestreservation.Lauren)
+
+        for guestreservation in GuestReservations:
+            location.append(guestreservation.location)
+
+        for guestreservation in GuestReservations:
+            location_requested.append(guestreservation.location_requested)
+
+        for guestreservation in GuestReservations:
+            netDollars.append(guestreservation.netDollars)
+
+        for guestreservation in GuestReservations:
+            netPercent.append(guestreservation.netPercent)
+
+        for guestreservation in GuestReservations:
+            nights_requested.append(guestreservation.nights_requested)
+
+        for guestreservation in GuestReservations:
+            notes.append(guestreservation.notes)
+
+        for guestreservation in GuestReservations:
+            otherFees.append(guestreservation.otherFees)
+
+        for guestreservation in GuestReservations:
+            points_required_for_reservation.append(guestreservation.points_required_for_reservation)
+
+        for guestreservation in GuestReservations:
+            pointsCost.append(guestreservation.pointsCost)
+
+        for guestreservation in GuestReservations:
+            RA_Sent_Rec.append(guestreservation.RA_Sent_Rec)
+
+        for guestreservation in GuestReservations:
+            rent.append(guestreservation.rent)
+
+        for guestreservation in GuestReservations:
+            sleeps.append(guestreservation.sleeps)
+
+        for guestreservation in GuestReservations:
+            totalCost.append(guestreservation.totalCost)
+
+        for guestreservation in GuestReservations:
+            unit_size.append(guestreservation.unit_size)
+
+        for guestreservation in GuestReservations:
+            unit_size_notes.append(guestreservation.unit_size_notes)
+
+
+#        for reservation in reservations:
+#            usernames.append(reservation.fk_owner.username)
+
+#        for reservation in reservations:
+#            resorts.append(reservation.location)
+
+#        for reservation in reservations:
+#            unit_sizes.append(reservation.unit_size)
+
+#        for reservation in reservations:
+#            travelers.append(reservation.guest_certificate)
+
+#        for reservation in reservations:
+#            upgrades.append(reservation.upgrade_status)
+
+
+
+        context = {
+#            "reservations" : reservations.order_by('date_of_reservation'),
+            "guestreservations" : GuestReservations,
+
+            "ad" : set(ad),
+            "addName" : set(addName),
+            "balanceDue_paid" : set(balanceDue_paid),
+            "ccFee" : set(ccFee),
+            "confirmation_number" : set(confirmation_number),
+            "date_booked" : set(date_booked),
+            "date_rquested" : set(date_rquested),
+            "downDue_paid" : set(downDue_paid),
+            "guests" : set(guest),
+            "guestCertCost" : set(guestCertCost),
+            "guestCertYr_number" : set(guestCertYr_number),
+            "guestSent" : set(guestSent),
+            "Jen" : set(Jen),
+            "Lauren" : set(Lauren),
+            "location" : set(location),
+            "location_requesteds" : set(location_requested),
+            "netDollars" : set(netDollars),
+            "netPercent" : set(netPercent),
+            "nights_requested" : set(nights_requested),
+            "notes" : set(notes),
+            "otherFees" : set(otherFees),
+            "points_required_for_reservation" : set(points_required_for_reservation),
+            "pointsCost" : set(pointsCost),
+            "RA_Sent_Rec" : set(RA_Sent_Rec),
+            "rent" : set(rent),
+            "rent" : set(rent),
+            "totalCost" : set(totalCost),
+            "unit_size" : set(unit_size),
+            "unit_size_notes" : set(unit_size_notes)
+
+
+
+
+
+        }
+
+        return render( request, "guest_reservations/index.html", context)
