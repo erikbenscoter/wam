@@ -47,7 +47,7 @@ class GenerateReport:
         return render(request,"generate_report/index.html", context)
 
 class Report:
-    def removeExcessSummaries(self):
+    def removeExcessSummaries():
         all_reports = MonthlyReport.objects.all()
 
         for report in all_reports:
@@ -55,7 +55,7 @@ class Report:
                 report.delete()
 
 
-    def updateSummaries(self):
+    def updateSummaries():
 
         all_reservations = Reservation.objects.filter(fk_monthly_report__isnull=True)
 
@@ -87,7 +87,7 @@ class Report:
                     reservation.fk_monthly_report = matching_summary
                     reservation.save()
 
-        self.removeExcessSummaries()
+        Report.removeExcessSummaries()
 
     @login_required(redirect_field_name="/admin", login_url="/login/")
     def get(request, p_owner_username, p_year, p_month):
