@@ -67,13 +67,13 @@ class View:
             ad.append(guestreservation.ad)
 
         for guestreservation in GuestReservations:
-            addName.append(guestreservation.addName)
+            addName.append(guestreservation.add_name)
 
         for guestreservation in GuestReservations:
-            balanceDue_paid.append(guestreservation.balanceDue_paid)
+            balanceDue_paid.append(guestreservation.balance_due_paid)
 
         for guestreservation in GuestReservations:
-            ccFee.append(guestreservation.ccFee)
+            ccFee.append(guestreservation.cc_fee)
 
         for guestreservation in GuestReservations:
             confirmation_number.append(guestreservation.confirmation_number)
@@ -85,25 +85,25 @@ class View:
             date_rquested.append(guestreservation.date_rquested)
 
         for guestreservation in GuestReservations:
-            downDue_paid.append(guestreservation.downDue_paid)
+            downDue_paid.append(guestreservation.down_due_paid)
 
         for guestreservation in GuestReservations:
             guest.append(guestreservation.guest)
 
         for guestreservation in GuestReservations:
-            guestCertCost.append(guestreservation.guestCertCost)
+            guestCertCost.append(guestreservation.guest_cert_cost)
 
         for guestreservation in GuestReservations:
-            guestCertYr_number.append(guestreservation.guestCertYr_number)
+            guestCertYr_number.append(guestreservation.guest_cert_yr_number)
 
         for guestreservation in GuestReservations:
-            guestSent.append(guestreservation.guestSent)
+            guestSent.append(guestreservation.guest_sent)
 
         for guestreservation in GuestReservations:
-            Jen.append(guestreservation.Jen)
+            Jen.append(guestreservation.jen)
 
         for guestreservation in GuestReservations:
-            Lauren.append(guestreservation.Lauren)
+            Lauren.append(guestreservation.lauren)
 
         for guestreservation in GuestReservations:
             location.append(guestreservation.location)
@@ -112,10 +112,10 @@ class View:
             location_requested.append(guestreservation.location_requested)
 
         for guestreservation in GuestReservations:
-            netDollars.append(guestreservation.netDollars)
+            netDollars.append(guestreservation.net_dollars)
 
         for guestreservation in GuestReservations:
-            netPercent.append(guestreservation.netPercent)
+            netPercent.append(guestreservation.net_percent)
 
         for guestreservation in GuestReservations:
             nights_requested.append(guestreservation.nights_requested)
@@ -124,16 +124,16 @@ class View:
             notes.append(guestreservation.notes)
 
         for guestreservation in GuestReservations:
-            otherFees.append(guestreservation.otherFees)
+            otherFees.append(guestreservation.other_fees)
 
         for guestreservation in GuestReservations:
             points_required_for_reservation.append(guestreservation.points_required_for_reservation)
 
         for guestreservation in GuestReservations:
-            pointsCost.append(guestreservation.pointsCost)
+            pointsCost.append(guestreservation.points_cost)
 
         for guestreservation in GuestReservations:
-            RA_Sent_Rec.append(guestreservation.RA_Sent_Rec)
+            RA_Sent_Rec.append(guestreservation.ra_sent_rec)
 
         for guestreservation in GuestReservations:
             rent.append(guestreservation.rent)
@@ -142,7 +142,7 @@ class View:
             sleeps.append(guestreservation.sleeps)
 
         for guestreservation in GuestReservations:
-            totalCost.append(guestreservation.totalCost)
+            totalCost.append(guestreservation.total_cost)
 
         for guestreservation in GuestReservations:
             unit_size.append(guestreservation.unit_size)

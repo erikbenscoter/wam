@@ -19,6 +19,7 @@ TRUE_OR_FALSE = (
 class GuestReservation(models.Model):
 
 #                   data from Reservations once ruth enters confimation_number
+    id = models.IntegerField( blank=False, null=False,primary_key=True )
     optional_username_to_aim_for = models.CharField( max_length=2000, blank=True, null=True, default = None)
 
 #                 data ruth enters initial
@@ -36,7 +37,7 @@ class GuestReservation(models.Model):
     notes = models.CharField( blank=True, null=True, max_length=2000)
     add_name = models.CharField( blank=True, null=True, max_length=2000)
     guest_sent = models.DateField( blank=True, null=True )
-    RA_sent_rec =  models.CharField( blank=True, null=True, max_length=2000)
+    ra_sent_rec =  models.CharField( blank=True, null=True, max_length=2000)
     down_due_paid = models.CharField( blank=True, null=True, max_length=2000)
     balance_due_paid = models.CharField( blank=True, null=True, max_length=2000)
     guest_cert_yr_number = models.CharField( blank=True, null=True, max_length=2000)

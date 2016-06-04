@@ -74,12 +74,7 @@
 <table class="container">
 	<thead>
 		<tr>
-<!--			<th><h1>Owner</h1></th>
-			<th><h1>Travel From</h1></th>
-			<th><h1>Expiration</h1></th>
-			<th><h1>Points Description</h1></th>
-			<th><h1>Points Available</h1></th>
--->
+	    <th><h1>ID</h1></th>
 			<th><h1>Res Date</h1></th>
       <th><h1>Date request</h1></th>
       <th><h1>Nts</h1></th>
@@ -121,6 +116,7 @@
   			<td class = "pointsavail">{{ownerspointsstatus.Points_Available}}</td>
   			<td class = "housekeepingavail">{{ownerspointsstatus.Housekeeping_Available}}</td>
       -->
+        <td class = "id">{{guestreservation.id}}</td>
         <td class = "date_booked">{{guestreservation.date_rquested}}</td>
         <td class = "date_rquested">{{guestreservation.date_rquested}}</td>
         <td class = "nights_requested">{{guestreservation.nights_requested}}</td>
@@ -134,21 +130,21 @@
         <td class = "ad">{{guestreservation.ad}}</td>
         <td class = "traveler">{{guestreservation.guest}}</td>
         <td class = "notes">{{guestreservation.notes}}</td>
-        <td class = "addName">{{guestreservation.addName}}</td>
-        <td class = "guestSent">{{guestreservation.guestSent}}</td>
-        <td class = "RA_Sent_Rec">{{guestreservation.RA_Sent_Rec}}</td>
-        <td class = "downDue_paid">{{guestreservation.downDue_paid}}</td>
-        <td class = "balanceDue_paid">{{guestreservation.balanceDue_paid}}</td>
-        <td class = "pointsCost">{{guestreservation.pointsCost}}</td>
-        <td class = "guestCertYr_number">{{guestreservation.guestCertYr_number}}</td>
-        <td class = "guestCertCost">{{guestreservation.guestCertCost}}</td>
-        <td class = "ccFee">{{guestreservation.ccFee}}</td>
-        <td class = "otherFees">{{guestreservation.otherFees}}</td>
-        <td class = "totalCost">{{guestreservation.totalCost}}</td>
-        <td class = "netDollars">{{guestreservation.netDollars}}</td>
-        <td class = "netPercent">{{guestreservation.netPercent}}</td>
-        <td class = "Jen">{{guestreservation.Jen}}</td>
-        <td class = "Lauren">{{guestreservation.Lauren}}</td>
+        <td class = "addName">{{guestreservation.add_name}}</td>
+        <td class = "guestSent">{{guestreservation.guest_sent}}</td>
+        <td class = "RA_Sent_Rec">{{guestreservation.ra_sent_rec}}</td>
+        <td class = "downDue_paid">{{guestreservation.down_due_paid}}</td>
+        <td class = "balanceDue_paid">{{guestreservation.balance_due_paid}}</td>
+        <td class = "pointsCost">{{guestreservation.points_cost}}</td>
+        <td class = "guestCertYr_number">{{guestreservation.guest_cert_yr_number}}</td>
+        <td class = "guestCertCost">{{guestreservation.guest_cert_cost}}</td>
+        <td class = "ccFee">{{guestreservation.cc_fee}}</td>
+        <td class = "otherFees">{{guestreservation.other_fees}}</td>
+        <td class = "totalCost">{{guestreservation.total_cost}}</td>
+        <td class = "netDollars">{{guestreservation.net_dollars}}</td>
+        <td class = "netPercent">{{guestreservation.net_percent}}</td>
+        <td class = "Jen">{{guestreservation.jen}}</td>
+        <td class = "Lauren">{{guestreservation.lauren}}</td>
 
     {%endfor%}
 	</tbody>
