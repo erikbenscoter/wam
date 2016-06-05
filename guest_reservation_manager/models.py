@@ -19,7 +19,7 @@ TRUE_OR_FALSE = (
 class GuestReservation(models.Model):
 
 #                   data from Reservations once ruth enters confimation_number
-    id = models.IntegerField( blank=False, null=False,primary_key=True )
+#    id = models.IntegerField( blank=False, null=False,primary_key=True )
     optional_username_to_aim_for = models.CharField( max_length=2000, blank=True, null=True, default = None)
 
 #                 data ruth enters initial
