@@ -3,6 +3,7 @@ var resort;
 var unit_size;
 var traveler;
 var upgrades;
+var booked;
 var show_cancelations;
 var in_days;
 
@@ -55,20 +56,6 @@ function getCheckboxes(){
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -79,6 +66,7 @@ function getAllFilterValues() {
   unit_size = $("#unit_size_filter").val();
   traveler = $("#traveler_filter").val();
   upgrades = $("#upgrades_filter").val();
+  booked = $("#booked_filter").val();
   in_days = $("#days_filter").val();
   show_cancelations = $("#cancelations_filter").val();
 
@@ -135,6 +123,12 @@ function showAllRowsThatMatchFilter() {
     if(upgrades != "---"){
       var row_upgrades = $(this).children(".upgrade").html();
       if(row_upgrades != upgrades){
+        $(this).hide();
+      }
+    }
+    if(booked != "---"){
+      var row_booked = $(this).children(".booked").html();
+      if(row_booked != booked){
         $(this).hide();
       }
     }

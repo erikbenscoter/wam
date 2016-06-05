@@ -280,10 +280,10 @@ class View:
         unit_sizes = []
         travelers = []
         upgrades = []
+        booked = []
 
         newest_date = ReservationManagerApplicationSettings.objects.all().order_by('-last_updated')
         newest_date = newest_date[0].last_updated
-        print (newest_date)
         newest_date = newest_date + timedelta(hours=-4)
         newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
 
@@ -311,12 +311,15 @@ class View:
         for reservation in reservations:
             upgrades.append(reservation.upgrade_status)
 
-
+        for reservation in reservations:
+            booked.append(reservation.date_booked)
+            
 
         context = {
             "reservations" : reservations.order_by('date_of_reservation'),
             "usernames" : set(usernames),
             "resorts" : set(resorts),
+            "booked_set" : set(booked),
             "unit_sizes" : set(unit_sizes),
             "travelers" : set(travelers),
             "upgrades" : set(upgrades),
