@@ -313,7 +313,7 @@ class View:
 
         for reservation in reservations:
             booked.append(reservation.date_booked)
-            
+
 
         context = {
             "reservations" : reservations.order_by('date_of_reservation'),
