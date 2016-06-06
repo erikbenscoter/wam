@@ -1,0 +1,241 @@
+[
+{
+    "model": "reservation_manager.owner",
+    "pk": 1,
+    "fields": {
+        "email": "",
+        "username": "sunnyv",
+        "password": "sunnyboy1",
+        "first_name": "",
+        "last_name": "",
+        "phone_number": "",
+        "owner_reimbursement_rate": 7.0
+    }
+},
+{
+    "model": "reservation_manager.owner",
+    "pk": 3,
+    "fields": {
+        "email": "",
+        "username": "carolynbenscoter",
+        "password": "sunnyboy1",
+        "first_name": "",
+        "last_name": "",
+        "phone_number": "",
+        "owner_reimbursement_rate": 7.0
+    }
+},
+{
+    "model": "reservation_manager.owner",
+    "pk": 4,
+    "fields": {
+        "email": "",
+        "username": "laurenhunt",
+        "password": "alabama8",
+        "first_name": "",
+        "last_name": "",
+        "phone_number": "",
+        "owner_reimbursement_rate": 6.0
+    }
+},
+{
+    "model": "reservation_manager.owner",
+    "pk": 5,
+    "fields": {
+        "email": "",
+        "username": "ruthhunt",
+        "password": "alabama8",
+        "first_name": "",
+        "last_name": "",
+        "phone_number": "",
+        "owner_reimbursement_rate": 6.0
+    }
+},
+{
+    "model": "reservation_manager.owner",
+    "pk": 6,
+    "fields": {
+        "email": "",
+        "username": "fondren",
+        "password": "alabama8",
+        "first_name": "",
+        "last_name": "",
+        "phone_number": "",
+        "owner_reimbursement_rate": 6.0
+    }
+},
+{
+    "model": "reservation_manager.owner",
+    "pk": 7,
+    "fields": {
+        "email": "",
+        "username": "acesneights8",
+        "password": "alabama8",
+        "first_name": "",
+        "last_name": "",
+        "phone_number": "",
+        "owner_reimbursement_rate": 6.0
+    }
+},
+{
+    "model": "reservation_manager.owner",
+    "pk": 9,
+    "fields": {
+        "email": "",
+        "username": "00010085571",
+        "password": "fairfield1",
+        "first_name": "Mellena",
+        "last_name": "Burke",
+        "phone_number": "",
+        "owner_reimbursement_rate": 6.0
+    }
+},
+{
+    "model": "reservation_manager.owner",
+    "pk": 10,
+    "fields": {
+        "email": "",
+        "username": "hoffman8",
+        "password": "alabama8",
+        "first_name": "",
+        "last_name": "",
+        "phone_number": "",
+        "owner_reimbursement_rate": 6.0
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 74,
+    "fields": {
+        "last_updated": "2016-05-31T23:08:01.351Z",
+        "last_updated_by": null
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 75,
+    "fields": {
+        "last_updated": "2016-06-03T22:48:46.086Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 76,
+    "fields": {
+        "last_updated": "2016-06-03T23:30:25.373Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 77,
+    "fields": {
+        "last_updated": "2016-06-04T01:46:42.261Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 78,
+    "fields": {
+        "last_updated": "2016-06-04T11:14:57.188Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 79,
+    "fields": {
+        "last_updated": "2016-06-04T19:03:59.605Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 80,
+    "fields": {
+        "last_updated": "2016-06-04T19:14:08.744Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 81,
+    "fields": {
+        "last_updated": "2016-06-04T19:32:10.909Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 82,
+    "fields": {
+        "last_updated": "2016-06-04T20:07:18.532Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 83,
+    "fields": {
+        "last_updated": "2016-06-04T20:15:19.813Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 84,
+    "fields": {
+        "last_updated": "2016-06-04T20:35:52.594Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 85,
+    "fields": {
+        "last_updated": "2016-06-04T23:08:18.725Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 86,
+    "fields": {
+        "last_updated": "2016-06-05T11:14:44.191Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 87,
+    "fields": {
+        "last_updated": "2016-06-05T18:01:41.253Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 88,
+    "fields": {
+        "last_updated": "2016-06-05T23:10:49.276Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 89,
+    "fields": {
+        "last_updated": "2016-06-06T11:17:25.892Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 90,
+    "fields": {
+        "last_updated": "2016-06-06T11:31:17.845Z",
+        "last_updated_by": 3
+    }
+}
