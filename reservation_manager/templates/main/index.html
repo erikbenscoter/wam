@@ -62,10 +62,10 @@
       {%endfor%}
     </select><br>
 
-    <span class = "filter_title">Show Canclations = </span>
+    <span class = "filter_title">Show Cancelations = </span>
     <select id = "cancelations_filter">
       <option value = 0> Don't Show Cancelations </option>
-      <option value = 1> Show Cancleations </option>
+      <option value = 1> Show Cancelations </option>
 
     </select><br>
 
@@ -74,6 +74,14 @@
       <option> --- </option>
       {%for upgrade in upgrades%}
         <option>{{upgrade}}</option>
+      {%endfor%}
+    </select><br>
+
+    <span class = "filter_title">Date Booked = </span>
+    <select id = "booked_filter">
+      <option> --- </option>
+      {%for booked in booked_set%}
+        <option>{{booked}}</option>
       {%endfor%}
     </select><br>
 

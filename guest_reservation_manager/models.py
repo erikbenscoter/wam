@@ -19,6 +19,7 @@ TRUE_OR_FALSE = (
 class GuestReservation(models.Model):
 
 #                   data from Reservations once ruth enters confimation_number
+#    id = models.IntegerField( blank=False, null=False,primary_key=True )
     optional_username_to_aim_for = models.CharField( max_length=2000, blank=True, null=True, default = None)
 
 #                 data ruth enters initial
@@ -36,7 +37,7 @@ class GuestReservation(models.Model):
     notes = models.CharField( blank=True, null=True, max_length=2000)
     add_name = models.CharField( blank=True, null=True, max_length=2000)
     guest_sent = models.DateField( blank=True, null=True )
-    RA_sent_rec =  models.CharField( blank=True, null=True, max_length=2000)
+    ra_sent_rec =  models.CharField( blank=True, null=True, max_length=2000)
     down_due_paid = models.CharField( blank=True, null=True, max_length=2000)
     balance_due_paid = models.CharField( blank=True, null=True, max_length=2000)
     guest_cert_yr_number = models.CharField( blank=True, null=True, max_length=2000)
@@ -50,6 +51,11 @@ class GuestReservation(models.Model):
     jen = models.CharField( blank=True, null=True, max_length=2000)
     lauren = models.CharField( blank=True, null=True, max_length=2000)
 
+#  data that can come from reservations
+    confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
+    date_booked = models.DateField( blank=True, null=True )
+    location = models.CharField( blank=True, null=True, max_length=2000)
+    points_required_for_reservation = models.IntegerField( blank=True, null=True )
 
 #      system will supply when original is cancelled
     prior_confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
@@ -61,12 +67,10 @@ class GuestReservation(models.Model):
 
 
     def __str__(self):
-        return str(self.username) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + str(
-            self.confirmation_number) + " , " + str(self.location_requested) + " , " + str(self.id)
+        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
 
     def __unicode__(self):
-        return str(self.username) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + str(
-            self.confirmation_number) + " , " + str(self.location_requested) + " , " + str(self.id)
+        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
 
 
 class CreateGuestWishForm(ModelForm):
