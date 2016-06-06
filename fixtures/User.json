@@ -1,0 +1,93 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$51ETFooHuII7$dAAkAqhJ9xRVJh8JssMQmDCGTo2tQnUEJnIUywI1v6w=",
+        "last_login": "2016-06-04T19:59:25.623Z",
+        "is_superuser": true,
+        "username": "erikbenscoter",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2016-04-10T01:49:37.264Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$bGsTs9Ck7VXP$1fLAo3NNj4dYRKs7zLR76LsPdXae0c3Z3rVbZb3VN/o=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "RuthHunt",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2016-04-10T18:32:01Z",
+        "groups": [],
+        "user_permissions": [
+            19,
+            20,
+            21,
+            25,
+            26,
+            27,
+            22,
+            23
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$x7cJnbq7p9Ch$ZsvlKUw81Qdzvh99U5CzonDNl9Nf8OUTIw7C43B62Tc=",
+        "last_login": "2016-06-03T23:05:25.167Z",
+        "is_superuser": true,
+        "username": "glennbenscoter",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2016-04-10T18:33:12Z",
+        "groups": [],
+        "user_permissions": [
+            1,
+            2,
+            3,
+            7,
+            8,
+            9,
+            4,
+            5,
+            6,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            20,
+            21,
+            25,
+            26,
+            27,
+            22,
+            23,
+            24,
+            16,
+            17,
+            18
+        ]
+    }
+}
+]
