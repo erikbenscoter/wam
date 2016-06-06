@@ -1,14 +1,14 @@
 [
 {
     "model": "owners_point_manager.ownerpointsmanagerapplicationsettings",
-    "pk": 28,
+    "pk": 29,
     "fields": {
-        "last_updated": "2016-06-04T11:32:23.364Z"
+        "last_updated": "2016-06-05T11:32:24.018Z"
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 932,
+    "pk": 967,
     "fields": {
         "fk_owner": 1,
         "Travel_From": "2016-06-04",
@@ -20,7 +20,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 933,
+    "pk": 968,
     "fields": {
         "fk_owner": 1,
         "Travel_From": "2016-10-01",
@@ -32,7 +32,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 934,
+    "pk": 969,
     "fields": {
         "fk_owner": 1,
         "Travel_From": "2017-10-01",
@@ -44,7 +44,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 935,
+    "pk": 970,
     "fields": {
         "fk_owner": 1,
         "Travel_From": "2017-10-01",
@@ -56,7 +56,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 936,
+    "pk": 971,
     "fields": {
         "fk_owner": 3,
         "Travel_From": "2016-06-04",
@@ -68,7 +68,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 937,
+    "pk": 972,
     "fields": {
         "fk_owner": 3,
         "Travel_From": "2017-01-01",
@@ -80,7 +80,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 938,
+    "pk": 973,
     "fields": {
         "fk_owner": 3,
         "Travel_From": "2017-10-01",
@@ -92,7 +92,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 939,
+    "pk": 974,
     "fields": {
         "fk_owner": 3,
         "Travel_From": "2018-01-01",
@@ -104,7 +104,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 940,
+    "pk": 975,
     "fields": {
         "fk_owner": 4,
         "Travel_From": "2016-06-04",
@@ -116,7 +116,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 941,
+    "pk": 976,
     "fields": {
         "fk_owner": 4,
         "Travel_From": "2017-01-01",
@@ -128,7 +128,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 942,
+    "pk": 977,
     "fields": {
         "fk_owner": 4,
         "Travel_From": "2018-01-01",
@@ -140,7 +140,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 943,
+    "pk": 978,
     "fields": {
         "fk_owner": 5,
         "Travel_From": "2016-06-04",
@@ -152,7 +152,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 944,
+    "pk": 979,
     "fields": {
         "fk_owner": 5,
         "Travel_From": "2017-01-01",
@@ -164,7 +164,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 945,
+    "pk": 980,
     "fields": {
         "fk_owner": 5,
         "Travel_From": "2017-07-01",
@@ -176,7 +176,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 946,
+    "pk": 981,
     "fields": {
         "fk_owner": 5,
         "Travel_From": "2018-01-01",
@@ -188,7 +188,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 947,
+    "pk": 982,
     "fields": {
         "fk_owner": 5,
         "Travel_From": "2018-01-01",
@@ -200,7 +200,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 948,
+    "pk": 983,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2016-06-04",
@@ -212,7 +212,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 949,
+    "pk": 984,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2016-06-04",
@@ -224,7 +224,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 950,
+    "pk": 985,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2017-01-01",
@@ -236,7 +236,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 951,
+    "pk": 986,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2017-04-01",
@@ -248,7 +248,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 952,
+    "pk": 987,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2018-01-01",
@@ -260,7 +260,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 953,
+    "pk": 988,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2018-01-01",
@@ -272,7 +272,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 954,
+    "pk": 989,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2018-01-01",
@@ -284,7 +284,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 955,
+    "pk": 990,
     "fields": {
         "fk_owner": 7,
         "Travel_From": "2016-06-04",
@@ -296,7 +296,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 956,
+    "pk": 991,
     "fields": {
         "fk_owner": 7,
         "Travel_From": "2017-01-01",
@@ -308,7 +308,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 957,
+    "pk": 992,
     "fields": {
         "fk_owner": 7,
         "Travel_From": "2017-01-01",
@@ -320,7 +320,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 958,
+    "pk": 993,
     "fields": {
         "fk_owner": 7,
         "Travel_From": "2018-01-01",
@@ -332,7 +332,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 959,
+    "pk": 994,
     "fields": {
         "fk_owner": 9,
         "Travel_From": "2016-06-04",
@@ -344,7 +344,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 960,
+    "pk": 995,
     "fields": {
         "fk_owner": 9,
         "Travel_From": "2016-07-01",
@@ -356,7 +356,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 961,
+    "pk": 996,
     "fields": {
         "fk_owner": 9,
         "Travel_From": "2017-07-01",
@@ -368,7 +368,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 962,
+    "pk": 997,
     "fields": {
         "fk_owner": 10,
         "Travel_From": "2016-06-04",
@@ -380,7 +380,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 963,
+    "pk": 998,
     "fields": {
         "fk_owner": 10,
         "Travel_From": "2017-01-01",
@@ -392,7 +392,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 964,
+    "pk": 999,
     "fields": {
         "fk_owner": 10,
         "Travel_From": "2017-01-01",
@@ -404,7 +404,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 965,
+    "pk": 1000,
     "fields": {
         "fk_owner": 10,
         "Travel_From": "2017-10-01",
@@ -416,7 +416,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 966,
+    "pk": 1001,
     "fields": {
         "fk_owner": 10,
         "Travel_From": "2018-01-01",

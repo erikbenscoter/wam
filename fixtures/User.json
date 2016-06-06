@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$24000$51ETFooHuII7$dAAkAqhJ9xRVJh8JssMQmDCGTo2tQnUEJnIUywI1v6w=",
-        "last_login": "2016-06-04T17:13:19.559Z",
+        "last_login": "2016-06-04T21:06:51.106Z",
         "is_superuser": true,
         "username": "erikbenscoter",
         "first_name": "",

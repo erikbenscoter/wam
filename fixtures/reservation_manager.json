@@ -144,6 +144,102 @@
     }
 },
 {
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 79,
+    "fields": {
+        "last_updated": "2016-06-04T19:03:59.605Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 80,
+    "fields": {
+        "last_updated": "2016-06-04T19:14:08.744Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 81,
+    "fields": {
+        "last_updated": "2016-06-04T19:32:10.909Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 82,
+    "fields": {
+        "last_updated": "2016-06-04T20:07:18.532Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 83,
+    "fields": {
+        "last_updated": "2016-06-04T20:15:19.813Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 84,
+    "fields": {
+        "last_updated": "2016-06-04T20:35:52.594Z",
+        "last_updated_by": 1
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 85,
+    "fields": {
+        "last_updated": "2016-06-04T23:08:18.725Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 86,
+    "fields": {
+        "last_updated": "2016-06-05T11:14:44.191Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 87,
+    "fields": {
+        "last_updated": "2016-06-05T18:01:41.253Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 88,
+    "fields": {
+        "last_updated": "2016-06-05T23:10:49.276Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 89,
+    "fields": {
+        "last_updated": "2016-06-06T11:17:25.892Z",
+        "last_updated_by": 3
+    }
+},
+{
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 90,
+    "fields": {
+        "last_updated": "2016-06-06T11:31:17.845Z",
+        "last_updated_by": 3
+    }
+},
+{
     "model": "reservation_manager.reservation",
     "pk": 356,
     "fields": {
@@ -426,7 +522,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -470,7 +566,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -514,7 +610,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -558,7 +654,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -602,7 +698,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -646,7 +742,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -690,7 +786,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -712,7 +808,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -734,7 +830,7 @@
         "guest_certificate": "Owner: James L Alexander, Auth Rep",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -778,7 +874,7 @@
         "guest_certificate": "Owner: James L Alexander, Auth Rep",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -800,7 +896,7 @@
         "guest_certificate": "Owner: Glenn C Benscoter, TTEE",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -822,7 +918,7 @@
         "guest_certificate": "Owner: Glenn C Benscoter, Tstee",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -844,7 +940,7 @@
         "guest_certificate": "Owner: Glenn C Benscoter, Tstee",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -866,7 +962,7 @@
         "guest_certificate": "Owner: Glenn C Benscoter, TTEE",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -888,7 +984,7 @@
         "guest_certificate": "Owner: Glenn C Benscoter, Tstee",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -910,7 +1006,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -932,7 +1028,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -954,7 +1050,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -976,7 +1072,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -998,7 +1094,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1350,7 +1446,7 @@
         "guest_certificate": "Owner: Glenn C Benscoter, TTEE",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1372,7 +1468,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1394,7 +1490,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1416,7 +1512,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1438,7 +1534,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1460,7 +1556,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1482,7 +1578,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1504,7 +1600,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1526,7 +1622,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1548,7 +1644,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1570,7 +1666,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1592,7 +1688,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1614,7 +1710,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1636,7 +1732,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1658,7 +1754,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1680,7 +1776,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1812,7 +1908,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1856,7 +1952,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1922,7 +2018,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -1988,7 +2084,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -2054,7 +2150,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -2120,7 +2216,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -2186,7 +2282,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -2252,7 +2348,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -2296,7 +2392,7 @@
         "guest_certificate": "Guest: TAMMY or FAITH KENDALL-JOHNSON",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -4518,7 +4614,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -6894,7 +6990,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -6960,7 +7056,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -7004,7 +7100,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -7026,7 +7122,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -7704,11 +7800,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-04-20",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -7726,11 +7822,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-04-20",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -7748,11 +7844,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-04-18",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -7770,7 +7866,7 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-04-19",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
@@ -7792,7 +7888,7 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2015-11-27",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
@@ -9688,7 +9784,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10018,7 +10114,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10040,7 +10136,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10062,7 +10158,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10172,7 +10268,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10194,7 +10290,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10282,7 +10378,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10304,7 +10400,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10326,7 +10422,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10348,7 +10444,7 @@
         "guest_certificate": "Guest: BARRY and NORA LORION",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10370,7 +10466,7 @@
         "guest_certificate": "Owner: Jared F Hunt",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10392,7 +10488,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10414,7 +10510,7 @@
         "guest_certificate": "Guest: BARRY and NORA LORION",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10436,7 +10532,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10612,7 +10708,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10634,7 +10730,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10652,11 +10748,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-05-04",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10674,11 +10770,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-05-04",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10696,11 +10792,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-05-04",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10718,11 +10814,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-05-04",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -10832,7 +10928,7 @@
         "guest_certificate": "Owner: Glenn C Benscoter, TTEE",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -11514,7 +11610,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -11646,7 +11742,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -11668,7 +11764,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -11950,7 +12046,7 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-05-16",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
@@ -12262,7 +12358,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -12526,7 +12622,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -12548,7 +12644,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -12724,7 +12820,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -12790,7 +12886,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -12812,7 +12908,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -12918,7 +13014,7 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-05-23",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
@@ -13032,7 +13128,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -13054,7 +13150,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -13076,7 +13172,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -13186,7 +13282,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -13296,7 +13392,7 @@
         "guest_certificate": "Guest: EILEEN WEINGRAM ABBYE CORNFIELD",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -13318,7 +13414,7 @@
         "guest_certificate": "Guest: MICHAEL & JOSHU WEINGRAM",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -13340,7 +13436,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -13362,7 +13458,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -13912,7 +14008,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14110,7 +14206,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14132,7 +14228,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14198,7 +14294,7 @@
         "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14370,11 +14466,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-05-28",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: Robert Fondren",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14484,7 +14580,7 @@
         "guest_certificate": "Owner: Mellena Burke",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14704,7 +14800,7 @@
         "guest_certificate": "Owner: Ruth Hunt",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14748,7 +14844,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14770,7 +14866,7 @@
         "guest_certificate": "Owner: Ruth Hunt",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14792,7 +14888,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14814,7 +14910,7 @@
         "guest_certificate": "Owner: Ruth Hunt",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14836,7 +14932,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14858,7 +14954,7 @@
         "guest_certificate": "Owner: Ruth Hunt",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14880,7 +14976,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14924,7 +15020,7 @@
         "guest_certificate": "Owner: Ruth Hunt",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -14946,7 +15042,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15012,7 +15108,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15052,11 +15148,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-02",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15074,11 +15170,11 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-02",
-        "upgrade_status": "Not in Upgrade Window",
+        "upgrade_status": "Search for Upgrade",
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15122,7 +15218,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15166,7 +15262,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15210,7 +15306,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15254,7 +15350,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15320,7 +15416,7 @@
         "guest_certificate": "Owner: SUNNY VACATIONS LLC",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -15606,7 +15702,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -16002,7 +16098,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -16205,116 +16301,6 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2025,
-    "fields": {
-        "fk_owner": 6,
-        "fk_monthly_report": null,
-        "location": "Wyndham Inn on Long Wharf",
-        "date_of_reservation": "2016-06-12",
-        "number_of_nights": 5,
-        "unit_size": "1 Bedroom Suite",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Robert Fondren",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2026,
-    "fields": {
-        "fk_owner": 6,
-        "fk_monthly_report": null,
-        "location": "Wyndham Long Wharf",
-        "date_of_reservation": "2016-06-12",
-        "number_of_nights": 2,
-        "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Robert Fondren",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2027,
-    "fields": {
-        "fk_owner": 6,
-        "fk_monthly_report": null,
-        "location": "Wyndham Long Wharf",
-        "date_of_reservation": "2016-06-13",
-        "number_of_nights": 4,
-        "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Robert Fondren",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2028,
-    "fields": {
-        "fk_owner": 6,
-        "fk_monthly_report": null,
-        "location": "Wyndham Long Wharf",
-        "date_of_reservation": "2016-06-14",
-        "number_of_nights": 3,
-        "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Robert Fondren",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2029,
-    "fields": {
-        "fk_owner": 6,
-        "fk_monthly_report": null,
-        "location": "Wyndham Inn on the Harbor",
-        "date_of_reservation": "2016-06-18",
-        "number_of_nights": 7,
-        "unit_size": "1 Bedroom Plus",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Robert Fondren",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
     "pk": 2030,
     "fields": {
         "fk_owner": 3,
@@ -16332,7 +16318,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -16354,7 +16340,7 @@
         "guest_certificate": "Owner: Carolyn Benscoter",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -16425,94 +16411,6 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 2035,
-    "fields": {
-        "fk_owner": 9,
-        "fk_monthly_report": null,
-        "location": "Wyndham Kingsgate",
-        "date_of_reservation": "2016-06-11",
-        "number_of_nights": 7,
-        "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Reservation Upgraded",
-        "guest_certificate": "Owner: Mellena Burke",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2036,
-    "fields": {
-        "fk_owner": 9,
-        "fk_monthly_report": null,
-        "location": "Wyndham Kingsgate",
-        "date_of_reservation": "2016-06-18",
-        "number_of_nights": 7,
-        "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Reservation Upgraded",
-        "guest_certificate": "Owner: Mellena Burke",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2037,
-    "fields": {
-        "fk_owner": 9,
-        "fk_monthly_report": null,
-        "location": "Coconut Malorie Resort",
-        "date_of_reservation": "2016-06-18",
-        "number_of_nights": 7,
-        "unit_size": "Studio",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Mellena Burke",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2038,
-    "fields": {
-        "fk_owner": 9,
-        "fk_monthly_report": null,
-        "location": "Coconut Malorie Resort",
-        "date_of_reservation": "2016-06-18",
-        "number_of_nights": 7,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Mellena Burke",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
     "pk": 2039,
     "fields": {
         "fk_owner": 10,
@@ -16530,51 +16428,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2040,
-    "fields": {
-        "fk_owner": 9,
-        "fk_monthly_report": null,
-        "location": "Wyndham Old Town Alexandria",
-        "date_of_reservation": "2016-06-19",
-        "number_of_nights": 1,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Mellena Burke",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 2041,
-    "fields": {
-        "fk_owner": 9,
-        "fk_monthly_report": null,
-        "location": "Wyndham Old Town Alexandria",
-        "date_of_reservation": "2016-06-20",
-        "number_of_nights": 4,
-        "unit_size": "1 Bedroom",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-04",
-        "upgrade_status": "Search for Upgrade",
-        "guest_certificate": "Owner: Mellena Burke",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -16596,7 +16450,7 @@
         "guest_certificate": "Owner: Mellena Burke",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -16640,7 +16494,7 @@
         "guest_certificate": "Owner: Mellena Burke",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -16662,7 +16516,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -16684,7 +16538,7 @@
         "guest_certificate": "Owner: Mellena Burke",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -16900,6 +16754,1018 @@
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-03",
+        "upgrade_status": "Not in Upgrade Window",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2419,
+    "fields": {
+        "fk_owner": 6,
+        "fk_monthly_report": null,
+        "location": "Wyndham Ocean Walk",
+        "date_of_reservation": "2016-09-01",
+        "number_of_nights": 3,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "942878",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Not in Upgrade Window",
+        "guest_certificate": "Owner: Robert Fondren",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2420,
+    "fields": {
+        "fk_owner": 6,
+        "fk_monthly_report": null,
+        "location": "Wyndham Ocean Walk",
+        "date_of_reservation": "2016-09-04",
+        "number_of_nights": 3,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "942879",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Not in Upgrade Window",
+        "guest_certificate": "Owner: Robert Fondren",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2421,
+    "fields": {
+        "fk_owner": 5,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-06-18",
+        "number_of_nights": 1,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Ruth Hunt",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2422,
+    "fields": {
+        "fk_owner": 5,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-06-18",
+        "number_of_nights": 7,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Ruth Hunt",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2423,
+    "fields": {
+        "fk_owner": 5,
+        "fk_monthly_report": null,
+        "location": "Wyndham Inn on the Harbor",
+        "date_of_reservation": "2016-06-18",
+        "number_of_nights": 7,
+        "unit_size": "1 Bedroom Plus",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Ruth Hunt",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2424,
+    "fields": {
+        "fk_owner": 5,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-06-19",
+        "number_of_nights": 6,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Ruth Hunt",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2425,
+    "fields": {
+        "fk_owner": 5,
+        "fk_monthly_report": null,
+        "location": "Wyndham Old Town Alexandria",
+        "date_of_reservation": "2016-06-19",
+        "number_of_nights": 1,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Ruth Hunt",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2426,
+    "fields": {
+        "fk_owner": 5,
+        "fk_monthly_report": null,
+        "location": "Wyndham Governor's Green",
+        "date_of_reservation": "2016-06-20",
+        "number_of_nights": 4,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Ruth Hunt",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2427,
+    "fields": {
+        "fk_owner": 5,
+        "fk_monthly_report": null,
+        "location": "Wyndham Old Town Alexandria",
+        "date_of_reservation": "2016-06-20",
+        "number_of_nights": 4,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Ruth Hunt",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2428,
+    "fields": {
+        "fk_owner": 5,
+        "fk_monthly_report": null,
+        "location": "Wyndham Governor's Green",
+        "date_of_reservation": "2016-06-24",
+        "number_of_nights": 2,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Ruth Hunt",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2429,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Ocean Ridge",
+        "date_of_reservation": "2016-06-24",
+        "number_of_nights": 2,
+        "unit_size": "4 Bedroom Deluxe",
+        "confirmation_number": "952132",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2430,
+    "fields": {
+        "fk_owner": 7,
+        "fk_monthly_report": null,
+        "location": "Wyndham Vacation Resorts Towers on the Grove at North Myrtle Beach",
+        "date_of_reservation": "2016-06-22",
+        "number_of_nights": 3,
+        "unit_size": "2 Bedroom",
+        "confirmation_number": "946498",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2431,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Wyndham Governor's Green",
+        "date_of_reservation": "2016-06-18",
+        "number_of_nights": 1,
+        "unit_size": "3 Bedroom Deluxe",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2432,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Coconut Malorie Resort",
+        "date_of_reservation": "2016-06-18",
+        "number_of_nights": 3,
+        "unit_size": "Studio",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2433,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Governor's Green",
+        "date_of_reservation": "2016-06-24",
+        "number_of_nights": 2,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "952133",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2434,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Skyline Tower",
+        "date_of_reservation": "2016-06-24",
+        "number_of_nights": 2,
+        "unit_size": "1 Bedroom Suite",
+        "confirmation_number": "952144",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2435,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": 137,
+        "location": "Coconut Malorie Resort",
+        "date_of_reservation": "2016-06-18",
+        "number_of_nights": 7,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "942025",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Guest: JAMES JARVIS",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2436,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Wyndham Governor's Green",
+        "date_of_reservation": "2016-06-19",
+        "number_of_nights": 7,
+        "unit_size": "1 Bedroom Suite",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2437,
+    "fields": {
+        "fk_owner": 7,
+        "fk_monthly_report": null,
+        "location": "Wyndham Governor's Green",
+        "date_of_reservation": "2016-07-17",
+        "number_of_nights": 2,
+        "unit_size": "3 Bedroom Deluxe",
+        "confirmation_number": "946497",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2438,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": 137,
+        "location": "Wyndham Governor's Green",
+        "date_of_reservation": "2016-06-19",
+        "number_of_nights": 7,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "947081",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Guest: MICHAEL & JOANN ANDREWS",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2439,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Wyndham Governor's Green",
+        "date_of_reservation": "2016-06-19",
+        "number_of_nights": 3,
+        "unit_size": "3 Bedroom Deluxe",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2440,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Long Wharf",
+        "date_of_reservation": "2016-06-26",
+        "number_of_nights": 4,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "952147",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2441,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": 137,
+        "location": "Wyndham Vacation Resorts Towers on the Grove at North Myrtle Beach",
+        "date_of_reservation": "2016-06-20",
+        "number_of_nights": 4,
+        "unit_size": "2 Bedroom Ocean Front",
+        "confirmation_number": "942023",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Guest: LESLIE HART",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2442,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Coconut Malorie Resort",
+        "date_of_reservation": "2016-06-20",
+        "number_of_nights": 4,
+        "unit_size": "1 Bedroom",
+        "confirmation_number": "N/A",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-06",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2443,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Resort at Fairfield Sapphire Valley",
+        "date_of_reservation": "2016-07-02",
+        "number_of_nights": 7,
+        "unit_size": "2 Bedroom",
+        "confirmation_number": "952131",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2444,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": 137,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-06-23",
+        "number_of_nights": 1,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "947079",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Guest: DEBBIE & TINA STEVENSON-BAUMAN",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2445,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": 137,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-06-24",
+        "number_of_nights": 2,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "947082",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Guest: DEBBIE & TINA STEVENSON-BAUMAN",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2446,
+    "fields": {
+        "fk_owner": 9,
+        "fk_monthly_report": null,
+        "location": "Wyndham Old Town Alexandria",
+        "date_of_reservation": "2016-06-26",
+        "number_of_nights": 3,
+        "unit_size": "2 Bedroom Lockoff",
+        "confirmation_number": "947083",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Mellena Burke",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2447,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Governor's Green",
+        "date_of_reservation": "2016-07-13",
+        "number_of_nights": 3,
+        "unit_size": "3 Bedroom Deluxe",
+        "confirmation_number": "952134",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2448,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Vacation Resorts Towers on the Grove at North Myrtle Beach",
+        "date_of_reservation": "2016-07-14",
+        "number_of_nights": 1,
+        "unit_size": "Studio",
+        "confirmation_number": "946468",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2449,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Vacation Resorts Towers on the Grove at North Myrtle Beach",
+        "date_of_reservation": "2016-07-15",
+        "number_of_nights": 2,
+        "unit_size": "Studio",
+        "confirmation_number": "946469",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2450,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Bentley Brook",
+        "date_of_reservation": "2016-07-21",
+        "number_of_nights": 1,
+        "unit_size": "Studio",
+        "confirmation_number": "946466",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2451,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Bentley Brook",
+        "date_of_reservation": "2016-07-21",
+        "number_of_nights": 1,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "946467",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2452,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Skyline Tower",
+        "date_of_reservation": "2016-07-31",
+        "number_of_nights": 7,
+        "unit_size": "1 Bedroom Suite",
+        "confirmation_number": "952145",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2453,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-03",
+        "number_of_nights": 1,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "946464",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2454,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-03",
+        "number_of_nights": 1,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "946465",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-04",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2455,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-04",
+        "number_of_nights": 1,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "952135",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2456,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-04",
+        "number_of_nights": 1,
+        "unit_size": "3 Bedroom Lockoff",
+        "confirmation_number": "952136",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2457,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-04",
+        "number_of_nights": 1,
+        "unit_size": "3 Bedroom Lockoff",
+        "confirmation_number": "952137",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2458,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-04",
+        "number_of_nights": 1,
+        "unit_size": "3 Bedroom Lockoff",
+        "confirmation_number": "952138",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2459,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-04",
+        "number_of_nights": 3,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "952139",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2460,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-04",
+        "number_of_nights": 3,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "952140",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2461,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-04",
+        "number_of_nights": 3,
+        "unit_size": "3 Bedroom Lockoff",
+        "confirmation_number": "952141",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2462,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Skyline Tower",
+        "date_of_reservation": "2016-08-04",
+        "number_of_nights": 1,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "952146",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Reservation Upgraded",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2463,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-15",
+        "number_of_nights": 4,
+        "unit_size": "3 Bedroom Lockoff",
+        "confirmation_number": "952142",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
+        "upgrade_status": "Not in Upgrade Window",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 2464,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-19",
+        "number_of_nights": 3,
+        "unit_size": "3 Bedroom Lockoff",
+        "confirmation_number": "952143",
+        "points_required_for_reservation": -1,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-05",
         "upgrade_status": "Not in Upgrade Window",
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
