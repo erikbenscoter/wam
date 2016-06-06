@@ -10,9 +10,9 @@ TRUE_OR_FALSE = (
 )
 
 REASON_ON_HOLD_CHOICES = (
-("UPGD", "Needed For Upgrade"),
-("WSH","User requested this"),
-("NH", "Not being held")
+	("UPGD", "Needed For Upgrade"),
+	("WSH","User requested this"),
+	("NH", "Not being held")
 )
 
 # Create your models here.
