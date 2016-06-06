@@ -1,6 +1,7 @@
 from django.db import models
 from monthly_summary.models import MonthlyReport
 from django.contrib.auth.models import User
+from guest_reservation_manager.models import GuestReservation
 import re
 
 TRUE_OR_FALSE = (
@@ -8,6 +9,11 @@ TRUE_OR_FALSE = (
     (0, "False")
 )
 
+REASON_ON_HOLD_CHOICES = (
+("UPGD", "Needed For Upgrade"),
+("WSH","User requested this"),
+("NH", "Not being held")
+)
 
 # Create your models here.
 class Owner( models.Model ):
@@ -32,6 +38,8 @@ class ReservationManagerApplicationSettings(models.Model):
 class Reservation( models.Model ):
     fk_owner = models.ForeignKey(Owner, on_delete=models.SET_NULL, null=True, blank=True)
     fk_monthly_report = models.ForeignKey(MonthlyReport, blank=True, null=True, default=None, on_delete=models.SET_NULL)
+    fk_wish_held_for = models.ForeignKey(GuestReservation, on_delete=models.SET_NULL, null=True,blank=True, default=None)
+    reason_on_hold = models.CharField(max_length=5, choices = REASON_ON_HOLD_CHOICES,default="NH")
     location = models.CharField( blank=True, null=True, max_length=2000)
     date_of_reservation = models.DateField( blank=True, null=True )
     number_of_nights = models.IntegerField( blank=True, null=True )
@@ -46,6 +54,7 @@ class Reservation( models.Model ):
     touched = models.DateField( blank=True, null=True,default=None )
     touched_bool = models.NullBooleanField(blank=True,null=True,default=None)
     canceled = models.NullBooleanField(blank=True, null=True, default=None)
+
 
 
     @property

@@ -59,7 +59,7 @@ class ScrapeWyndham:
 
     def parsePointStatusPage(self, p_owner):
 
-        print("xxxin parsePointsStatusPage", " second part")
+#        print("xxxin parsePointsStatusPage", " second part")
 # time.sleep(30)
         columns = self.browser.find_elements_by_tag_name("td")
 
@@ -82,12 +82,12 @@ class ScrapeWyndham:
             columns_text.append(element)
 
         tmp = []
-        print("columns text after cleanig out ")
-        for column_text in columns_text:
-            print(str(column_text).encode("utf-8"))
+#        print("columns text after cleanig out ")
+#        for column_text in columns_text:
+#            print(str(column_text).encode("utf-8"))
 
         bad_values = ["Travel From", "Expiration", "Points Description", "Points Available", "Housekeeping\nAvailable"]
-        print(bad_values)
+#        print(bad_values)
 
         for column_text in columns_text:
             if not (column_text in bad_values):
@@ -100,9 +100,9 @@ class ScrapeWyndham:
 
         tmp = []
 
-        print("columns text after cleanig out ")
-        for column_text in columns_text:
-            print(str(column_text).encode("utf-8"))
+#        print("columns text after cleanig out ")
+#        for column_text in columns_text:
+#            print(str(column_text).encode("utf-8"))
 
         beg_slice_index = 0  # inclusive
         end_slice_index = 6  # non-inclusive
@@ -114,7 +114,7 @@ class ScrapeWyndham:
             points = self.parsePointStatusRow(columns_text[beg_slice_index:end_slice_index],
                                               p_owner)
             ownerspointsstatus.append(points)
-            print("ownerspointsstatus at 123 ", ownerspointsstatus)
+#            print("ownerspointsstatus at 123 ", ownerspointsstatus)
             beg_slice_index += 5
             end_slice_index += 5
 
@@ -188,7 +188,7 @@ class Update:
 
 class View:
     def get(request):
-        print("at top of View")
+#        print("at top of View")
         usernames = []
         travelfrom = []
         expiration = []
@@ -198,7 +198,7 @@ class View:
 
         newest_date = OwnerPointsManagerApplicationSettings.objects.all()
         newest_date = newest_date[0].last_updated
-        print (newest_date)
+#        print (newest_date)
         newest_date = newest_date + timedelta(hours=-4)
         newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
 
@@ -210,24 +210,24 @@ class View:
 
         for ownerspointsstatus in Owners_Points_Statuss:
             travelfrom.append(ownerspointsstatus.Travel_From)
-            print("travel from = ", travelfrom)
-        print("travel from at 297", travelfrom)
+#            print("travel from = ", travelfrom)
+#        print("travel from at 297", travelfrom)
 
         for ownerspointsstatus in Owners_Points_Statuss:
             expiration.append(ownerspointsstatus.Expiration)
-            print("expiration = ", expiration)
+#            print("expiration = ", expiration)
 
         for ownerspointsstatus in Owners_Points_Statuss:
             pointsdesc.append(ownerspointsstatus.Points_Description)
-            print("pointsdesc = ", pointsdesc)
+#            print("pointsdesc = ", pointsdesc)
 
         for ownerspointsstatus in Owners_Points_Statuss:
             pointsavail.append(ownerspointsstatus.Points_Available)
-            print("pointsavail = ", pointsavail)
+#            print("pointsavail = ", pointsavail)
 
         for ownerspointsstatus in Owners_Points_Statuss:
             housekeepingavail.append(ownerspointsstatus.Housekeeping_Available)
-            print("housekeepingavail = ", housekeepingavail)
+#            print("housekeepingavail = ", housekeepingavail)
 
         context = {
             "ownerspointsstatuss": Owners_Points_Statuss,
@@ -241,50 +241,3 @@ class View:
         }
 
         return render(request, "owner_points/index.html", context)
-
-
-class Export:
-    def get(request):
-        newest = Reservation.objects.all().latest("touched").touched
-        reservations = Reservation.objects.all().filter(touched=newest)
-
-        response = HttpResponse(content_type='text/csv')
-        response['Content-Description'] = 'attachment; filename="export.xlsx"'
-
-        arr = []
-
-        writer = csv.writer(response)
-        arr.append("username")
-        arr.append("location")
-        arr.append("date_of_reservation")
-        arr.append("number_of_nights")
-        arr.append("unit_size")
-        arr.append("confirmation_number")
-        arr.append("points_required_for_reservation")
-        arr.append("is_buyer_lined_up")
-        arr.append("amount_paid")
-        arr.append("date_booked")
-        arr.append("upgrade_status")
-        arr.append("guest_certificate")
-        arr.append("touched")
-        writer.writerow(arr)
-        arr = []
-        for reservation in reservations:
-            arr.append(reservation.fk_owner.username)
-            arr.append(reservation.location)
-            arr.append(reservation.date_of_reservation)
-            arr.append(reservation.number_of_nights)
-            arr.append(reservation.unit_size)
-            arr.append(reservation.confirmation_number)
-            arr.append(reservation.points_required_for_reservation)
-            arr.append(reservation.is_buyer_lined_up)
-            arr.append(reservation.amount_paid)
-            arr.append(reservation.date_booked)
-            arr.append(reservation.upgrade_status)
-            arr.append(reservation.guest_certificate)
-            arr.append(reservation.touched)
-
-            writer.writerow(arr)
-            arr = []
-
-        return response

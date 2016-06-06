@@ -1,0 +1,155 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Guest Revervations View </title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
+  </head>
+
+  <body>
+
+    <h1><span class="yellow">Guest Reservations View</span></h1>
+    <br>
+    <br>
+    <br>
+    <br>
+<!-- <a href="/updatepoints"><button class = "btn btn-large btn-primary">Update Points Available</button></a>
+<a href="/"><button class = "btn btn-large btn-primary">View All Reservation</button></a>
+
+    <div class = "filters">
+    <span class = "filter_title">Owner =</span>
+    <select id = "owner_filter">
+      <option> --- </option>
+      {%for username in usernames%}
+        <option>{{username}}</option>
+      {%endfor%}
+    </select><br>
+</div>
+-->
+    <div class = "filters">
+      <span class = "filter_title">Guest = </span>
+      <select id = "traveler_filter">
+        <option> --- </option>
+        {%for guest in guests%}
+          <option>{{guest}}</option>
+        {%endfor%}
+      </select><br>
+
+
+      <span class = "filter_title">location_requested = </span>
+      <select id = "location_requested_filter">
+          <option> --- </option>
+          {%for location_requested in location_requesteds%}
+            <option>{{location_requested}}</option>
+          {%endfor%}
+        </select><br>
+
+    </div>
+<!--
+<br>
+<center>
+  <b>
+    <span id = "id_num_match" class = "filter_title">
+      <span id="num_match"></span>
+      matching results
+    </span>
+  </b>
+</center>
+<br>
+<center>
+  <b>
+    <span id = "id_num_match" class = "filter_title">
+      <span id="num_match"></span>
+      Last Successful Update : {{last_updated}}
+    </span>
+  </b>
+</center>
+<br>
+
+-->
+
+<table class="container">
+	<thead>
+		<tr>
+	    <th><h1>ID</h1></th>
+			<th><h1>Res Date</h1></th>
+      <th><h1>Date request</h1></th>
+      <th><h1>Nts</h1></th>
+      <th><h1>Location Requested</h1></th>
+      <th><h1>Unit Size</h1></th>
+      <th><h1>unit size notes</h1></th>
+      <th><h1>Slp</h1></th>
+      <th><h1>Conf #</h1></th>
+      <th><h1>Rent</h1></th>
+      <th><h1>Points</h1></th>
+      <th><h1>AD</h1></th>
+      <th><h1>Guest</h1></th>
+      <th><h1>Notes</h1></th>
+      <th><h1>Add Name</h1></th>
+      <th><h1>Guest Sent</h1></th>
+      <th><h1>RA Sent/Rec</h1></th>
+      <th><h1>Down due/paid</h1></th>
+      <th><h1>Balance due/paid</h1></th>
+      <th><h1>Cost</h1></th>
+      <th><h1>Guest Fee Notes</h1></th>
+      <th><h1>Guest Fee</h1></th>
+      <th><h1>CC Fee</h1></th>
+      <th><h1>Other Fees</h1></th>
+      <th><h1>Total Cost</h1></th>
+      <th><h1>Net</h1></th>
+      <th><h1>Net %</h1></th>
+      <th><h1>Jen</h1></th>
+      <th><h1>Lauren</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+    {%for guestreservation in guestreservations%}
+  		<tr>
+<!--  	<td class = "username">{{ownerspointsstatus.fk_owner.username}}</td>
+  			<td class = "travelfrom">{{ownerspointsstatus.Travel_From}}</td>
+
+  			<td class = "expiration">{{ownerspointsstatus.Expiration}}</td>
+  			<td class = "pointsdesc">{{ownerspointsstatus.Points_Description}}</td>
+  			<td class = "pointsavail">{{ownerspointsstatus.Points_Available}}</td>
+  			<td class = "housekeepingavail">{{ownerspointsstatus.Housekeeping_Available}}</td>
+      -->
+        <td class = "id">{{guestreservation.id}}</td>
+        <td class = "date_booked">{{guestreservation.date_rquested}}</td>
+        <td class = "date_rquested">{{guestreservation.date_rquested}}</td>
+        <td class = "nights_requested">{{guestreservation.nights_requested}}</td>
+        <td class = "location_requested">{{guestreservation.location_requested}}</td>
+        <td class = "unit_size">{{guestreservation.unit_size}}</td>
+        <td class = "unit_size_notes">{{guestreservation.unit_size_notes}}</td>
+        <td class = "sleeps">{{guestreservation.sleeps}}</td>
+        <td class = "confirmation_number">{{guestreservation.confirmation_number}}</td>
+        <td class = "rent">{{guestreservation.rent}}</td>
+        <td class = "points_required_for_reservation">{{guestreservation.points_required_for_reservation}}</td>
+        <td class = "ad">{{guestreservation.ad}}</td>
+        <td class = "traveler">{{guestreservation.guest}}</td>
+        <td class = "notes">{{guestreservation.notes}}</td>
+        <td class = "addName">{{guestreservation.add_name}}</td>
+        <td class = "guestSent">{{guestreservation.guest_sent}}</td>
+        <td class = "RA_Sent_Rec">{{guestreservation.ra_sent_rec}}</td>
+        <td class = "downDue_paid">{{guestreservation.down_due_paid}}</td>
+        <td class = "balanceDue_paid">{{guestreservation.balance_due_paid}}</td>
+        <td class = "pointsCost">{{guestreservation.points_cost}}</td>
+        <td class = "guestCertYr_number">{{guestreservation.guest_cert_yr_number}}</td>
+        <td class = "guestCertCost">{{guestreservation.guest_cert_cost}}</td>
+        <td class = "ccFee">{{guestreservation.cc_fee}}</td>
+        <td class = "otherFees">{{guestreservation.other_fees}}</td>
+        <td class = "totalCost">{{guestreservation.total_cost}}</td>
+        <td class = "netDollars">{{guestreservation.net_dollars}}</td>
+        <td class = "netPercent">{{guestreservation.net_percent}}</td>
+        <td class = "Jen">{{guestreservation.jen}}</td>
+        <td class = "Lauren">{{guestreservation.lauren}}</td>
+
+    {%endfor%}
+	</tbody>
+</table>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src = "{%static 'main/js/index.js'%}"></script>
+</html>
