@@ -15,7 +15,6 @@ from monthly_summary.views import Report
 from datetime import timedelta
 from django.contrib.auth.decorators import login_required
 
-
 def handleOwner(owner):
 
     reservations = Reservation.objects.all()
@@ -149,10 +148,6 @@ class ScrapeWyndham:
 
 
 
-
-
-
-
     def parseConfirmationPage(self, p_owner, p_confirmaion_numbers_pts_dict):
         time.sleep(3)
         columns = self.browser.find_elements_by_tag_name("td")
@@ -185,9 +180,6 @@ class ScrapeWyndham:
                 element.click()
             except:
                 more_pages_exist = False
-
-
-
 
 class Update:
 

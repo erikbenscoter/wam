@@ -128,8 +128,8 @@ class ScrapeWyndham:
         pointsavailable = p_pointstatusrow_text[3]
         housekeepingavailable = p_pointstatusrow_text[4]
 
-        print(travelfrom)
-        print(expiration)
+#        print(travelfrom)
+#        print(expiration)
 
 
         travelfrom = datetime.strptime(str(travelfrom).strip(), '%b %d, %Y')
