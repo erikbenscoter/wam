@@ -1,18 +1,25 @@
 import csv
 import re
 import time
+
 from datetime import datetime
+from datetime import timedelta
+
+from django.core.mail import send_mail
+
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
+
+
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-from datetime import datetime
+
 from .models import Owner
 from .models import Owners_Points_Status
 from .models import OwnerPointsManagerApplicationSettings
-from datetime import timedelta
+
 
 
 
@@ -184,6 +191,22 @@ class Update:
         opma = OwnerPointsManagerApplicationSettings(last_updated = datetime.now())
         opma.save()
 
+#        mail_admins(
+#            'WAM Owner Point Manager',
+#            'Update has run.',
+#            connection=None,
+#            html_message=None
+#        )
+
+
+#        send_mail (
+#            'WAM Owner Point Manager',
+#            'Update has run.',
+#            'Glenn.Benscoter@gmail.com',
+#            ['Glenn.Benscoter@gmail.com'],
+#            fail_silently=False
+#        )
+
         return redirect("/updatepointsview")
 
 class View:
@@ -228,6 +251,7 @@ class View:
         for ownerspointsstatus in Owners_Points_Statuss:
             housekeepingavail.append(ownerspointsstatus.Housekeeping_Available)
 #            print("housekeepingavail = ", housekeepingavail)
+
 
         context = {
             "ownerspointsstatuss": Owners_Points_Statuss,
