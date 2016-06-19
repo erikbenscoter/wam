@@ -15,6 +15,8 @@ python3 manage.py makemigrations owners_point_manager
 python3 manage.py makemigrations upgrade_recognition
 python3 manage.py makemigrations guest_reservation_manager
 
+
+
 echo "+++ migrate +++"
 
 python3 manage.py migrate
