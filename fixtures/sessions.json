@@ -1,0 +1,10 @@
+[
+{
+    "pk": "jdw16wnf90bqk1u20x59j58txowy6lzw",
+    "fields": {
+        "session_data": "YTEyYjQyMTk0NjkzMmZkZjA1MWRmM2FiNjYwNmNmYTA5YjU2ODZlMDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhNjAzOTZhZTczMmI4ZmNkZjE1NDU4NzYwZGJjMjkzNzM4OWZkNjM2In0=",
+        "expire_date": "2016-07-04T22:38:23.957Z"
+    },
+    "model": "sessions.session"
+}
+]

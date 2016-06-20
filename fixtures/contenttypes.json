@@ -1,0 +1,106 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "logentry",
+        "app_label": "admin"
+    },
+    "pk": 1
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "permission",
+        "app_label": "auth"
+    },
+    "pk": 2
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "group",
+        "app_label": "auth"
+    },
+    "pk": 3
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "user",
+        "app_label": "auth"
+    },
+    "pk": 4
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "contenttype",
+        "app_label": "contenttypes"
+    },
+    "pk": 5
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "session",
+        "app_label": "sessions"
+    },
+    "pk": 6
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "owner",
+        "app_label": "reservation_manager"
+    },
+    "pk": 7
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "reservationmanagerapplicationsettings",
+        "app_label": "reservation_manager"
+    },
+    "pk": 8
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "reservation",
+        "app_label": "reservation_manager"
+    },
+    "pk": 9
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "monthlyreport",
+        "app_label": "monthly_summary"
+    },
+    "pk": 10
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "ownerpointsmanagerapplicationsettings",
+        "app_label": "owners_point_manager"
+    },
+    "pk": 11
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "owners_points_status",
+        "app_label": "owners_point_manager"
+    },
+    "pk": 12
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "guestreservation",
+        "app_label": "guest_reservation_manager"
+    },
+    "pk": 13
+}
+]
