@@ -12,6 +12,7 @@ TRUE_OR_FALSE = (
 REASON_ON_HOLD_CHOICES = (
 	("UPGD", "Needed For Upgrade"),
 	("WSH","User requested this"),
+	("OWN","Owner requested this"),
 	("NH", "Not being held")
 )
 
@@ -71,6 +72,6 @@ class Reservation( models.Model ):
 
 
     def __str__(self):
-        return str(self.fk_owner.username) + "   " + str(self.date_of_reservation) + " , " + str(self.location)
+        return str(self.confirmation_number) + "," +  str(self.fk_owner.username) + " ,  " + str(self.date_of_reservation) + " , " + str(self.location)
     def __unicode__(self):
-        return str(self.fk_owner.username) + "   " + str(self.date_of_reservation) + " , " + str(self.location)
+        return str(self.confirmation_number) + "," +  str(self.fk_owner.username) + " ,  " + str(self.date_of_reservation) + " , " + str(self.location)

@@ -73,6 +73,21 @@ class GuestReservation(models.Model):
         return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
 
 
+class RuthSheet(models.Model):
+    A_ResDate = models.CharField( blank=True, null=True, max_length = 2000)
+    B_UseDate = models.CharField( blank=True, null=True, max_length = 2000)
+    C_NTS = models.CharField( blank=True, null=True, max_length = 2000)
+    D_Resort = models.CharField( blank=True, null=True, max_length = 2000)
+    E_UnitSize = models.CharField( blank=True, null=True, max_length = 2000)
+    F_Slp = models.CharField( blank=True, null=True, max_length = 2000)
+
+    def __str__(self):
+        return str(self.id) + "," + str(self.A_ResDate) + "   " + str(self.B_UseDate) + " , " + str(self.C_NTS) + " , " +  str(self.D_Resort) + " , " + str(self.E_UnitSize)+ " , " + str(self.F_Slp)
+
+    def __unicode__(self):
+        return str(self.id) + "," + str(self.A_ResDate) + "   " + str(self.B_UseDate) + " , " + str(self.C_NTS) + " , " +  str(self.D_Resort) + " , " + str(self.E_UnitSize)+ " , " + str(self.F_Slp)
+
+
 class CreateGuestWishForm(ModelForm):
     class Meta:
         model = GuestReservation
