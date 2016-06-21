@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from guest_reservation_manager.views import View as guest_reservations_views
+from guest_reservation_manager.views import makeNewWish
 from owners_point_manager.views import Update as update_owners_points_update
 from owners_point_manager.views import View as update_owners_points_view
 from reservation_manager.views import Export
@@ -41,7 +41,7 @@ urlpatterns = [
 	url(r'^login/$', login_views.login_user),
 	url(r'^$', View.get),
 
-    url(r'^guest/makeWish/$','guest_reservation_manager.views.makeNewWish'),
+    url(r'^guest/makeWish/$',makeNewWish),
     url(r'^guestreservationview/', guest_reservations_views.get),
 
     url(r'^updatepoints/', update_owners_points_update.get),
