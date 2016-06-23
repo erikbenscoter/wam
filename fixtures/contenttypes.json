@@ -1,106 +1,114 @@
 [
 {
     "model": "contenttypes.contenttype",
+    "pk": 1,
     "fields": {
-        "model": "logentry",
-        "app_label": "admin"
-    },
-    "pk": 1
+        "app_label": "admin",
+        "model": "logentry"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 2,
     "fields": {
-        "model": "permission",
-        "app_label": "auth"
-    },
-    "pk": 2
+        "app_label": "auth",
+        "model": "permission"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 3,
     "fields": {
-        "model": "group",
-        "app_label": "auth"
-    },
-    "pk": 3
+        "app_label": "auth",
+        "model": "group"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 4,
     "fields": {
-        "model": "user",
-        "app_label": "auth"
-    },
-    "pk": 4
+        "app_label": "auth",
+        "model": "user"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 5,
     "fields": {
-        "model": "contenttype",
-        "app_label": "contenttypes"
-    },
-    "pk": 5
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 6,
     "fields": {
-        "model": "session",
-        "app_label": "sessions"
-    },
-    "pk": 6
+        "app_label": "sessions",
+        "model": "session"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 7,
     "fields": {
-        "model": "owner",
-        "app_label": "reservation_manager"
-    },
-    "pk": 7
+        "app_label": "reservation_manager",
+        "model": "owner"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 8,
     "fields": {
-        "model": "reservationmanagerapplicationsettings",
-        "app_label": "reservation_manager"
-    },
-    "pk": 8
+        "app_label": "reservation_manager",
+        "model": "reservationmanagerapplicationsettings"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 9,
     "fields": {
-        "model": "reservation",
-        "app_label": "reservation_manager"
-    },
-    "pk": 9
+        "app_label": "reservation_manager",
+        "model": "reservation"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 10,
     "fields": {
-        "model": "monthlyreport",
-        "app_label": "monthly_summary"
-    },
-    "pk": 10
+        "app_label": "monthly_summary",
+        "model": "monthlyreport"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 11,
     "fields": {
-        "model": "ownerpointsmanagerapplicationsettings",
-        "app_label": "owners_point_manager"
-    },
-    "pk": 11
+        "app_label": "owners_point_manager",
+        "model": "ownerpointsmanagerapplicationsettings"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 12,
     "fields": {
-        "model": "owners_points_status",
-        "app_label": "owners_point_manager"
-    },
-    "pk": 12
+        "app_label": "owners_point_manager",
+        "model": "owners_points_status"
+    }
 },
 {
     "model": "contenttypes.contenttype",
+    "pk": 13,
     "fields": {
-        "model": "guestreservation",
-        "app_label": "guest_reservation_manager"
-    },
-    "pk": 13
+        "app_label": "guest_reservation_manager",
+        "model": "guestreservation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "guest_reservation_manager",
+        "model": "ruthsheet"
+    }
 }
 ]

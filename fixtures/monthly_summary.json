@@ -39,9 +39,9 @@
     "model": "monthly_summary.monthlyreport",
     "pk": 136,
     "fields": {
-        "check_number": null,
-        "amount_paid": 0.0,
-        "date_paid": null
+        "check_number": "1005",
+        "amount_paid": 1051.5,
+        "date_paid": "2016-06-12T23:27:27.728Z"
     }
 },
 {
@@ -101,6 +101,51 @@
 {
     "model": "monthly_summary.monthlyreport",
     "pk": 143,
+    "fields": {
+        "check_number": null,
+        "amount_paid": 0.0,
+        "date_paid": null
+    }
+},
+{
+    "model": "monthly_summary.monthlyreport",
+    "pk": 149,
+    "fields": {
+        "check_number": null,
+        "amount_paid": 0.0,
+        "date_paid": null
+    }
+},
+{
+    "model": "monthly_summary.monthlyreport",
+    "pk": 150,
+    "fields": {
+        "check_number": null,
+        "amount_paid": 0.0,
+        "date_paid": null
+    }
+},
+{
+    "model": "monthly_summary.monthlyreport",
+    "pk": 152,
+    "fields": {
+        "check_number": null,
+        "amount_paid": 0.0,
+        "date_paid": null
+    }
+},
+{
+    "model": "monthly_summary.monthlyreport",
+    "pk": 155,
+    "fields": {
+        "check_number": null,
+        "amount_paid": 0.0,
+        "date_paid": null
+    }
+},
+{
+    "model": "monthly_summary.monthlyreport",
+    "pk": 156,
     "fields": {
         "check_number": null,
         "amount_paid": 0.0,

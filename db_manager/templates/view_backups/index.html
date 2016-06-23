@@ -1,0 +1,14 @@
+{%load staticfiles%}
+
+<html>
+  <link rel="stylesheet" href="{%static 'clean_table/css/style.css'%}" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <body>
+
+    <center>
+      {%include 'clean_table/index.html' with blue=1 table=table%}
+    </center>
+
+  </body>
+</html>

@@ -28,6 +28,8 @@ from login import views as login_views
 from upgrade_recognition import views as upgrade_recognition_views
 from VacationScheduler.custom_startup import setUpToRunHourly
 from db_manager.views import DBManager
+from guest_reservation_manager.views import View as guest_reservations_views
+
 
 
 
@@ -47,7 +49,8 @@ urlpatterns = [
     url(r'^updatepoints/', update_owners_points_update.get),
     url(r'^updatepointsview/', update_owners_points_view.get),
     url(r'^upgrades/', upgrade_recognition_views.main),
-    url(r'^dumpdata/', DBManager.dumpData)
+    url(r'^dumpdata/', DBManager.dumpData),
+    url(r'^viewbackups/', DBManager.viewUpdates)
 
 
 ]
