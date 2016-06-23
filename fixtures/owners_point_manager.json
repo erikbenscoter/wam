@@ -1,38 +1,38 @@
 [
 {
     "model": "owners_point_manager.ownerpointsmanagerapplicationsettings",
-    "pk": 33,
+    "pk": 53,
     "fields": {
-        "last_updated": "2016-06-08T13:32:25.625Z"
+        "last_updated": "2016-06-22T10:52:23.892Z"
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1107,
+    "pk": 1802,
     "fields": {
         "fk_owner": 1,
-        "Travel_From": "2016-06-08",
+        "Travel_From": "2016-06-22",
         "Expiration": "2016-09-30",
         "Points_Description": "Regular",
-        "Points_Available": 79000,
+        "Points_Available": 0,
         "Housekeeping_Available": 1314
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1108,
+    "pk": 1803,
     "fields": {
         "fk_owner": 1,
         "Travel_From": "2016-10-01",
         "Expiration": "2017-09-30",
         "Points_Description": "Regular",
-        "Points_Available": 1076200,
+        "Points_Available": 976200,
         "Housekeeping_Available": 1314
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1109,
+    "pk": 1804,
     "fields": {
         "fk_owner": 1,
         "Travel_From": "2017-10-01",
@@ -44,31 +44,31 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1110,
+    "pk": 1805,
     "fields": {
         "fk_owner": 1,
         "Travel_From": "2017-10-01",
         "Expiration": "2018-09-30",
         "Points_Description": "Credit Pool",
-        "Points_Available": 21025,
+        "Points_Available": 27325,
         "Housekeeping_Available": 623
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1111,
+    "pk": 1806,
     "fields": {
         "fk_owner": 3,
-        "Travel_From": "2016-06-08",
+        "Travel_From": "2016-06-22",
         "Expiration": "2016-12-31",
         "Points_Description": "Regular",
-        "Points_Available": 34625,
+        "Points_Available": 188325,
         "Housekeeping_Available": 569
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1112,
+    "pk": 1807,
     "fields": {
         "fk_owner": 3,
         "Travel_From": "2017-01-01",
@@ -80,7 +80,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1113,
+    "pk": 1808,
     "fields": {
         "fk_owner": 3,
         "Travel_From": "2017-10-01",
@@ -92,7 +92,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1114,
+    "pk": 1809,
     "fields": {
         "fk_owner": 3,
         "Travel_From": "2018-01-01",
@@ -104,19 +104,19 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1115,
+    "pk": 1810,
     "fields": {
         "fk_owner": 4,
-        "Travel_From": "2016-06-08",
+        "Travel_From": "2016-06-22",
         "Expiration": "2016-12-31",
         "Points_Description": "Regular",
-        "Points_Available": 60675,
+        "Points_Available": 39675,
         "Housekeeping_Available": 1505
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1116,
+    "pk": 1811,
     "fields": {
         "fk_owner": 4,
         "Travel_From": "2017-01-01",
@@ -128,7 +128,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1117,
+    "pk": 1812,
     "fields": {
         "fk_owner": 4,
         "Travel_From": "2018-01-01",
@@ -140,19 +140,19 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1118,
+    "pk": 1813,
     "fields": {
         "fk_owner": 5,
-        "Travel_From": "2016-06-08",
+        "Travel_From": "2016-06-22",
         "Expiration": "2016-12-31",
         "Points_Description": "Regular",
-        "Points_Available": 1239100,
-        "Housekeeping_Available": 44
+        "Points_Available": 121750,
+        "Housekeeping_Available": 85
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1119,
+    "pk": 1814,
     "fields": {
         "fk_owner": 5,
         "Travel_From": "2017-01-01",
@@ -164,19 +164,19 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1120,
+    "pk": 1815,
     "fields": {
         "fk_owner": 5,
         "Travel_From": "2017-07-01",
         "Expiration": "2018-06-23",
         "Points_Description": "Credit Pool",
-        "Points_Available": 944502,
+        "Points_Available": 280402,
         "Housekeeping_Available": 1021
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1121,
+    "pk": 1816,
     "fields": {
         "fk_owner": 5,
         "Travel_From": "2018-01-01",
@@ -188,7 +188,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1122,
+    "pk": 1817,
     "fields": {
         "fk_owner": 5,
         "Travel_From": "2018-01-01",
@@ -200,22 +200,22 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1123,
+    "pk": 1818,
     "fields": {
         "fk_owner": 6,
-        "Travel_From": "2016-06-08",
+        "Travel_From": "2016-06-22",
         "Expiration": "2016-12-31",
         "Points_Description": "Regular",
-        "Points_Available": 29250,
+        "Points_Available": 0,
         "Housekeeping_Available": 547
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1124,
+    "pk": 1819,
     "fields": {
         "fk_owner": 6,
-        "Travel_From": "2016-06-08",
+        "Travel_From": "2016-06-22",
         "Expiration": "2017-03-31",
         "Points_Description": "Regular",
         "Points_Available": 0,
@@ -224,7 +224,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1125,
+    "pk": 1820,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2017-01-01",
@@ -236,7 +236,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1126,
+    "pk": 1821,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2017-04-01",
@@ -248,7 +248,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1127,
+    "pk": 1822,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2018-01-01",
@@ -260,19 +260,19 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1128,
+    "pk": 1823,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2018-01-01",
         "Expiration": "2018-12-29",
         "Points_Description": "Credit Pool",
-        "Points_Available": 21700,
+        "Points_Available": 69700,
         "Housekeeping_Available": 0
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1129,
+    "pk": 1824,
     "fields": {
         "fk_owner": 6,
         "Travel_From": "2018-01-01",
@@ -284,19 +284,19 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1130,
+    "pk": 1825,
     "fields": {
         "fk_owner": 7,
-        "Travel_From": "2016-06-08",
+        "Travel_From": "2016-06-22",
         "Expiration": "2016-12-31",
         "Points_Description": "Regular",
-        "Points_Available": 52755,
+        "Points_Available": 287705,
         "Housekeeping_Available": 2506
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1131,
+    "pk": 1826,
     "fields": {
         "fk_owner": 7,
         "Travel_From": "2017-01-01",
@@ -308,7 +308,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1132,
+    "pk": 1827,
     "fields": {
         "fk_owner": 7,
         "Travel_From": "2017-01-01",
@@ -320,7 +320,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1133,
+    "pk": 1828,
     "fields": {
         "fk_owner": 7,
         "Travel_From": "2018-01-01",
@@ -332,31 +332,31 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1134,
+    "pk": 1829,
     "fields": {
         "fk_owner": 9,
-        "Travel_From": "2016-06-08",
+        "Travel_From": "2016-06-22",
         "Expiration": "2016-06-30",
         "Points_Description": "Regular",
-        "Points_Available": 67725,
+        "Points_Available": 18725,
         "Housekeeping_Available": 1603
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1135,
+    "pk": 1830,
     "fields": {
         "fk_owner": 9,
         "Travel_From": "2016-07-01",
         "Expiration": "2017-06-30",
         "Points_Description": "Regular",
-        "Points_Available": 1435000,
+        "Points_Available": 1503000,
         "Housekeeping_Available": 1503
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1136,
+    "pk": 1831,
     "fields": {
         "fk_owner": 9,
         "Travel_From": "2017-07-01",
@@ -368,19 +368,19 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1137,
+    "pk": 1832,
     "fields": {
         "fk_owner": 10,
-        "Travel_From": "2016-06-08",
+        "Travel_From": "2016-06-22",
         "Expiration": "2016-12-31",
         "Points_Description": "Regular",
-        "Points_Available": 284725,
+        "Points_Available": 822250,
         "Housekeeping_Available": 2450
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1138,
+    "pk": 1833,
     "fields": {
         "fk_owner": 10,
         "Travel_From": "2017-01-01",
@@ -392,7 +392,7 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1139,
+    "pk": 1834,
     "fields": {
         "fk_owner": 10,
         "Travel_From": "2017-01-01",
@@ -404,19 +404,19 @@
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1140,
+    "pk": 1835,
     "fields": {
         "fk_owner": 10,
         "Travel_From": "2017-10-01",
         "Expiration": "2018-09-30",
         "Points_Description": "Credit Pool",
-        "Points_Available": 29175,
+        "Points_Available": 10900,
         "Housekeeping_Available": 999
     }
 },
 {
     "model": "owners_point_manager.owners_points_status",
-    "pk": 1141,
+    "pk": 1836,
     "fields": {
         "fk_owner": 10,
         "Travel_From": "2018-01-01",
