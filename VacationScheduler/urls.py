@@ -43,7 +43,7 @@ urlpatterns = [
 	url(r'^login/$', login_views.login_user),
 	url(r'^$', View.get),
 
-    url(r'^guest/makeWish/$',guest_reservations_views.makeNewWish),
+    url(r'^guest/makeWish/$',makeNewWish),
     url(r'^guestreservationview/', guest_reservations_views.get),
 
     url(r'^updatepoints/', update_owners_points_update.get),
