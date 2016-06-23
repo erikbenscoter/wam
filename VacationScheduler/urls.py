@@ -54,5 +54,5 @@ urlpatterns = [
 
 
 ]
-
-setUpToRunHourly()
+# this adds the cron
+# setUpToRunHourly()
