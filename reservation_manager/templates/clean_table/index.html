@@ -1,0 +1,16 @@
+<table class="rwd-table">
+  <tr>
+    {% for heading in table.0.keys %}
+      <th>{{heading}}</th>
+    {% endfor %}
+  </tr>
+
+  {% for row in table %}
+    <tr>
+    {% for key,value in row.items %}
+      <td data-th="{{key}}">{{value}}</td>
+    {% endfor %}
+    </tr>
+  {% endfor %}
+
+</table>

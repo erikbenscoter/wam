@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from guest_reservation_manager.views import View as guest_reservations_views
+from guest_reservation_manager.views import makeNewWish
 from owners_point_manager.views import Update as update_owners_points_update
 from owners_point_manager.views import View as update_owners_points_view
 from reservation_manager.views import Export
@@ -28,6 +28,8 @@ from login import views as login_views
 from upgrade_recognition import views as upgrade_recognition_views
 from VacationScheduler.custom_startup import setUpToRunHourly
 from db_manager.views import DBManager
+from guest_reservation_manager.views import View as guest_reservations_views
+
 
 
 
@@ -41,15 +43,16 @@ urlpatterns = [
 	url(r'^login/$', login_views.login_user),
 	url(r'^$', View.get),
 
-    url(r'^guest/makeWish/$','guest_reservation_manager.views.makeNewWish'),
+    url(r'^guest/makeWish/$',guest_reservations_views.makeNewWish),
     url(r'^guestreservationview/', guest_reservations_views.get),
 
     url(r'^updatepoints/', update_owners_points_update.get),
     url(r'^updatepointsview/', update_owners_points_view.get),
     url(r'^upgrades/', upgrade_recognition_views.main),
-    url(r'^dumpdata/', DBManager.dumpData)
+    url(r'^dumpdata/', DBManager.dumpData),
+    url(r'^viewbackups/', DBManager.viewUpdates)
 
 
 ]
-
-setUpToRunHourly()
+# this adds the cron
+# setUpToRunHourly()
