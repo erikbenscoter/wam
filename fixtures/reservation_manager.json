@@ -568,6 +568,14 @@
     }
 },
 {
+    "model": "reservation_manager.reservationmanagerapplicationsettings",
+    "pk": 132,
+    "fields": {
+        "last_updated": "2016-06-23T13:16:06.798Z",
+        "last_updated_by": 3
+    }
+},
+{
     "model": "reservation_manager.reservation",
     "pk": 356,
     "fields": {
@@ -3948,7 +3956,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": true
+        "canceled": false
     }
 },
 {
@@ -4020,7 +4028,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": true
+        "canceled": false
     }
 },
 {
@@ -4092,7 +4100,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": true
+        "canceled": false
     }
 },
 {
@@ -4164,7 +4172,7 @@
         "guest_certificate": "Owner: Lauren Hunt",
         "touched": "2016-04-30",
         "touched_bool": false,
-        "canceled": true
+        "canceled": false
     }
 },
 {
@@ -13188,7 +13196,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -23700,7 +23708,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -27276,7 +27284,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -27300,7 +27308,7 @@
         "guest_certificate": "Owner: Stanley Hoffman",
         "touched": null,
         "touched_bool": false,
-        "canceled": false
+        "canceled": true
     }
 },
 {
@@ -27737,18 +27745,18 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 3723,
+    "pk": 3731,
     "fields": {
         "fk_owner": 6,
-        "fk_monthly_report": 156,
+        "fk_monthly_report": 157,
         "fk_wish_held_for": null,
         "reason_on_hold": "NH",
         "location": "Wyndham Bonnet Creek Resort",
         "date_of_reservation": "2016-07-03",
         "number_of_nights": 5,
         "unit_size": "1 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "055105",
+        "points_required_for_reservation": 50000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-22",
@@ -27761,42 +27769,18 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 3724,
+    "pk": 3732,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
         "fk_wish_held_for": null,
         "reason_on_hold": "NH",
-        "location": "Wyndham Governor's Green",
-        "date_of_reservation": "2016-07-06",
-        "number_of_nights": 2,
-        "unit_size": "3 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
-        "is_buyer_lined_up": null,
-        "amount_paid": null,
-        "date_booked": "2016-06-22",
-        "upgrade_status": "Reservation Upgraded",
-        "guest_certificate": "Owner: Stanley Hoffman",
-        "touched": null,
-        "touched_bool": false,
-        "canceled": false
-    }
-},
-{
-    "model": "reservation_manager.reservation",
-    "pk": 3725,
-    "fields": {
-        "fk_owner": 10,
-        "fk_monthly_report": null,
-        "fk_wish_held_for": null,
-        "reason_on_hold": "NH",
-        "location": "Wyndham Inn on the Harbor",
-        "date_of_reservation": "2016-07-06",
-        "number_of_nights": 3,
-        "unit_size": "1 Bedroom Suite",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "location": "Coconut Malorie Resort",
+        "date_of_reservation": "2016-07-05",
+        "number_of_nights": 4,
+        "unit_size": "Studio",
+        "confirmation_number": "059078",
+        "points_required_for_reservation": 23250,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-22",
@@ -27809,7 +27793,31 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 3726,
+    "pk": 3733,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "fk_wish_held_for": null,
+        "reason_on_hold": "NH",
+        "location": "Wyndham Bay Voyage Inn",
+        "date_of_reservation": "2016-07-08",
+        "number_of_nights": 2,
+        "unit_size": "1 Bedroom Suite",
+        "confirmation_number": "059076",
+        "points_required_for_reservation": 19500,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-22",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 3734,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -27819,8 +27827,8 @@
         "date_of_reservation": "2016-07-15",
         "number_of_nights": 3,
         "unit_size": "1 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "059077",
+        "points_required_for_reservation": 45500,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-22",
@@ -27833,7 +27841,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 3727,
+    "pk": 3735,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -27843,8 +27851,8 @@
         "date_of_reservation": "2016-07-18",
         "number_of_nights": 4,
         "unit_size": "2 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "059068",
+        "points_required_for_reservation": 36000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-22",
@@ -27857,7 +27865,103 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 3728,
+    "pk": 3736,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "fk_wish_held_for": null,
+        "reason_on_hold": "NH",
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-09",
+        "number_of_nights": 4,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "059070",
+        "points_required_for_reservation": 43000,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-22",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 3737,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "fk_wish_held_for": null,
+        "reason_on_hold": "NH",
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-11",
+        "number_of_nights": 2,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "059069",
+        "points_required_for_reservation": 25000,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-22",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 3738,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "fk_wish_held_for": null,
+        "reason_on_hold": "NH",
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-13",
+        "number_of_nights": 1,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "059072",
+        "points_required_for_reservation": 16000,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-22",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 3739,
+    "fields": {
+        "fk_owner": 10,
+        "fk_monthly_report": null,
+        "fk_wish_held_for": null,
+        "reason_on_hold": "NH",
+        "location": "Wyndham Kingsgate",
+        "date_of_reservation": "2016-08-13",
+        "number_of_nights": 1,
+        "unit_size": "2 Bedroom Deluxe",
+        "confirmation_number": "059073",
+        "points_required_for_reservation": 16000,
+        "is_buyer_lined_up": null,
+        "amount_paid": null,
+        "date_booked": "2016-06-22",
+        "upgrade_status": "Search for Upgrade",
+        "guest_certificate": "Owner: Stanley Hoffman",
+        "touched": null,
+        "touched_bool": false,
+        "canceled": false
+    }
+},
+{
+    "model": "reservation_manager.reservation",
+    "pk": 3740,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -27867,8 +27971,8 @@
         "date_of_reservation": "2016-08-15",
         "number_of_nights": 4,
         "unit_size": "1 Bedroom Deluxe",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "059071",
+        "points_required_for_reservation": 24000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-22",
@@ -27881,7 +27985,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 3729,
+    "pk": 3741,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -27891,8 +27995,8 @@
         "date_of_reservation": "2016-08-19",
         "number_of_nights": 3,
         "unit_size": "3 Bedroom Lockoff",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "059074",
+        "points_required_for_reservation": 41000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-22",
@@ -27905,7 +28009,7 @@
 },
 {
     "model": "reservation_manager.reservation",
-    "pk": 3730,
+    "pk": 3742,
     "fields": {
         "fk_owner": 10,
         "fk_monthly_report": null,
@@ -27915,8 +28019,8 @@
         "date_of_reservation": "2016-08-19",
         "number_of_nights": 2,
         "unit_size": "1 Bedroom Suite",
-        "confirmation_number": "N/A",
-        "points_required_for_reservation": -1,
+        "confirmation_number": "059075",
+        "points_required_for_reservation": 32000,
         "is_buyer_lined_up": null,
         "amount_paid": null,
         "date_booked": "2016-06-22",

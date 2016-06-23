@@ -24,5 +24,9 @@ def copyJsonFiles():
 	cmd = "cp ./fixtures/* {}/fixtures/".format(str(getBackupPath()))
 	os.system(cmd)
 
-makeFolder()
-copyJsonFiles()
+def main():
+	makeFolder()
+	copyJsonFiles()
+
+if __name__ == '__main__':
+	main()

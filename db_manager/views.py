@@ -9,7 +9,7 @@ class DBManager:
 
         cmd = "sh dump_the_data.sh"
         os.system(cmd)
-        return redirect("/")
+        return redirect("/viewbackups")
 
     def viewUpdates(request):
         date_folder_name = push_backup.getDateFolderName()
@@ -30,5 +30,5 @@ class DBManager:
             "table" : table
         }
 
-        
+
         return render(request,"view_backups/index.html", context)
