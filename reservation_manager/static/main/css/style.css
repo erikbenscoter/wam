@@ -156,6 +156,10 @@ tr.canceled{
   background-color:#1F2739;
 }
 
+.no_bg_color{
+    background-color:#1F2739 !important;
+}
+
 @media (max-width: 800px) {
 .container td:nth-child(4),
 .container th:nth-child(4) { display: none; }

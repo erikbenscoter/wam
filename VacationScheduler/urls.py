@@ -39,6 +39,9 @@ urlpatterns = [
     url(r'^export/', Export.get),
     url(r'^report/(?P<p_owner_username>.*)/(?P<p_month>[0-9][0-9]?)/(?P<p_year>[0-9][0-9][0-9][0-9])', Report.get),
     url(r'^save_payment/(?P<p_check_number>[0-9]*)/(?P<p_amt_paid>[0-9]*.?[0-9]*)/(?P<p_monthly_summary>.*)', Report.savePayment),
+
+    url(r'^set_is_saved_for_owner/(?P<reservation_id>[0-9]*)', Report.setIsSavedForOwner),
+
     url(r'^generate_report/', GenerateReport.get),
 	url(r'^login/$', login_views.login_user),
 	url(r'^$', View.get),

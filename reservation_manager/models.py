@@ -69,6 +69,13 @@ class Reservation( models.Model ):
         else:
             return True
 
+    @property
+    def is_held_for_owner(self):
+        if(self.reason_on_hold == "OWN"):
+            return True
+        else:
+            return False
+
 
 
     def __str__(self):

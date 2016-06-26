@@ -15,14 +15,28 @@ class MonthlyReport(models.Model):
     @property
     def total_owed_owner_month(self):
         from reservation_manager.models import Reservation
-        reservations = Reservation.objects.filter(fk_monthly_report=self)
+        reservations = Reservation.objects.filter(fk_monthly_report=self,canceled=False)
 
         total_owed = 0
 
         for reservation in reservations:
-            total_owed += reservation.owed_owner
+            if(not (reservation.is_held_for_owner)):
+                total_owed += reservation.owed_owner
 
         return total_owed
+
+    @property
+    def total_points_month(self):
+        from reservation_manager.models import Reservation
+        reservations = Reservation.objects.filter(fk_monthly_report=self, canceled=False)
+
+        total_points = 0
+
+        for reservation in reservations:
+            if(not (reservation.is_held_for_owner)):
+                total_points += reservation.points_required_for_reservation
+
+        return total_points
 
     @property
     def owner(self):
