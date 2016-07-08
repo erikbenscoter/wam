@@ -1,0 +1,92 @@
+.TH "monthly_summary.models.MonthlyReport" 3 "Fri Jul 8 2016" "WAM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+monthly_summary.models.MonthlyReport \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Model\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBtotal_owed_owner_month\fP"
+.br
+.ti -1c
+.RI "def \fBtotal_points_month\fP"
+.br
+.ti -1c
+.RI "def \fBowner\fP"
+.br
+.ti -1c
+.RI "def \fBmonth\fP"
+.br
+.ti -1c
+.RI "def \fByear\fP"
+.br
+.ti -1c
+.RI "def \fB__str__\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBcheck_number\fP = models\&.CharField( blank=True, null=True, max_length=2000 )"
+.br
+.ti -1c
+.RI "tuple \fBamount_paid\fP = models\&.FloatField( default=0\&.00 )"
+.br
+.ti -1c
+.RI "tuple \fBdate_paid\fP = models\&.DateTimeField( null=True, default=None, blank=True )"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file models\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def monthly_summary\&.models\&.MonthlyReport\&.__str__ (self)"
+
+.PP
+Definition at line 80 of file models\&.py\&.
+.SS "def monthly_summary\&.models\&.MonthlyReport\&.month (self)"
+
+.PP
+Definition at line 55 of file models\&.py\&.
+.SS "def monthly_summary\&.models\&.MonthlyReport\&.owner (self)"
+
+.PP
+Definition at line 42 of file models\&.py\&.
+.SS "def monthly_summary\&.models\&.MonthlyReport\&.total_owed_owner_month (self)"
+
+.PP
+Definition at line 16 of file models\&.py\&.
+.SS "def monthly_summary\&.models\&.MonthlyReport\&.total_points_month (self)"
+
+.PP
+Definition at line 29 of file models\&.py\&.
+.SS "def monthly_summary\&.models\&.MonthlyReport\&.year (self)"
+
+.PP
+Definition at line 68 of file models\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "tuple monthly_summary\&.models\&.MonthlyReport\&.amount_paid = models\&.FloatField( default=0\&.00 )\fC [static]\fP"
+
+.PP
+Definition at line 11 of file models\&.py\&.
+.SS "tuple monthly_summary\&.models\&.MonthlyReport\&.check_number = models\&.CharField( blank=True, null=True, max_length=2000 )\fC [static]\fP"
+
+.PP
+Definition at line 10 of file models\&.py\&.
+.SS "tuple monthly_summary\&.models\&.MonthlyReport\&.date_paid = models\&.DateTimeField( null=True, default=None, blank=True )\fC [static]\fP"
+
+.PP
+Definition at line 12 of file models\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAM from the source code\&.

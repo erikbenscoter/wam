@@ -1,0 +1,65 @@
+\hypertarget{namespaceVacationScheduler_1_1urls}{\section{Vacation\-Scheduler.\-urls Namespace Reference}
+\label{namespaceVacationScheduler_1_1urls}\index{Vacation\-Scheduler.\-urls@{Vacation\-Scheduler.\-urls}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespaceVacationScheduler_1_1urls_a13c8b2ea0a5f6d100c48d2d8febcad83}{urlpatterns}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}VacationScheduler URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/1.9/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.conf.urls import url, include
+    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceVacationScheduler_1_1urls_a13c8b2ea0a5f6d100c48d2d8febcad83}{\index{Vacation\-Scheduler\-::urls@{Vacation\-Scheduler\-::urls}!urlpatterns@{urlpatterns}}
+\index{urlpatterns@{urlpatterns}!VacationScheduler::urls@{Vacation\-Scheduler\-::urls}}
+\subsubsection[{urlpatterns}]{\setlength{\rightskip}{0pt plus 5cm}list Vacation\-Scheduler.\-urls.\-urlpatterns}}\label{namespaceVacationScheduler_1_1urls_a13c8b2ea0a5f6d100c48d2d8febcad83}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [
+2     url(\textcolor{stringliteral}{r'^admin/'}, admin.site.urls),
+3     url(\textcolor{stringliteral}{r'^update/'}, Update.get),
+4     url(\textcolor{stringliteral}{r'^export/'}, Export.get),
+5     url(\textcolor{stringliteral}{r'^report/(?P<p\_owner\_username>.*)/(?P<p\_month>[0-9][0-9]?)/(?P<p\_year>[0-9][0-9][0-9][0-9])'}, 
+      Report.get),
+6     url(\textcolor{stringliteral}{r'^save\_payment/(?P<p\_check\_number>[0-9]*)/(?P<p\_amt\_paid>[0-9]*.?[0-9]*)/(?P<p\_monthly\_summary>.*)
+      '}, Report.savePayment),
+7 
+8     url(\textcolor{stringliteral}{r'^set\_is\_saved\_for\_owner/(?P<reservation\_id>[0-9]*)'}, Report.setIsSavedForOwner),
+9 
+10     url(\textcolor{stringliteral}{r'^generate\_report/'}, GenerateReport.get),
+11     url(\textcolor{stringliteral}{r'^login/$'}, login\_views.login\_user),
+12     url(\textcolor{stringliteral}{r'^$'}, View.get),
+13 
+14     url(\textcolor{stringliteral}{r'^guest/makeWish/$'},makeNewWish),
+15     url(\textcolor{stringliteral}{r'^guestreservationview/'}, guest\_reservations\_views.get),
+16 
+17     url(\textcolor{stringliteral}{r'^updatepoints/'}, update\_owners\_points\_update.get),
+18     url(\textcolor{stringliteral}{r'^updatepointsview/'}, update\_owners\_points\_view.get),
+19     url(\textcolor{stringliteral}{r'^upgrades/'}, upgrade\_recognition\_views.main),
+20     url(\textcolor{stringliteral}{r'^dumpdata/'}, DBManager.dumpData),
+21     url(\textcolor{stringliteral}{r'^viewbackups/'}, DBManager.viewUpdates)
+22 
+23 
+24 ]
+\end{DoxyCode}
+
+
+Definition at line 36 of file urls.\-py.
+

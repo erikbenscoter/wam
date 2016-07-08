@@ -1,0 +1,85 @@
+.TH "owners_point_manager.models.Owners_Points_Status" 3 "Fri Jul 8 2016" "WAM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+owners_point_manager.models.Owners_Points_Status \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Model\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__str__\fP"
+.br
+.ti -1c
+.RI "def \fB__unicode__\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBfk_owner\fP = models\&.ForeignKey(\fBOwner\fP)"
+.br
+.ti -1c
+.RI "tuple \fBTravel_From\fP = models\&.DateField(blank=True, null=True)"
+.br
+.ti -1c
+.RI "tuple \fBExpiration\fP = models\&.DateField(blank=True, null=True)"
+.br
+.ti -1c
+.RI "tuple \fBPoints_Description\fP = models\&.CharField(blank=True, null=True, max_length=20)"
+.br
+.ti -1c
+.RI "tuple \fBPoints_Available\fP = models\&.IntegerField(blank=True, null=True)"
+.br
+.ti -1c
+.RI "tuple \fBHousekeeping_Available\fP = models\&.IntegerField(blank=True, null=True)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 15 of file models\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def owners_point_manager\&.models\&.Owners_Points_Status\&.__str__ (self)"
+
+.PP
+Definition at line 23 of file models\&.py\&.
+.SS "def owners_point_manager\&.models\&.Owners_Points_Status\&.__unicode__ (self)"
+
+.PP
+Definition at line 27 of file models\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "tuple owners_point_manager\&.models\&.Owners_Points_Status\&.Expiration = models\&.DateField(blank=True, null=True)\fC [static]\fP"
+
+.PP
+Definition at line 18 of file models\&.py\&.
+.SS "tuple owners_point_manager\&.models\&.Owners_Points_Status\&.fk_owner = models\&.ForeignKey(\fBOwner\fP)\fC [static]\fP"
+
+.PP
+Definition at line 16 of file models\&.py\&.
+.SS "tuple owners_point_manager\&.models\&.Owners_Points_Status\&.Housekeeping_Available = models\&.IntegerField(blank=True, null=True)\fC [static]\fP"
+
+.PP
+Definition at line 21 of file models\&.py\&.
+.SS "tuple owners_point_manager\&.models\&.Owners_Points_Status\&.Points_Available = models\&.IntegerField(blank=True, null=True)\fC [static]\fP"
+
+.PP
+Definition at line 20 of file models\&.py\&.
+.SS "tuple owners_point_manager\&.models\&.Owners_Points_Status\&.Points_Description = models\&.CharField(blank=True, null=True, max_length=20)\fC [static]\fP"
+
+.PP
+Definition at line 19 of file models\&.py\&.
+.SS "tuple owners_point_manager\&.models\&.Owners_Points_Status\&.Travel_From = models\&.DateField(blank=True, null=True)\fC [static]\fP"
+
+.PP
+Definition at line 17 of file models\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAM from the source code\&.

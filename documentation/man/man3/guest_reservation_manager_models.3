@@ -1,0 +1,288 @@
+.TH "guest_reservation_manager.models" 3 "Fri Jul 8 2016" "WAM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+guest_reservation_manager.models \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGuestReservation\fP"
+.br
+.ti -1c
+.RI "class \fBRuthSheet\fP"
+.br
+.ti -1c
+.RI "class \fBCreateGuestWishForm\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBreservations\fP"
+.br
+.ti -1c
+.RI "def \fB__str__\fP"
+.br
+.ti -1c
+.RI "def \fB__unicode__\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBTRUE_OR_FALSE\fP"
+.br
+.ti -1c
+.RI "tuple \fBoptional_username_to_aim_for\fP = models\&.CharField( max_length=2000, blank=True, null=True, default = None)"
+.br
+.ti -1c
+.RI "tuple \fBguest\fP = models\&.CharField( blank=True, null=True, max_length = 2000)"
+.br
+.ti -1c
+.RI "tuple \fBdate_rquested\fP = models\&.DateField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBnights_requested\fP = models\&.IntegerField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBlocation_requested\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBunit_size\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBsleeps\fP = models\&.IntegerField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBunit_size_notes\fP = models\&.CharField( blank=True, null=True, max_length=2000 )"
+.br
+.ti -1c
+.RI "tuple \fBrent\fP = models\&.FloatField( default=0\&.00 )"
+.br
+.ti -1c
+.RI "tuple \fBad\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBnotes\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBadd_name\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBguest_sent\fP = models\&.DateField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBra_sent_rec\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBdown_due_paid\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBbalance_due_paid\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBguest_cert_yr_number\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBpoints_cost\fP = models\&.FloatField( default=0\&.00 )"
+.br
+.ti -1c
+.RI "tuple \fBguest_cert_cost\fP = models\&.FloatField( default=0\&.00 )"
+.br
+.ti -1c
+.RI "tuple \fBcc_fee\fP = models\&.FloatField( default=0\&.00 )"
+.br
+.ti -1c
+.RI "tuple \fBother_fees\fP = models\&.FloatField( default=0\&.00 )"
+.br
+.ti -1c
+.RI "tuple \fBtotal_cost\fP = models\&.FloatField( default=0\&.00 )"
+.br
+.ti -1c
+.RI "tuple \fBnet_dollars\fP = models\&.FloatField( default=0\&.00 )"
+.br
+.ti -1c
+.RI "tuple \fBnet_percent\fP = models\&.FloatField( default=0\&.00 )"
+.br
+.ti -1c
+.RI "tuple \fBjen\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBlauren\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBconfirmation_number\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBdate_booked\fP = models\&.DateField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBlocation\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBpoints_required_for_reservation\fP = models\&.IntegerField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBprior_confirmation_number\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def guest_reservation_manager\&.models\&.__str__ (self)"
+
+.PP
+Definition at line 69 of file models\&.py\&.
+.SS "def guest_reservation_manager\&.models\&.__unicode__ (self)"
+
+.PP
+Definition at line 72 of file models\&.py\&.
+.SS "def guest_reservation_manager\&.models\&.reservations (self)"
+
+.PP
+Definition at line 64 of file models\&.py\&.
+.SH "Variable Documentation"
+.PP 
+.SS "tuple guest_reservation_manager\&.models\&.ad = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 36 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.add_name = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 38 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.balance_due_paid = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 42 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.cc_fee = models\&.FloatField( default=0\&.00 )"
+
+.PP
+Definition at line 46 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.confirmation_number = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 55 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.date_booked = models\&.DateField( blank=True, null=True )"
+
+.PP
+Definition at line 56 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.date_rquested = models\&.DateField( blank=True, null=True )"
+
+.PP
+Definition at line 27 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.down_due_paid = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 41 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.guest = models\&.CharField( blank=True, null=True, max_length = 2000)"
+
+.PP
+Definition at line 26 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.guest_cert_cost = models\&.FloatField( default=0\&.00 )"
+
+.PP
+Definition at line 45 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.guest_cert_yr_number = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 43 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.guest_sent = models\&.DateField( blank=True, null=True )"
+
+.PP
+Definition at line 39 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.jen = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 51 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.lauren = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 52 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.location = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 57 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.location_requested = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 29 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.net_dollars = models\&.FloatField( default=0\&.00 )"
+
+.PP
+Definition at line 49 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.net_percent = models\&.FloatField( default=0\&.00 )"
+
+.PP
+Definition at line 50 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.nights_requested = models\&.IntegerField( blank=True, null=True )"
+
+.PP
+Definition at line 28 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.notes = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 37 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.optional_username_to_aim_for = models\&.CharField( max_length=2000, blank=True, null=True, default = None)"
+
+.PP
+Definition at line 23 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.other_fees = models\&.FloatField( default=0\&.00 )"
+
+.PP
+Definition at line 47 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.points_cost = models\&.FloatField( default=0\&.00 )"
+
+.PP
+Definition at line 44 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.points_required_for_reservation = models\&.IntegerField( blank=True, null=True )"
+
+.PP
+Definition at line 58 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.prior_confirmation_number = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 61 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.ra_sent_rec = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 40 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.rent = models\&.FloatField( default=0\&.00 )"
+
+.PP
+Definition at line 35 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.sleeps = models\&.IntegerField( blank=True, null=True )"
+
+.PP
+Definition at line 31 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.total_cost = models\&.FloatField( default=0\&.00 )"
+
+.PP
+Definition at line 48 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.TRUE_OR_FALSE"
+\fBInitial value:\fP
+.PP
+.nf
+1 = (
+2     (1, "True"),
+3     (0, "False")
+4 )
+.fi
+.PP
+Definition at line 9 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.unit_size = models\&.CharField( blank=True, null=True, max_length=2000)"
+
+.PP
+Definition at line 30 of file models\&.py\&.
+.SS "tuple guest_reservation_manager\&.models\&.unit_size_notes = models\&.CharField( blank=True, null=True, max_length=2000 )"
+
+.PP
+Definition at line 34 of file models\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAM from the source code\&.

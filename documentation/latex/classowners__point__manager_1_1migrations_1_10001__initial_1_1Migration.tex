@@ -1,0 +1,91 @@
+\hypertarget{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration}{\section{owners\-\_\-point\-\_\-manager.\-migrations.0001\-\_\-initial.Migration Class Reference}
+\label{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration}\index{owners\-\_\-point\-\_\-manager.\-migrations.\-0001\-\_\-initial.\-Migration@{owners\-\_\-point\-\_\-manager.\-migrations.\-0001\-\_\-initial.\-Migration}}
+}
+
+
+Inheritance diagram for owners\-\_\-point\-\_\-manager.\-migrations.0001\-\_\-initial.Migration\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for owners\-\_\-point\-\_\-manager.\-migrations.0001\-\_\-initial.Migration\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration_a71a0f81128f1a648d682ea78293a7fa5}{dependencies}
+\item 
+list \hyperlink{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration_a2f1f70b01d6da09085a0a645cfbde222}{operations}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file 0001\-\_\-initial.\-py.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration_a71a0f81128f1a648d682ea78293a7fa5}{\index{owners\-\_\-point\-\_\-manager\-::migrations\-::0001\-\_\-initial\-::\-Migration@{owners\-\_\-point\-\_\-manager\-::migrations\-::0001\-\_\-initial\-::\-Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!owners_point_manager::migrations::0001_initial::Migration@{owners\-\_\-point\-\_\-manager\-::migrations\-::0001\-\_\-initial\-::\-Migration}}
+\subsubsection[{dependencies}]{\setlength{\rightskip}{0pt plus 5cm}list owners\-\_\-point\-\_\-manager.\-migrations.\-0001\-\_\-initial.\-Migration.\-dependencies\hspace{0.3cm}{\ttfamily [static]}}}\label{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration_a71a0f81128f1a648d682ea78293a7fa5}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [
+2         (\textcolor{stringliteral}{'reservation\_manager'}, \textcolor{stringliteral}{'0001\_initial'}),
+3     ]
+\end{DoxyCode}
+
+
+Definition at line 9 of file 0001\-\_\-initial.\-py.
+
+\hypertarget{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration_a2f1f70b01d6da09085a0a645cfbde222}{\index{owners\-\_\-point\-\_\-manager\-::migrations\-::0001\-\_\-initial\-::\-Migration@{owners\-\_\-point\-\_\-manager\-::migrations\-::0001\-\_\-initial\-::\-Migration}!operations@{operations}}
+\index{operations@{operations}!owners_point_manager::migrations::0001_initial::Migration@{owners\-\_\-point\-\_\-manager\-::migrations\-::0001\-\_\-initial\-::\-Migration}}
+\subsubsection[{operations}]{\setlength{\rightskip}{0pt plus 5cm}list owners\-\_\-point\-\_\-manager.\-migrations.\-0001\-\_\-initial.\-Migration.\-operations\hspace{0.3cm}{\ttfamily [static]}}}\label{classowners__point__manager_1_1migrations_1_10001__initial_1_1Migration_a2f1f70b01d6da09085a0a645cfbde222}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = [
+2         migrations.CreateModel(
+3             name=\textcolor{stringliteral}{'OwnerPointsManagerApplicationSettings'},
+4             fields=[
+5                 (\textcolor{stringliteral}{'id'}, models.AutoField(auto\_created=\textcolor{keyword}{True}, primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False}, verbose\_name=\textcolor{stringliteral}{
+      'ID'})),
+6                 (\textcolor{stringliteral}{'last\_updated'}, models.DateTimeField(null=\textcolor{keyword}{True}, blank=\textcolor{keyword}{True})),
+7             ],
+8         ),
+9         migrations.CreateModel(
+10             name=\textcolor{stringliteral}{'Owners\_Points\_Status'},
+11             fields=[
+12                 (\textcolor{stringliteral}{'id'}, models.AutoField(auto\_created=\textcolor{keyword}{True}, primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False}, verbose\_name=\textcolor{stringliteral}{
+      'ID'})),
+13                 (\textcolor{stringliteral}{'Travel\_From'}, models.DateField(null=\textcolor{keyword}{True}, blank=\textcolor{keyword}{True})),
+14                 (\textcolor{stringliteral}{'Expiration'}, models.DateField(null=\textcolor{keyword}{True}, blank=\textcolor{keyword}{True})),
+15                 (\textcolor{stringliteral}{'Points\_Description'}, models.CharField(null=\textcolor{keyword}{True}, blank=\textcolor{keyword}{True}, max\_length=20)),
+16                 (\textcolor{stringliteral}{'Points\_Available'}, models.IntegerField(null=\textcolor{keyword}{True}, blank=\textcolor{keyword}{True})),
+17                 (\textcolor{stringliteral}{'Housekeeping\_Available'}, models.IntegerField(null=\textcolor{keyword}{True}, blank=\textcolor{keyword}{True})),
+18                 (\textcolor{stringliteral}{'fk\_owner'}, models.ForeignKey(to=\textcolor{stringliteral}{'reservation\_manager.Owner'})),
+19             ],
+20         ),
+21     ]
+\end{DoxyCode}
+
+
+Definition at line 13 of file 0001\-\_\-initial.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+owners\-\_\-point\-\_\-manager/migrations/\hyperlink{owners__point__manager_2migrations_20001__initial_8py}{0001\-\_\-initial.\-py}\end{DoxyCompactItemize}

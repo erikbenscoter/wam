@@ -1,0 +1,201 @@
+.TH "reservation_manager.models.Reservation" 3 "Fri Jul 8 2016" "WAM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reservation_manager.models.Reservation \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Model\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBowed_owner\fP"
+.br
+.ti -1c
+.RI "def \fBis_rented\fP"
+.br
+.ti -1c
+.RI "def \fBis_held_for_owner\fP"
+.br
+.ti -1c
+.RI "def \fB__str__\fP"
+.br
+.ti -1c
+.RI "def \fB__unicode__\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBreason_on_hold\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBfk_owner\fP = models\&.ForeignKey(\fBOwner\fP, on_delete=models\&.SET_NULL, null=True, blank=True)"
+.br
+.ti -1c
+.RI "tuple \fBfk_monthly_report\fP = models\&.ForeignKey(\fBMonthlyReport\fP, blank=True, null=True, default=None, on_delete=models\&.SET_NULL)"
+.br
+.ti -1c
+.RI "tuple \fBfk_wish_held_for\fP = models\&.ForeignKey(\fBGuestReservation\fP, on_delete=models\&.SET_NULL, null=True,blank=True, default=None)"
+.br
+.ti -1c
+.RI "tuple \fBreason_on_hold\fP = models\&.CharField(max_length=5, choices = \fBREASON_ON_HOLD_CHOICES\fP,default='NH')"
+.br
+.ti -1c
+.RI "tuple \fBlocation\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBdate_of_reservation\fP = models\&.DateField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBnumber_of_nights\fP = models\&.IntegerField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBunit_size\fP = models\&.CharField( blank=True, null=True, max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBconfirmation_number\fP = models\&.CharField( max_length=2000)"
+.br
+.ti -1c
+.RI "tuple \fBpoints_required_for_reservation\fP = models\&.IntegerField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBis_buyer_lined_up\fP = models\&.IntegerField( blank=True, null=True, choices = \fBTRUE_OR_FALSE\fP)"
+.br
+.ti -1c
+.RI "tuple \fBamount_paid\fP = models\&.FloatField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBdate_booked\fP = models\&.DateField( blank=True, null=True )"
+.br
+.ti -1c
+.RI "tuple \fBupgrade_status\fP = models\&.CharField( blank=True, null=True, max_length = 2000)"
+.br
+.ti -1c
+.RI "tuple \fBguest_certificate\fP = models\&.CharField( blank=True, null=True, max_length = 2000)"
+.br
+.ti -1c
+.RI "tuple \fBtouched\fP = models\&.DateField( blank=True, null=True,default=None )"
+.br
+.ti -1c
+.RI "tuple \fBtouched_bool\fP = models\&.NullBooleanField(blank=True,null=True,default=None)"
+.br
+.ti -1c
+.RI "tuple \fBcanceled\fP = models\&.NullBooleanField(blank=True, null=True, default=None)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 39 of file models\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def reservation_manager\&.models\&.Reservation\&.__str__ (self)"
+
+.PP
+Definition at line 81 of file models\&.py\&.
+.SS "def reservation_manager\&.models\&.Reservation\&.__unicode__ (self)"
+
+.PP
+Definition at line 83 of file models\&.py\&.
+.SS "def reservation_manager\&.models\&.Reservation\&.is_held_for_owner (self)"
+
+.PP
+Definition at line 73 of file models\&.py\&.
+.SS "def reservation_manager\&.models\&.Reservation\&.is_rented (self)"
+
+.PP
+Definition at line 66 of file models\&.py\&.
+.SS "def reservation_manager\&.models\&.Reservation\&.owed_owner (self)"
+
+.PP
+Definition at line 62 of file models\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "tuple reservation_manager\&.models\&.Reservation\&.amount_paid = models\&.FloatField( blank=True, null=True )\fC [static]\fP"
+
+.PP
+Definition at line 51 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.canceled = models\&.NullBooleanField(blank=True, null=True, default=None)\fC [static]\fP"
+
+.PP
+Definition at line 57 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.confirmation_number = models\&.CharField( max_length=2000)\fC [static]\fP"
+
+.PP
+Definition at line 48 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.date_booked = models\&.DateField( blank=True, null=True )\fC [static]\fP"
+
+.PP
+Definition at line 52 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.date_of_reservation = models\&.DateField( blank=True, null=True )\fC [static]\fP"
+
+.PP
+Definition at line 45 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.fk_monthly_report = models\&.ForeignKey(\fBMonthlyReport\fP, blank=True, null=True, default=None, on_delete=models\&.SET_NULL)\fC [static]\fP"
+
+.PP
+Definition at line 41 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.fk_owner = models\&.ForeignKey(\fBOwner\fP, on_delete=models\&.SET_NULL, null=True, blank=True)\fC [static]\fP"
+
+.PP
+Definition at line 40 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.fk_wish_held_for = models\&.ForeignKey(\fBGuestReservation\fP, on_delete=models\&.SET_NULL, null=True,blank=True, default=None)\fC [static]\fP"
+
+.PP
+Definition at line 42 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.guest_certificate = models\&.CharField( blank=True, null=True, max_length = 2000)\fC [static]\fP"
+
+.PP
+Definition at line 54 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.is_buyer_lined_up = models\&.IntegerField( blank=True, null=True, choices = \fBTRUE_OR_FALSE\fP)\fC [static]\fP"
+
+.PP
+Definition at line 50 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.location = models\&.CharField( blank=True, null=True, max_length=2000)\fC [static]\fP"
+
+.PP
+Definition at line 44 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.number_of_nights = models\&.IntegerField( blank=True, null=True )\fC [static]\fP"
+
+.PP
+Definition at line 46 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.points_required_for_reservation = models\&.IntegerField( blank=True, null=True )\fC [static]\fP"
+
+.PP
+Definition at line 49 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.reason_on_hold = models\&.CharField(max_length=5, choices = \fBREASON_ON_HOLD_CHOICES\fP,default='NH')\fC [static]\fP"
+
+.PP
+Definition at line 43 of file models\&.py\&.
+.SS "reservation_manager\&.models\&.Reservation\&.reason_on_hold"
+
+.PP
+Definition at line 74 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.touched = models\&.DateField( blank=True, null=True,default=None )\fC [static]\fP"
+
+.PP
+Definition at line 55 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.touched_bool = models\&.NullBooleanField(blank=True,null=True,default=None)\fC [static]\fP"
+
+.PP
+Definition at line 56 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.unit_size = models\&.CharField( blank=True, null=True, max_length=2000)\fC [static]\fP"
+
+.PP
+Definition at line 47 of file models\&.py\&.
+.SS "tuple reservation_manager\&.models\&.Reservation\&.upgrade_status = models\&.CharField( blank=True, null=True, max_length = 2000)\fC [static]\fP"
+
+.PP
+Definition at line 53 of file models\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAM from the source code\&.

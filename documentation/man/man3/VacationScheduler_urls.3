@@ -1,0 +1,74 @@
+.TH "VacationScheduler.urls" 3 "Fri Jul 8 2016" "WAM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+VacationScheduler.urls \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "list \fBurlpatterns\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+VacationScheduler URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/1.9/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.conf.urls import url, include
+    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+
+.fi
+.PP
+ 
+.SH "Variable Documentation"
+.PP 
+.SS "list VacationScheduler\&.urls\&.urlpatterns"
+\fBInitial value:\fP
+.PP
+.nf
+1 = [
+2     url(r'^admin/', admin\&.site\&.urls),
+3     url(r'^update/', Update\&.get),
+4     url(r'^export/', Export\&.get),
+5     url(r'^report/(?P<p_owner_username>\&.*)/(?P<p_month>[0-9][0-9]?)/(?P<p_year>[0-9][0-9][0-9][0-9])', Report\&.get),
+6     url(r'^save_payment/(?P<p_check_number>[0-9]*)/(?P<p_amt_paid>[0-9]*\&.?[0-9]*)/(?P<p_monthly_summary>\&.*)', Report\&.savePayment),
+7 
+8     url(r'^set_is_saved_for_owner/(?P<reservation_id>[0-9]*)', Report\&.setIsSavedForOwner),
+9 
+10     url(r'^generate_report/', GenerateReport\&.get),
+11     url(r'^login/$', login_views\&.login_user),
+12     url(r'^$', View\&.get),
+13 
+14     url(r'^guest/makeWish/$',makeNewWish),
+15     url(r'^guestreservationview/', guest_reservations_views\&.get),
+16 
+17     url(r'^updatepoints/', update_owners_points_update\&.get),
+18     url(r'^updatepointsview/', update_owners_points_view\&.get),
+19     url(r'^upgrades/', upgrade_recognition_views\&.main),
+20     url(r'^dumpdata/', DBManager\&.dumpData),
+21     url(r'^viewbackups/', DBManager\&.viewUpdates)
+22 
+23 
+24 ]
+.fi
+.PP
+Definition at line 36 of file urls\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAM from the source code\&.

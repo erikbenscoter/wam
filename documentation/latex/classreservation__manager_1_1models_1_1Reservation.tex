@@ -1,0 +1,286 @@
+\hypertarget{classreservation__manager_1_1models_1_1Reservation}{\section{reservation\-\_\-manager.\-models.\-Reservation Class Reference}
+\label{classreservation__manager_1_1models_1_1Reservation}\index{reservation\-\_\-manager.\-models.\-Reservation@{reservation\-\_\-manager.\-models.\-Reservation}}
+}
+
+
+Inheritance diagram for reservation\-\_\-manager.\-models.\-Reservation\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classreservation__manager_1_1models_1_1Reservation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for reservation\-\_\-manager.\-models.\-Reservation\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{classreservation__manager_1_1models_1_1Reservation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classreservation__manager_1_1models_1_1Reservation_a5bc1634aa27fafdeadfaa8e1a98dfff8}{owed\-\_\-owner}
+\item 
+def \hyperlink{classreservation__manager_1_1models_1_1Reservation_ab63645333f31a740a5efff83f7d47a4a}{is\-\_\-rented}
+\item 
+def \hyperlink{classreservation__manager_1_1models_1_1Reservation_a82a07e222dfcce6cda1a4c0168ac2ba0}{is\-\_\-held\-\_\-for\-\_\-owner}
+\item 
+def \hyperlink{classreservation__manager_1_1models_1_1Reservation_a12bea46b97cdcf7999869174c4de52bb}{\-\_\-\-\_\-str\-\_\-\-\_\-}
+\item 
+def \hyperlink{classreservation__manager_1_1models_1_1Reservation_ab111c48f52c712cadc01338b64c8f15d}{\-\_\-\-\_\-unicode\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classreservation__manager_1_1models_1_1Reservation_aae0061bbb5fade388156256d1d3676e3}{reason\-\_\-on\-\_\-hold}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_ad460f0ba3d784f28324085882a2246b8}{fk\-\_\-owner} = models.\-Foreign\-Key(\hyperlink{classreservation__manager_1_1models_1_1Owner}{Owner}, on\-\_\-delete=models.\-S\-E\-T\-\_\-\-N\-U\-L\-L, null=True, blank=True)
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_ac21f0b3528f8e3ba53c3e24231a303cc}{fk\-\_\-monthly\-\_\-report} = models.\-Foreign\-Key(\hyperlink{classmonthly__summary_1_1models_1_1MonthlyReport}{Monthly\-Report}, blank=True, null=True, default=None, on\-\_\-delete=models.\-S\-E\-T\-\_\-\-N\-U\-L\-L)
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_a0fc4a0b1a628c9d2eadbe57632be4387}{fk\-\_\-wish\-\_\-held\-\_\-for} = models.\-Foreign\-Key(\hyperlink{classguest__reservation__manager_1_1models_1_1GuestReservation}{Guest\-Reservation}, on\-\_\-delete=models.\-S\-E\-T\-\_\-\-N\-U\-L\-L, null=True,blank=True, default=None)
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_a05bba6cb6791c1aadf552795174c1be7}{reason\-\_\-on\-\_\-hold} = models.\-Char\-Field(max\-\_\-length=5, choices = \hyperlink{namespacereservation__manager_1_1models_a435b3782f874d82dd97276b49043592c}{R\-E\-A\-S\-O\-N\-\_\-\-O\-N\-\_\-\-H\-O\-L\-D\-\_\-\-C\-H\-O\-I\-C\-E\-S},default=\char`\"{}N\-H\char`\"{})
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_a6a4c731b0619aaddc2c712a28388257a}{location} = models.\-Char\-Field( blank=True, null=True, max\-\_\-length=2000)
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_a25c61b7deefe701dcfc4db65f134875d}{date\-\_\-of\-\_\-reservation} = models.\-Date\-Field( blank=True, null=True )
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_a3545295be618596339a711e39cd97db4}{number\-\_\-of\-\_\-nights} = models.\-Integer\-Field( blank=True, null=True )
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_ac1fd20bad3887df3154f1304ddb19082}{unit\-\_\-size} = models.\-Char\-Field( blank=True, null=True, max\-\_\-length=2000)
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_aa8d05ddeae1fbe64623db8ca91ea5d21}{confirmation\-\_\-number} = models.\-Char\-Field( max\-\_\-length=2000)
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_a30f975d5fa7a98aed94b7950522f912e}{points\-\_\-required\-\_\-for\-\_\-reservation} = models.\-Integer\-Field( blank=True, null=True )
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_ad11d83584bd6a7c6b13c9a9ec14945e6}{is\-\_\-buyer\-\_\-lined\-\_\-up} = models.\-Integer\-Field( blank=True, null=True, choices = \hyperlink{namespacereservation__manager_1_1models_af585bf5affae3c2f4d6f7ee54371a0ec}{T\-R\-U\-E\-\_\-\-O\-R\-\_\-\-F\-A\-L\-S\-E})
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_ac2f88fc49e8a194dc3eb780073fef8f5}{amount\-\_\-paid} = models.\-Float\-Field( blank=True, null=True )
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_aa936091d190e04a52c4b9da7ee2ded77}{date\-\_\-booked} = models.\-Date\-Field( blank=True, null=True )
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_a7c49fa9a9dffa54479e28154f87c0a7d}{upgrade\-\_\-status} = models.\-Char\-Field( blank=True, null=True, max\-\_\-length = 2000)
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_ac844ab7132b06fb3c171707f201bf608}{guest\-\_\-certificate} = models.\-Char\-Field( blank=True, null=True, max\-\_\-length = 2000)
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_a8ee73ba43a314afaf611e4fe84533242}{touched} = models.\-Date\-Field( blank=True, null=True,default=None )
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_ad77ac02ca8b0e2f125a00ccb04e03589}{touched\-\_\-bool} = models.\-Null\-Boolean\-Field(blank=True,null=True,default=None)
+\item 
+tuple \hyperlink{classreservation__manager_1_1models_1_1Reservation_a4aeae1676d89b1d431438c20939ce812}{canceled} = models.\-Null\-Boolean\-Field(blank=True, null=True, default=None)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 39 of file models.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a12bea46b97cdcf7999869174c4de52bb}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-str\-\_\-\-\_\-@{\-\_\-\-\_\-str\-\_\-\-\_\-}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{\-\_\-\-\_\-str\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def reservation\-\_\-manager.\-models.\-Reservation.\-\_\-\-\_\-str\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classreservation__manager_1_1models_1_1Reservation_a12bea46b97cdcf7999869174c4de52bb}
+
+
+Definition at line 81 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_ab111c48f52c712cadc01338b64c8f15d}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!\-\_\-\-\_\-unicode\-\_\-\-\_\-@{\-\_\-\-\_\-unicode\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-unicode\-\_\-\-\_\-@{\-\_\-\-\_\-unicode\-\_\-\-\_\-}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{\-\_\-\-\_\-unicode\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def reservation\-\_\-manager.\-models.\-Reservation.\-\_\-\-\_\-unicode\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classreservation__manager_1_1models_1_1Reservation_ab111c48f52c712cadc01338b64c8f15d}
+
+
+Definition at line 83 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a82a07e222dfcce6cda1a4c0168ac2ba0}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!is\-\_\-held\-\_\-for\-\_\-owner@{is\-\_\-held\-\_\-for\-\_\-owner}}
+\index{is\-\_\-held\-\_\-for\-\_\-owner@{is\-\_\-held\-\_\-for\-\_\-owner}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{is\-\_\-held\-\_\-for\-\_\-owner}]{\setlength{\rightskip}{0pt plus 5cm}def reservation\-\_\-manager.\-models.\-Reservation.\-is\-\_\-held\-\_\-for\-\_\-owner (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classreservation__manager_1_1models_1_1Reservation_a82a07e222dfcce6cda1a4c0168ac2ba0}
+
+
+Definition at line 73 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_ab63645333f31a740a5efff83f7d47a4a}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!is\-\_\-rented@{is\-\_\-rented}}
+\index{is\-\_\-rented@{is\-\_\-rented}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{is\-\_\-rented}]{\setlength{\rightskip}{0pt plus 5cm}def reservation\-\_\-manager.\-models.\-Reservation.\-is\-\_\-rented (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classreservation__manager_1_1models_1_1Reservation_ab63645333f31a740a5efff83f7d47a4a}
+
+
+Definition at line 66 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a5bc1634aa27fafdeadfaa8e1a98dfff8}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!owed\-\_\-owner@{owed\-\_\-owner}}
+\index{owed\-\_\-owner@{owed\-\_\-owner}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{owed\-\_\-owner}]{\setlength{\rightskip}{0pt plus 5cm}def reservation\-\_\-manager.\-models.\-Reservation.\-owed\-\_\-owner (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classreservation__manager_1_1models_1_1Reservation_a5bc1634aa27fafdeadfaa8e1a98dfff8}
+
+
+Definition at line 62 of file models.\-py.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_ac2f88fc49e8a194dc3eb780073fef8f5}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!amount\-\_\-paid@{amount\-\_\-paid}}
+\index{amount\-\_\-paid@{amount\-\_\-paid}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{amount\-\_\-paid}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-amount\-\_\-paid = models.\-Float\-Field( blank=True, null=True )\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_ac2f88fc49e8a194dc3eb780073fef8f5}
+
+
+Definition at line 51 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a4aeae1676d89b1d431438c20939ce812}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!canceled@{canceled}}
+\index{canceled@{canceled}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{canceled}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-canceled = models.\-Null\-Boolean\-Field(blank=True, null=True, default=None)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_a4aeae1676d89b1d431438c20939ce812}
+
+
+Definition at line 57 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_aa8d05ddeae1fbe64623db8ca91ea5d21}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!confirmation\-\_\-number@{confirmation\-\_\-number}}
+\index{confirmation\-\_\-number@{confirmation\-\_\-number}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{confirmation\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-confirmation\-\_\-number = models.\-Char\-Field( max\-\_\-length=2000)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_aa8d05ddeae1fbe64623db8ca91ea5d21}
+
+
+Definition at line 48 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_aa936091d190e04a52c4b9da7ee2ded77}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!date\-\_\-booked@{date\-\_\-booked}}
+\index{date\-\_\-booked@{date\-\_\-booked}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{date\-\_\-booked}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-date\-\_\-booked = models.\-Date\-Field( blank=True, null=True )\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_aa936091d190e04a52c4b9da7ee2ded77}
+
+
+Definition at line 52 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a25c61b7deefe701dcfc4db65f134875d}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!date\-\_\-of\-\_\-reservation@{date\-\_\-of\-\_\-reservation}}
+\index{date\-\_\-of\-\_\-reservation@{date\-\_\-of\-\_\-reservation}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{date\-\_\-of\-\_\-reservation}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-date\-\_\-of\-\_\-reservation = models.\-Date\-Field( blank=True, null=True )\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_a25c61b7deefe701dcfc4db65f134875d}
+
+
+Definition at line 45 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_ac21f0b3528f8e3ba53c3e24231a303cc}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!fk\-\_\-monthly\-\_\-report@{fk\-\_\-monthly\-\_\-report}}
+\index{fk\-\_\-monthly\-\_\-report@{fk\-\_\-monthly\-\_\-report}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{fk\-\_\-monthly\-\_\-report}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-fk\-\_\-monthly\-\_\-report = models.\-Foreign\-Key({\bf Monthly\-Report}, blank=True, null=True, default=None, on\-\_\-delete=models.\-S\-E\-T\-\_\-\-N\-U\-L\-L)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_ac21f0b3528f8e3ba53c3e24231a303cc}
+
+
+Definition at line 41 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_ad460f0ba3d784f28324085882a2246b8}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!fk\-\_\-owner@{fk\-\_\-owner}}
+\index{fk\-\_\-owner@{fk\-\_\-owner}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{fk\-\_\-owner}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-fk\-\_\-owner = models.\-Foreign\-Key({\bf Owner}, on\-\_\-delete=models.\-S\-E\-T\-\_\-\-N\-U\-L\-L, null=True, blank=True)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_ad460f0ba3d784f28324085882a2246b8}
+
+
+Definition at line 40 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a0fc4a0b1a628c9d2eadbe57632be4387}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!fk\-\_\-wish\-\_\-held\-\_\-for@{fk\-\_\-wish\-\_\-held\-\_\-for}}
+\index{fk\-\_\-wish\-\_\-held\-\_\-for@{fk\-\_\-wish\-\_\-held\-\_\-for}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{fk\-\_\-wish\-\_\-held\-\_\-for}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-fk\-\_\-wish\-\_\-held\-\_\-for = models.\-Foreign\-Key({\bf Guest\-Reservation}, on\-\_\-delete=models.\-S\-E\-T\-\_\-\-N\-U\-L\-L, null=True,blank=True, default=None)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_a0fc4a0b1a628c9d2eadbe57632be4387}
+
+
+Definition at line 42 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_ac844ab7132b06fb3c171707f201bf608}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!guest\-\_\-certificate@{guest\-\_\-certificate}}
+\index{guest\-\_\-certificate@{guest\-\_\-certificate}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{guest\-\_\-certificate}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-guest\-\_\-certificate = models.\-Char\-Field( blank=True, null=True, max\-\_\-length = 2000)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_ac844ab7132b06fb3c171707f201bf608}
+
+
+Definition at line 54 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_ad11d83584bd6a7c6b13c9a9ec14945e6}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!is\-\_\-buyer\-\_\-lined\-\_\-up@{is\-\_\-buyer\-\_\-lined\-\_\-up}}
+\index{is\-\_\-buyer\-\_\-lined\-\_\-up@{is\-\_\-buyer\-\_\-lined\-\_\-up}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{is\-\_\-buyer\-\_\-lined\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-is\-\_\-buyer\-\_\-lined\-\_\-up = models.\-Integer\-Field( blank=True, null=True, choices = {\bf T\-R\-U\-E\-\_\-\-O\-R\-\_\-\-F\-A\-L\-S\-E})\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_ad11d83584bd6a7c6b13c9a9ec14945e6}
+
+
+Definition at line 50 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a6a4c731b0619aaddc2c712a28388257a}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!location@{location}}
+\index{location@{location}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{location}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-location = models.\-Char\-Field( blank=True, null=True, max\-\_\-length=2000)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_a6a4c731b0619aaddc2c712a28388257a}
+
+
+Definition at line 44 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a3545295be618596339a711e39cd97db4}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!number\-\_\-of\-\_\-nights@{number\-\_\-of\-\_\-nights}}
+\index{number\-\_\-of\-\_\-nights@{number\-\_\-of\-\_\-nights}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{number\-\_\-of\-\_\-nights}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-number\-\_\-of\-\_\-nights = models.\-Integer\-Field( blank=True, null=True )\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_a3545295be618596339a711e39cd97db4}
+
+
+Definition at line 46 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a30f975d5fa7a98aed94b7950522f912e}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!points\-\_\-required\-\_\-for\-\_\-reservation@{points\-\_\-required\-\_\-for\-\_\-reservation}}
+\index{points\-\_\-required\-\_\-for\-\_\-reservation@{points\-\_\-required\-\_\-for\-\_\-reservation}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{points\-\_\-required\-\_\-for\-\_\-reservation}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-points\-\_\-required\-\_\-for\-\_\-reservation = models.\-Integer\-Field( blank=True, null=True )\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_a30f975d5fa7a98aed94b7950522f912e}
+
+
+Definition at line 49 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a05bba6cb6791c1aadf552795174c1be7}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!reason\-\_\-on\-\_\-hold@{reason\-\_\-on\-\_\-hold}}
+\index{reason\-\_\-on\-\_\-hold@{reason\-\_\-on\-\_\-hold}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{reason\-\_\-on\-\_\-hold}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-reason\-\_\-on\-\_\-hold = models.\-Char\-Field(max\-\_\-length=5, choices = {\bf R\-E\-A\-S\-O\-N\-\_\-\-O\-N\-\_\-\-H\-O\-L\-D\-\_\-\-C\-H\-O\-I\-C\-E\-S},default=\char`\"{}N\-H\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_a05bba6cb6791c1aadf552795174c1be7}
+
+
+Definition at line 43 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_aae0061bbb5fade388156256d1d3676e3}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!reason\-\_\-on\-\_\-hold@{reason\-\_\-on\-\_\-hold}}
+\index{reason\-\_\-on\-\_\-hold@{reason\-\_\-on\-\_\-hold}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{reason\-\_\-on\-\_\-hold}]{\setlength{\rightskip}{0pt plus 5cm}reservation\-\_\-manager.\-models.\-Reservation.\-reason\-\_\-on\-\_\-hold}}\label{classreservation__manager_1_1models_1_1Reservation_aae0061bbb5fade388156256d1d3676e3}
+
+
+Definition at line 74 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a8ee73ba43a314afaf611e4fe84533242}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!touched@{touched}}
+\index{touched@{touched}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{touched}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-touched = models.\-Date\-Field( blank=True, null=True,default=None )\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_a8ee73ba43a314afaf611e4fe84533242}
+
+
+Definition at line 55 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_ad77ac02ca8b0e2f125a00ccb04e03589}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!touched\-\_\-bool@{touched\-\_\-bool}}
+\index{touched\-\_\-bool@{touched\-\_\-bool}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{touched\-\_\-bool}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-touched\-\_\-bool = models.\-Null\-Boolean\-Field(blank=True,null=True,default=None)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_ad77ac02ca8b0e2f125a00ccb04e03589}
+
+
+Definition at line 56 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_ac1fd20bad3887df3154f1304ddb19082}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!unit\-\_\-size@{unit\-\_\-size}}
+\index{unit\-\_\-size@{unit\-\_\-size}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{unit\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-unit\-\_\-size = models.\-Char\-Field( blank=True, null=True, max\-\_\-length=2000)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_ac1fd20bad3887df3154f1304ddb19082}
+
+
+Definition at line 47 of file models.\-py.
+
+\hypertarget{classreservation__manager_1_1models_1_1Reservation_a7c49fa9a9dffa54479e28154f87c0a7d}{\index{reservation\-\_\-manager\-::models\-::\-Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}!upgrade\-\_\-status@{upgrade\-\_\-status}}
+\index{upgrade\-\_\-status@{upgrade\-\_\-status}!reservation_manager::models::Reservation@{reservation\-\_\-manager\-::models\-::\-Reservation}}
+\subsubsection[{upgrade\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}tuple reservation\-\_\-manager.\-models.\-Reservation.\-upgrade\-\_\-status = models.\-Char\-Field( blank=True, null=True, max\-\_\-length = 2000)\hspace{0.3cm}{\ttfamily [static]}}}\label{classreservation__manager_1_1models_1_1Reservation_a7c49fa9a9dffa54479e28154f87c0a7d}
+
+
+Definition at line 53 of file models.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+reservation\-\_\-manager/\hyperlink{reservation__manager_2models_8py}{models.\-py}\end{DoxyCompactItemize}

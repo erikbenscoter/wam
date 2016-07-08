@@ -1,0 +1,67 @@
+.TH "owners_point_manager.migrations.0001_initial.Migration" 3 "Fri Jul 8 2016" "WAM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+owners_point_manager.migrations.0001_initial.Migration \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Migration\&.
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "list \fBdependencies\fP"
+.br
+.ti -1c
+.RI "list \fBoperations\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 7 of file 0001_initial\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "list owners_point_manager\&.migrations\&.0001_initial\&.Migration\&.dependencies\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+1 = [
+2         ('reservation_manager', '0001_initial'),
+3     ]
+.fi
+.PP
+Definition at line 9 of file 0001_initial\&.py\&.
+.SS "list owners_point_manager\&.migrations\&.0001_initial\&.Migration\&.operations\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+1 = [
+2         migrations\&.CreateModel(
+3             name='OwnerPointsManagerApplicationSettings',
+4             fields=[
+5                 ('id', models\&.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+6                 ('last_updated', models\&.DateTimeField(null=True, blank=True)),
+7             ],
+8         ),
+9         migrations\&.CreateModel(
+10             name='Owners_Points_Status',
+11             fields=[
+12                 ('id', models\&.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+13                 ('Travel_From', models\&.DateField(null=True, blank=True)),
+14                 ('Expiration', models\&.DateField(null=True, blank=True)),
+15                 ('Points_Description', models\&.CharField(null=True, blank=True, max_length=20)),
+16                 ('Points_Available', models\&.IntegerField(null=True, blank=True)),
+17                 ('Housekeeping_Available', models\&.IntegerField(null=True, blank=True)),
+18                 ('fk_owner', models\&.ForeignKey(to='reservation_manager\&.Owner')),
+19             ],
+20         ),
+21     ]
+.fi
+.PP
+Definition at line 13 of file 0001_initial\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAM from the source code\&.
