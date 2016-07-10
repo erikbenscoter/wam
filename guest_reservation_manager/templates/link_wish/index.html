@@ -50,7 +50,13 @@
   			<td class = "traveler">{{reservation.guest_certificate}}</td>
   			<td class = "upgrade">{{reservation.upgrade_status}}</td>
   			<td class = "points">{{reservation.points_required_for_reservation}}</td>
-  			<td class = "link_it"><a href="/guest/makeWish3/link/{{reservation.id}}/{{wish_id}}"><button>Link This</button></a></td>
+        <td>
+          <form method="POST" action = "/guest/makeWish3/link/{{reservation.id}}/{{wish_id}}">
+            {%csrf_token%}
+            {{heldForForm.as_p}}
+            <td class = "link_it"><button>Link This</button></td>
+          </form>
+        </td>
   		</tr>
     {%endfor%}
 	</tbody>

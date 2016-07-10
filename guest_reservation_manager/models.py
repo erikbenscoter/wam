@@ -59,24 +59,30 @@ class GuestReservation(models.Model):
     prior_confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
 
     @property
-    def confirmation_number(self):
+    def confirmation_numbers(self):
         from reservation_manager.models import Reservation
+
+        matching_reservations = []
 
         for reservation in Reservation.objects.all():
             if reservation.fk_wish_held_for == self:
-                return reservation.confirmation_number
-    @property
-    def reservation(self):
-        from reservation_manager.models import Reservation
+                matching_reservations.append( reservation.confirmation_number )
 
-        for reservation in Reservation.objects.all():
-            if reservation.fk_wish_held_for == self:
-                return reservation
+        return matching_reservations
 
     @property
     def reservations(self):
-        # TODO implement this after making the Reservation model changes
-        pass
+        from reservation_manager.models import Reservation
+
+        reservations_arr = []
+        for reservation in Reservation.objects.all():
+            if reservation.fk_wish_held_for == self:
+                reservations_arr.append(reservation)
+
+        return reservations_arr
+
+
+    
 
 
     def __str__(self):

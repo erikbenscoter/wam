@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import *
 from reservation_manager.fuzzySearch import FuzzySearch
 from reservation_manager.models import Reservation
+from reservation_manager.models import ReasonHeldForm
 
 # Create your views here.
 
@@ -55,12 +56,10 @@ def displayMatchingReservations(request, wish_id):
 
     context = {
         "reservations" : reservations,
-        "wish_id" : wish_id
+        "wish_id" : wish_id,
+        "heldForForm" : ReasonHeldForm()
     }
 
-    for reservation in reservations:
-        print (reservation)
-        print()
 
     return render(request, 'link_wish/index.html', context)
 ########################################
@@ -68,7 +67,6 @@ def displayMatchingReservations(request, wish_id):
 ########################################
 def makeNewWish1(request):
     if request.POST:
-        print("POSTED")
         wish_form = GuestWishForm1(request.POST)
         if wish_form.is_valid():
             wish_form.save()
@@ -84,7 +82,6 @@ def makeNewWish1(request):
 def makeNewWish1(request, wish_id):
     instance = GuestReservation.objects.get(id=wish_id)
     if request.POST:
-        print("POSTED")
         wish_form = GuestWishForm1(request.POST, instance=instance)
         if wish_form.is_valid():
             wish_form.save()
@@ -121,8 +118,15 @@ def makeNewWish3(request, wish_id):
 #######################################
 def commitLink(request, reservation_id, wish_id):
 
-    reservation_to_link = Reservation.objects.filter(id=reservation_id)
-    reservation_to_link.update(fk_wish_held_for=wish_id, reason_on_hold="WSH")
+    instance = Reservation.objects.select_related().filter(id=reservation_id)
+    instance.update(fk_wish_held_for=wish_id)
+
+    instance = Reservation.objects.get(id=reservation_id)
+    if request.POST:
+        reason_held_form = ReasonHeldForm(request.POST, instance=instance)
+        if reason_held_form.is_valid():
+            reason_held_form.save()
+
 
     return redirect("/guestreservationview")
 
@@ -188,7 +192,7 @@ class View:
             ccFee.append(guestreservation.cc_fee)
 
         for guestreservation in GuestReservations:
-            confirmation_number.append(guestreservation.confirmation_number)
+            confirmation_number.append(guestreservation.confirmation_numbers)
 
         for guestreservation in GuestReservations:
             date_booked.append(guestreservation.date_booked)
@@ -288,7 +292,7 @@ class View:
             "addName" : set(addName),
             "balanceDue_paid" : set(balanceDue_paid),
             "ccFee" : set(ccFee),
-            "confirmation_number" : set(confirmation_number),
+            # "confirmation_numbers" : set(confirmation_number),
             "date_booked" : set(date_booked),
             "date_requested" : set(date_requested),
             "downDue_paid" : set(downDue_paid),
@@ -319,5 +323,6 @@ class View:
 
 
         }
+
 
         return render( request, "guest_reservations/index.html", context)

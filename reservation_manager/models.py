@@ -3,6 +3,7 @@ from monthly_summary.models import MonthlyReport
 from django.contrib.auth.models import User
 from guest_reservation_manager.models import GuestReservation
 import re
+from django.forms import ModelForm
 
 TRUE_OR_FALSE = (
     (1, "True"),
@@ -82,3 +83,9 @@ class Reservation( models.Model ):
         return str(self.confirmation_number) + "," +  str(self.fk_owner.username) + " ,  " + str(self.date_of_reservation) + " , " + str(self.location)
     def __unicode__(self):
         return str(self.confirmation_number) + "," +  str(self.fk_owner.username) + " ,  " + str(self.date_of_reservation) + " , " + str(self.location)
+
+
+class ReasonHeldForm(ModelForm):
+    class Meta:
+        model = Reservation
+        fields = ["reason_on_hold"]

@@ -124,7 +124,11 @@
         <td class = "unit_size">{{guestreservation.unit_size}}</td>
         <td class = "unit_size_notes">{{guestreservation.unit_size_notes}}</td>
         <td class = "sleeps">{{guestreservation.sleeps}}</td>
-        <td class = "confirmation_number">{{guestreservation.confirmation_number}}</td>
+        <td class = "confirmation_number">
+          {%for reservation in guestreservation.reservations%}
+            {{reservation.confirmation_number}} <br> {{reservation.reason_on_hold}}<br>
+          {%endfor%}
+        </td>
         <td class = "rent">{{guestreservation.rent}}</td>
         <td class = "points_required_for_reservation">{{guestreservation.points_required_for_reservation}}</td>
         <td class = "ad">{{guestreservation.ad}}</td>
