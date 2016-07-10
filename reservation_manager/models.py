@@ -12,7 +12,7 @@ TRUE_OR_FALSE = (
 
 REASON_ON_HOLD_CHOICES = (
 	("UPGD", "Needed For Upgrade"),
-	("WSH","User requested this"),
+	("WSH","Guest requested this"),
 	("OWN","Owner requested this"),
 	("NH", "Not being held")
 )
@@ -61,7 +61,8 @@ class Reservation( models.Model ):
 
     @property
     def owed_owner(self):
-        return (self.fk_owner.owner_reimbursement_rate/1000.00 * self.points_required_for_reservation)
+        return (self.fk_owner.owner_reimbursement_rate * self.points_required_for_reservation / 1000.00 )
+
 
     @property
     def is_rented(self):
