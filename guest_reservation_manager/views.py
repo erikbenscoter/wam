@@ -65,7 +65,7 @@ def displayMatchingReservations(request, wish_id):
 ########################################
 # url = /guest/makeWish
 ########################################
-def makeNewWish1(request):
+def makeBrandNewWish(request):
     if request.POST:
         wish_form = GuestWishForm1(request.POST)
         if wish_form.is_valid():
