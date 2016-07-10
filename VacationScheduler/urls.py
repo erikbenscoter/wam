@@ -19,6 +19,7 @@ from django.contrib import admin
 from guest_reservation_manager.views import makeNewWish1
 from guest_reservation_manager.views import makeNewWish2
 from guest_reservation_manager.views import makeNewWish3
+from guest_reservation_manager.views import commitLink
 from owners_point_manager.views import Update as update_owners_points_update
 from owners_point_manager.views import View as update_owners_points_view
 from reservation_manager.views import Export
@@ -51,6 +52,9 @@ urlpatterns = [
     url(r'^guest/makeWish/$',makeNewWish1),
     url(r'^guest/makeWish2/(?P<wish_id>[0-9]*)$',makeNewWish2),
     url(r'^guest/makeWish3/(?P<wish_id>[0-9]*)$',makeNewWish3),
+    url(r'^guest/makeWish3/link/(?P<reservation_id>[0-9]*)/(?P<wish_id>[0-9]*)$',commitLink),
+
+
 
     url(r'^guestreservationview/', guest_reservations_views.get),
 

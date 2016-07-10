@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
+from reservation_manager.fuzzySearch import FuzzySearch
+from reservation_manager.models import Reservation
 
 # Create your views here.
 
@@ -26,6 +28,41 @@ def displayForm(request, step_number, form):
     }
     return render(request, 'new_wish/index1.html', context)
 
+
+def displayMatchingReservations(request, wish_id):
+
+
+    wish = GuestReservation.objects.get(id=wish_id)
+
+    location = wish.location_requested
+    bedrooms = wish.unit_size
+    bedroom_range = 2
+    nights = wish.nights_requested
+    nights_range = 4
+    date = wish.date_requested
+    date_range = 30
+
+    reservations = FuzzySearch.fuzzySearch(
+        location,
+        bedrooms,
+        bedroom_range,
+        nights,
+        nights_range,
+        date,
+        date_range
+    )
+
+
+    context = {
+        "reservations" : reservations,
+        "wish_id" : wish_id
+    }
+
+    for reservation in reservations:
+        print (reservation)
+        print()
+
+    return render(request, 'link_wish/index.html', context)
 ########################################
 # url = /guest/makeWish
 ########################################
@@ -50,7 +87,7 @@ def makeNewWish2(request, wish_id):
         wish_form = GuestWishForm2(request.POST, instance=instance)
         if wish_form.is_valid():
             wish_form.save()
-            return redirect("/guestreservationview")
+            return redirect("/guest/makeWish3/"+str(wish_form.instance.id))
         else:
             return displayForm(request,2,GuestWishForm2(instance=instance))
     else:
@@ -60,15 +97,19 @@ def makeNewWish2(request, wish_id):
 # url = /guest/makeWish3
 ########################################
 def makeNewWish3(request, wish_id):
-    if request.POST:
-        wish_form = GuestWishForm3(request.POST)
-        if wish_form.is_valid():
-            wish_form.save()
-            return redirect("/guestreservationview")
-        else:
-            return displayForm(request,3,GuestWishForm3)
-    else:
-        return displayForm(request,3,GuestWishForm3)
+    return displayMatchingReservations(request, wish_id)
+
+
+#######################################
+# url = /guest/makeWish3/link/reservation_id/wish_id
+#######################################
+def commitLink(request, reservation_id, wish_id):
+
+    reservation_to_link = Reservation.objects.filter(id=reservation_id)
+    reservation_to_link.update(fk_wish_held_for=wish_id)
+
+    return redirect("/guestreservationview")
+
 
 class View:
 

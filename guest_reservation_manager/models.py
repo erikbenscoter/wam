@@ -1,7 +1,5 @@
 from django.db import models
 from django.forms import ModelForm
-from reservation_manager.models import *
-
 # Create your models here.
 
 #from reservation_manager.models import Owner
@@ -52,13 +50,28 @@ class GuestReservation(models.Model):
     lauren = models.CharField( blank=True, null=True, max_length=2000)
 
 #  data that can come from reservations
-    confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
+    # confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
     date_booked = models.DateField( blank=True, null=True )
     location = models.CharField( blank=True, null=True, max_length=2000)
     points_required_for_reservation = models.IntegerField( blank=True, null=True )
 
 #      system will supply when original is cancelled
     prior_confirmation_number = models.CharField( blank=True, null=True, max_length=2000)
+
+    @property
+    def confirmation_number(self):
+        from reservation_manager.models import Reservation
+
+        for reservation in Reservation.objects.all():
+            if reservation.fk_wish_held_for == self:
+                return reservation.confirmation_number
+    @property
+    def reservation(self):
+        from reservation_manager.models import Reservation
+
+        for reservation in Reservation.objects.all():
+            if reservation.fk_wish_held_for == self:
+                return reservation
 
     @property
     def reservations(self):
