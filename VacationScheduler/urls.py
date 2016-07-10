@@ -50,6 +50,7 @@ urlpatterns = [
 	url(r'^$', View.get),
 
     url(r'^guest/makeWish/$',makeNewWish1),
+    url(r'^guest/makeWish/(?P<wish_id>[0-9]*)$',makeNewWish1),
     url(r'^guest/makeWish2/(?P<wish_id>[0-9]*)$',makeNewWish2),
     url(r'^guest/makeWish3/(?P<wish_id>[0-9]*)$',makeNewWish3),
     url(r'^guest/makeWish3/link/(?P<reservation_id>[0-9]*)/(?P<wish_id>[0-9]*)$',commitLink),

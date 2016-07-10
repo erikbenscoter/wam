@@ -79,6 +79,22 @@ def makeNewWish1(request):
         return displayForm(request,1,GuestWishForm1())
 
 ########################################
+# url = /guest/makeWish/wish_id
+########################################
+def makeNewWish1(request, wish_id):
+    instance = GuestReservation.objects.get(id=wish_id)
+    if request.POST:
+        print("POSTED")
+        wish_form = GuestWishForm1(request.POST, instance=instance)
+        if wish_form.is_valid():
+            wish_form.save()
+            return redirect("/guest/makeWish2/"+str(wish_form.instance.id))
+        else:
+            return displayForm(request,1,GuestWishForm1(instance=instance))
+    else:
+        return displayForm(request,1,GuestWishForm1(instance=instance))
+
+########################################
 # url = /guest/makeWish2
 ########################################
 def makeNewWish2(request, wish_id):
