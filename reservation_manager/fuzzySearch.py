@@ -10,7 +10,7 @@ class FuzzySearch:
         # use regular expressions to try to make a matching
         for itt in range( 0,len(objects) ):
 
-            reservation_location = objects[itt]
+            reservation_location = objects[itt].location
             # if it doesn't match the regular expression remove it
             if (  ( re.search(str(location), str(reservation_location) ) ) ):
                 desireable.append(objects[itt])
@@ -41,7 +41,7 @@ class FuzzySearch:
         # use regular expressions to try to make a matching
         for itt in range( 0,len(objects) ):
 
-            reservation_bedroom = str(objects[itt])
+            reservation_bedroom = str(objects[itt].unit_size)
 
             # if it doesn't match the regular expression remove it
             if ( ( re.search(bedroom_range_regex, reservation_bedroom ) ) ):
@@ -71,11 +71,11 @@ class FuzzySearch:
         # use regular expressions to try to make a matching
         for itt in range( 0,len(objects) ):
 
-            reservation_nights = str(objects[itt])
+            reservation_nights = str(objects[itt].number_of_nights)
             reservation_nights = int(re.findall("[0-9]*", reservation_nights)[0])
 
             # if it doesn't match the regular expression remove it
-            if ( reservation_nights < nights_lower_bound or reservation_nights > nights_upper_bound ):
+            if ( reservation_nights >= nights_lower_bound and reservation_nights <= nights_upper_bound ):
                 desireable.append(objects[itt])
 
         return desireable

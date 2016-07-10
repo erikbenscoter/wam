@@ -47,7 +47,7 @@ class Reservation( models.Model ):
     unit_size = models.CharField( blank=True, null=True, max_length=2000)
     confirmation_number = models.CharField( max_length=2000)
     points_required_for_reservation = models.IntegerField( blank=True, null=True )
-    is_buyer_lined_up = models.IntegerField( blank=True, null=True, choices = TRUE_OR_FALSE)
+    is_buyer_lined_up = models.IntegerField( blank=True, null=True, choices = TRUE_OR_FALSE) # remove this
     amount_paid = models.FloatField( blank=True, null=True )
     date_booked = models.DateField( blank=True, null=True )
     upgrade_status = models.CharField( blank=True, null=True, max_length = 2000)

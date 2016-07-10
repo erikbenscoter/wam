@@ -106,7 +106,7 @@ def makeNewWish3(request, wish_id):
 def commitLink(request, reservation_id, wish_id):
 
     reservation_to_link = Reservation.objects.filter(id=reservation_id)
-    reservation_to_link.update(fk_wish_held_for=wish_id)
+    reservation_to_link.update(fk_wish_held_for=wish_id, reason_on_hold="WSH")
 
     return redirect("/guestreservationview")
 
