@@ -1,20 +1,75 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 
 # Create your views here.
 
-def makeNewWish(request):
-    if request.POST:
-        wish_form = CreateGuestWishForm(request.POST)
-        if wish_form.is_valid():
-            wish_form.save()
-    else:
-        wish_form = CreateGuestWishForm()
+# def makeNewWish(request):
+#     if request.POST:
+#         wish_form = CreateGuestWishForm(request.POST)
+#         if wish_form.is_valid():
+#             wish_form.save()
+#     else:
+#         wish_form = CreateGuestWishForm()
+#
+#     context = {
+#         "form" : wish_form
+#     }
+#     return render(request, 'new_wish/index.html', context)
+
+
+def displayForm(request, step_number, form):
 
     context = {
-        "form" : wish_form
+        "form" : form,
+        "step_number" : step_number,
+        "url" : request.path
     }
-    return render(request, 'new_wish/index.html', context)
+    return render(request, 'new_wish/index1.html', context)
+
+########################################
+# url = /guest/makeWish
+########################################
+def makeNewWish1(request):
+    if request.POST:
+        print("POSTED")
+        wish_form = GuestWishForm1(request.POST)
+        if wish_form.is_valid():
+            wish_form.save()
+            return redirect("/guest/makeWish2/"+str(wish_form.instance.id))
+        else:
+            return displayForm(request,1,GuestWishForm1())
+    else:
+        return displayForm(request,1,GuestWishForm1())
+
+########################################
+# url = /guest/makeWish2
+########################################
+def makeNewWish2(request, wish_id):
+    instance = GuestReservation.objects.get(id=wish_id)
+    if request.POST:
+        wish_form = GuestWishForm2(request.POST, instance=instance)
+        if wish_form.is_valid():
+            wish_form.save()
+            return redirect("/guestreservationview")
+        else:
+            return displayForm(request,2,GuestWishForm2(instance=instance))
+    else:
+        return displayForm(request,2,GuestWishForm2(instance=instance))
+
+########################################
+# url = /guest/makeWish3
+########################################
+def makeNewWish3(request, wish_id):
+    if request.POST:
+        wish_form = GuestWishForm3(request.POST)
+        if wish_form.is_valid():
+            wish_form.save()
+            return redirect("/guestreservationview")
+        else:
+            return displayForm(request,3,GuestWishForm3)
+    else:
+        return displayForm(request,3,GuestWishForm3)
+
 class View:
 
 #    @login_required(redirect_field_name="/admin", login_url="/login/")
@@ -27,7 +82,7 @@ class View:
         ccFee = []
         confirmation_number = []
         date_booked = []
-        date_rquested = []
+        date_requested = []
         downDue_paid = []
         guest = []
         guestCertCost = []
@@ -61,7 +116,7 @@ class View:
 
 #        reservations = Reservation.objects.filter(date_of_reservation__gte=datetime.today())
 
-        GuestReservations = GuestReservation.objects.order_by("date_rquested")
+        GuestReservations = GuestReservation.objects.order_by("date_requested")
 
         for guestreservation in GuestReservations:
             ad.append(guestreservation.ad)
@@ -82,7 +137,7 @@ class View:
             date_booked.append(guestreservation.date_booked)
 
         for guestreservation in GuestReservations:
-            date_rquested.append(guestreservation.date_rquested)
+            date_requested.append(guestreservation.date_requested)
 
         for guestreservation in GuestReservations:
             downDue_paid.append(guestreservation.down_due_paid)
@@ -178,7 +233,7 @@ class View:
             "ccFee" : set(ccFee),
             "confirmation_number" : set(confirmation_number),
             "date_booked" : set(date_booked),
-            "date_rquested" : set(date_rquested),
+            "date_requested" : set(date_requested),
             "downDue_paid" : set(downDue_paid),
             "guests" : set(guest),
             "guestCertCost" : set(guestCertCost),

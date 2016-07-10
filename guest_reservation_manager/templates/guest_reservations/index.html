@@ -146,6 +146,9 @@
         <td class = "Jen">{{guestreservation.jen}}</td>
         <td class = "Lauren">{{guestreservation.lauren}}</td>
 
+
+        <td><a href = "/guest/makeWish2/{{guestreservation.id}}"><button>Edit Details</button></a></td>
+      </tr>
     {%endfor%}
 	</tbody>
 </table>
@@ -153,5 +156,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src = "{%static 'main/js/index.js'%}"></script>
   <script src = "{%static 'main/js/tableSort.js'%}"></script>
-  
+
 </html>

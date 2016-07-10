@@ -1,0 +1,60 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Multi Step Form with Progress Bar using jQuery and CSS3</title>
+
+
+    <link rel="stylesheet" href="{%static 'new_wish/css/reset.css'%}">
+    <link rel="stylesheet" href="{%static 'new_wish/css/style.css'%}">
+
+
+
+
+  </head>
+
+  <body>
+
+    <!-- multistep form -->
+<form id="msform" method="POST" action = {{url}}>
+  {%csrf_token%}
+  <!-- progressbar -->
+  <ul id="progressbar">
+    {%if step_number == 1%}
+      <li class = "active">Initial Wish</li>
+      <li>Extra Details</li>
+      <li>Personal Details</li>
+    {%elif step_number == 2%}
+      <li>Initial Wish</li>
+      <li class = "active">Extra Details</li>
+      <li>Personal Details</li>
+    {%elif step_number == 3%}
+      <li>Initial Wish</li>
+      <li>Extra Details</li>
+      <li class = "active">Personal Details</li>
+    {%endif%}
+
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Create your account</h2>
+    <h3 class="fs-subtitle">This is step {{step_number}}</h3>
+    <!-- <input type="text" name="email" placeholder="Email" />
+    <input type="password" name="pass" placeholder="Password" />
+    <input type="password" name="cpass" placeholder="Confirm Password" /> -->
+    {{form.as_table}}
+    <input type="submit" name="next" class="next action-button" value="Next" />
+  </fieldset>
+
+</form>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+
+
+
+  </body>
+</html>

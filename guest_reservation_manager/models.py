@@ -24,7 +24,7 @@ class GuestReservation(models.Model):
 
 #                 data ruth enters initial
     guest = models.CharField( blank=True, null=True, max_length = 2000)
-    date_rquested = models.DateField( blank=True, null=True )
+    date_requested = models.DateField( blank=True, null=True )
     nights_requested = models.IntegerField( blank=True, null=True )
     location_requested = models.CharField( blank=True, null=True, max_length=2000)
     unit_size = models.CharField( blank=True, null=True, max_length=2000)
@@ -67,10 +67,10 @@ class GuestReservation(models.Model):
 
 
     def __str__(self):
-        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
+        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_requested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
 
     def __unicode__(self):
-        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_rquested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
+        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_requested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
 
 
 class RuthSheet(models.Model):
@@ -92,3 +92,38 @@ class CreateGuestWishForm(ModelForm):
     class Meta:
         model = GuestReservation
         exclude = []
+
+class GuestWishForm1(ModelForm):
+    class Meta:
+        model = GuestReservation
+        fields = ["guest", "date_requested", "nights_requested", "location_requested", "unit_size", "sleeps"]
+
+class GuestWishForm2(ModelForm):
+    class Meta:
+        model = GuestReservation
+        fields = [
+            "unit_size_notes",
+            "rent",
+            "ad",
+            "notes",
+            "add_name",
+            "guest_sent",
+            "ra_sent_rec",
+            "down_due_paid",
+            "balance_due_paid",
+            "guest_cert_yr_number",
+            "points_cost",
+            "guest_cert_cost",
+            "cc_fee",
+            "other_fees",
+            "total_cost",
+            "net_dollars",
+            "net_percent",
+            "jen",
+            "lauren"
+        ]
+
+class GuestWishForm3(ModelForm):
+    class Meta:
+        model = GuestReservation
+        fields = ["guest", "date_requested", "nights_requested", "location_requested", "unit_size", "sleeps"]
