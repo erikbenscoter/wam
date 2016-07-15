@@ -41,7 +41,7 @@
   <body>
 
   <!--  <h1><span class="blue"></span>{{owner.username}}, {{month}} , {{year}}<span class="blue"></span> <span class="yellow">Summary</span></h1> -->
-  
+
     <h1><span class="blue"></span>{{owner.username}}</h1> <br> <h1>{{month}} , {{year}}<span class="blue"></span> <span class="yellow">Summary</span></h1>
 
 
@@ -54,19 +54,26 @@
   <thead>
     <tr>
       <th>
-        <h1>Booked</h1></th>
+        <h1>Booked</h1>
+      </th>
       <th>
-        <h1>Checkin</h1></th>
+        <h1>Checkin</h1>
+      </th>
       <th>
-        <h1>Nights</h1></th>
+        <h1>Nights</h1>
+      </th>
       <th>
-        <h1>Resort</h1></th>
+        <h1>Resort</h1>
+      </th>
       <th>
-        <h1>Unit Size</h1></th>
+        <h1>Unit Size</h1>
+      </th>
       <th>
-        <h1>Conf#</h1></th>
+        <h1>Conf#</h1>
+      </th>
       <th>
-        <h1>Traveler</h1></th>
+        <h1>Traveler</h1>
+      </th>
       <th>
         <h1>Points</h1></th>
       <th>
@@ -88,8 +95,6 @@
           Remove From summary
         </h1>
       </th>
-
-
     </tr>
   </thead>
   <tbody>
@@ -132,18 +137,11 @@
         </td>
       {% endif %}
     </tr>
-
-
-
   </tbody>
 </table>
 <input type = "hidden" id = "monthly_summary" value = "{{monthly_summary.id}}"></input>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 
         <script src="{% static 'summary/js/index.js'%}"></script>
-
-
-
-
   </body>
 </html>
