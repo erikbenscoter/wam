@@ -29,10 +29,6 @@
 
 <table class="container">
   <thead>
-    <tr>
-      <th>
-        <h1>Booked</h1>
-      </th>
       <th>
         <h1>Checkin</h1>
       </th>
@@ -67,7 +63,7 @@
         <h1>Date Paid</h1>
       </th>
       <th>
-        <h1 class="hidden-print" > 
+        <h1 class="hidden-print" >
           Used By Owner<br>
           Remove From summary
         </h1>
@@ -77,7 +73,6 @@
   <tbody>
     {%for reservation in reservations%}
       <tr>
-        <td>{{reservation.date_booked}}</td>
         <td>{{reservation.date_of_reservation}}</td>
         <td>{{reservation.number_of_nights}}</td>
         <td>{{reservation.location}}</td>
@@ -94,7 +89,6 @@
       </tr>
     {%endfor%}
     <tr>
-      <td class="monthly_report not_used"></td>
       <td class="monthly_report not_used"></td>
       <td class="monthly_report not_used"></td>
       <td class="monthly_report not_used"></td>
