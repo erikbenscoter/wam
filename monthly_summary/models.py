@@ -23,8 +23,10 @@ class MonthlyReport(models.Model):
             if(not (reservation.is_held_for_owner)):
                 total_owed += float(reservation.owed_owner)
 
-        return total_owed
+        
 
+        total_owed = format(round(total_owed, 2), '.2f')
+        return total_owed
     @property
     def total_points_month(self):
         from reservation_manager.models import Reservation
@@ -36,7 +38,27 @@ class MonthlyReport(models.Model):
             if(not (reservation.is_held_for_owner)):
                 total_points += reservation.points_required_for_reservation
 
+
         return total_points
+
+
+    @property
+    def filtered_total_points_month(self):
+        from reservation_manager.models import Reservation
+        reservations = Reservation.objects.filter(fk_monthly_report=self, canceled=False)
+
+        total_points = 0
+
+        for reservation in reservations:
+            if(not (reservation.is_held_for_owner)):
+                total_points += reservation.points_required_for_reservation
+
+
+
+        total_points = float(float(total_points)/1000.00)
+        total_points = format(round(total_points,3),'.3f')
+        return total_points
+
 
     @property
     def owner(self):

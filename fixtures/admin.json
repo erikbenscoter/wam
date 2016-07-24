@@ -50,5 +50,18 @@
         "action_flag": 2,
         "change_message": "Changed password."
     }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2016-07-17T11:55:31.827Z",
+        "user": 3,
+        "content_type": 7,
+        "object_id": "11",
+        "object_repr": "GlennBenscoter",
+        "action_flag": 1,
+        "change_message": "Added."
+    }
 }
 ]
