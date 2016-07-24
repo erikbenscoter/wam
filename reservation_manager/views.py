@@ -298,7 +298,7 @@ class View:
             unit_sizes.append(reservation.unit_size)
 
         for reservation in reservations:
-            travelers.append(reservation.guest_certificate)
+            travelers.append(reservation.filtered_guest_certificate)
 
         for reservation in reservations:
             upgrades.append(reservation.upgrade_status)
@@ -359,7 +359,7 @@ class Export:
             arr.append(reservation.amount_paid)
             arr.append(reservation.date_booked)
             arr.append(reservation.upgrade_status)
-            arr.append(reservation.guest_certificate)
+            arr.append(reservation.filtered_guest_certificate)
             arr.append(reservation.canceled)
 
             writer.writerow(arr)

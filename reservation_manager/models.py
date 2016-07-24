@@ -87,6 +87,13 @@ class Reservation( models.Model ):
         ret_val = str(ret_val).strip()
         return ret_val
 
+    @property
+    def filtered_guest_certificate(self):
+        ret_val = str(self.guest_certificate)
+        ret_val = ret_val.replace("Guest:","")
+        ret_val = str(ret_val).strip()
+        return ret_val
+
 
 
 
