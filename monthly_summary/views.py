@@ -92,7 +92,7 @@ class Report:
     def get(request, p_owner_username, p_year, p_month):
 
         all_reports = list(MonthlyReport.objects.all())
-        all_reservations = list(Reservation.objects.all())
+        all_reservations = list(Reservation.objects.all().order_by('date_of_reservation'))
         matching_reservations = []
 
         desired_summary = None
@@ -113,7 +113,6 @@ class Report:
                                 matching_reservations.append(reservation)
 
         reservations = matching_reservations
-
 
 
         context = {
