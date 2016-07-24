@@ -94,6 +94,13 @@ class Reservation( models.Model ):
         ret_val = str(ret_val).strip()
         return ret_val
 
+    @property
+    def filtered_points_required_for_reservation(self):
+        ret_val = str(self.points_required_for_reservation)
+        ret_val = float(float(ret_val)/1000.00)
+        ret_val =  format(round(ret_val,3), '.3f')
+        return ret_val
+
 
 
 

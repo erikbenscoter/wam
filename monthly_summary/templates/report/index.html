@@ -48,9 +48,9 @@
         <h1>Traveler</h1>
       </th>
       <th>
-        <h1>Points</h1></th>
+        <h1>Points(x1000)</h1></th>
       <th>
-        <h1>Owner Rate</h1></th>
+        <h1>Owner Rate($/1000pts)</h1></th>
       <th>
         <h1>Owed Owner</h1></th>
       <th>
@@ -79,7 +79,7 @@
         <td>{{reservation.unit_size}}</td>
         <td>{{reservation.confirmation_number}}</td>
         <td>{{reservation.filtered_guest_certificate}}</td>
-        <td>{{reservation.points_required_for_reservation}}</td>
+        <td>{{reservation.filtered_points_required_for_reservation}}</td>
         <td>${{reservation.fk_owner.owner_reimbursement_rate}}</td>
         <td>${{reservation.owed_owner}}</td>
         <td class = "not_used"></td>
