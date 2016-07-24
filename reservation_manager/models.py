@@ -83,6 +83,7 @@ class Reservation( models.Model ):
     def filtered_location(self):
         ret_val = str(self.location)
         ret_val = ret_val.replace("Wyndham Vacation Resorts at","")
+        ret_val = ret_val.replace("Wyndham Vacation Resorts","")
         ret_val = ret_val.replace("Wyndham", "")
         ret_val = str(ret_val).strip()
         return ret_val
