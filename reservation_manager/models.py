@@ -78,6 +78,15 @@ class Reservation( models.Model ):
         else:
             return False
 
+    @property
+    def filtered_location(self):
+        ret_val = str(self.location)
+        ret_val = ret_val.replace("Wyndham Vacation Resorts at","")
+        ret_val = ret_val.replace("Wyndham", "")
+        ret_val = str(ret_val).strip()
+        return ret_val
+
+
 
 
     def __str__(self):

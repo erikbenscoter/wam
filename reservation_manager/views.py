@@ -292,7 +292,7 @@ class View:
             usernames.append(reservation.fk_owner.username)
 
         for reservation in reservations:
-            resorts.append(reservation.location)
+            resorts.append(reservation.filtered_location)
 
         for reservation in reservations:
             unit_sizes.append(reservation.unit_size)
