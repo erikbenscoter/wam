@@ -21,7 +21,7 @@ class MonthlyReport(models.Model):
 
         for reservation in reservations:
             if(not (reservation.is_held_for_owner)):
-                total_owed += reservation.owed_owner
+                total_owed += float(reservation.owed_owner)
 
         return total_owed
 

@@ -80,8 +80,8 @@
         <td>{{reservation.confirmation_number}}</td>
         <td>{{reservation.guest_certificate}}</td>
         <td>{{reservation.points_required_for_reservation}}</td>
-        <td>{{reservation.fk_owner.owner_reimbursement_rate}}</td>
-        <td>{{reservation.owed_owner}}</td>
+        <td>${{reservation.fk_owner.owner_reimbursement_rate}}</td>
+        <td>${{reservation.owed_owner}}</td>
         <td class = "not_used"></td>
         <td class = "not_used"></td>
         <td class = "not_used"></td>
@@ -96,10 +96,10 @@
       <td class="monthly_report not_used"></td>
       <td class="monthly_report not_used"></td>
       <td class="monthly_report">{{monthly_summary.total_points_month}}</td>
-      <td class="monthly_report">{{monthly_summary.owner.owner_reimbursement_rate}}</td>
-      <td class="monthly_report">{{monthly_summary.total_owed_owner_month}}</td>
+      <td class="monthly_report">${{monthly_summary.owner.owner_reimbursement_rate}}</td>
+      <td class="monthly_report">${{monthly_summary.total_owed_owner_month}}</td>
       <td class="monthly_report">{{monthly_summary.check_number}}</td>
-      <td class="monthly_report">{{monthly_summary.amount_paid}}</td>
+      <td class="monthly_report">${{monthly_summary.amount_paid}}</td>
       {% if monthly_summary.date_paid %}
         <td class="monthly_report">{{monthly_summary.date_paid}}</td>
       {% else %}

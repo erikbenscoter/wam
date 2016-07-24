@@ -25,7 +25,7 @@ class Owner( models.Model ):
     first_name = models.CharField( blank=True, null=True, max_length=2000)
     last_name = models.CharField( blank=True, null=True, max_length=2000)
     phone_number = models.CharField( blank=True, null=True, max_length=2000)
-    owner_reimbursement_rate = models.FloatField( blank=True, null=True )
+    owner_reimbursement_rate = models.DecimalField( blank=True, decimal_places=0, max_digits=5)
 
     def __str__(self):
         return self.username
@@ -61,8 +61,9 @@ class Reservation( models.Model ):
 
     @property
     def owed_owner(self):
-        return (self.fk_owner.owner_reimbursement_rate * self.points_required_for_reservation / 1000.00 )
-
+        ret_val = ((float(self.fk_owner.owner_reimbursement_rate)/1000.00 * self.points_required_for_reservation ))
+        ret_val =  format(round(ret_val,2), '.2f')
+        return ret_val
 
     @property
     def is_rented(self):
