@@ -11,7 +11,6 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
 
-
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -19,8 +18,6 @@ from selenium.webdriver.common.keys import Keys
 from .models import Owner
 from .models import Owners_Points_Status
 from .models import OwnerPointsManagerApplicationSettings
-
-
 
 
 # Create your views here.
@@ -66,7 +63,7 @@ class ScrapeWyndham:
 
     def parsePointStatusPage(self, p_owner):
 
-#        print("xxxin parsePointsStatusPage", " second part")
+
 # time.sleep(30)
         columns = self.browser.find_elements_by_tag_name("td")
 
@@ -89,12 +86,8 @@ class ScrapeWyndham:
             columns_text.append(element)
 
         tmp = []
-#        print("columns text after cleanig out ")
-#        for column_text in columns_text:
-#            print(str(column_text).encode("utf-8"))
 
         bad_values = ["Travel From", "Expiration", "Points Description", "Points Available", "Housekeeping\nAvailable"]
-#        print(bad_values)
 
         for column_text in columns_text:
             if not (column_text in bad_values):
@@ -107,10 +100,6 @@ class ScrapeWyndham:
 
         tmp = []
 
-#        print("columns text after cleanig out ")
-#        for column_text in columns_text:
-#            print(str(column_text).encode("utf-8"))
-
         beg_slice_index = 0  # inclusive
         end_slice_index = 6  # non-inclusive
         rows = len(columns_text) / 5
@@ -121,7 +110,7 @@ class ScrapeWyndham:
             points = self.parsePointStatusRow(columns_text[beg_slice_index:end_slice_index],
                                               p_owner)
             ownerspointsstatus.append(points)
-#            print("ownerspointsstatus at 123 ", ownerspointsstatus)
+
             beg_slice_index += 5
             end_slice_index += 5
 
@@ -134,10 +123,6 @@ class ScrapeWyndham:
         pointsdescription = p_pointstatusrow_text[2]
         pointsavailable = p_pointstatusrow_text[3]
         housekeepingavailable = p_pointstatusrow_text[4]
-
-#        print(travelfrom)
-#        print(expiration)
-
 
         travelfrom = datetime.strptime(str(travelfrom).strip(), '%b %d, %Y')
         expiration = datetime.strptime(str(expiration).strip(), '%b %d, %Y')
@@ -176,7 +161,7 @@ class Update:
             time.sleep(2)
             scrape_wyndham.getToPointStatusPage()
             time.sleep(2)
-            #           src = scrape_wyndham.getConfirmationPages(owner, confirmation_numbers)
+
             src = scrape_wyndham.parsePointStatusPage(owner)
             time.sleep(2)
             scrape_wyndham.logout()
@@ -211,7 +196,7 @@ class Update:
 
 class View:
     def get(request):
-#        print("at top of View")
+
         usernames = []
         travelfrom = []
         expiration = []
@@ -221,7 +206,7 @@ class View:
 
         newest_date = OwnerPointsManagerApplicationSettings.objects.all()
         newest_date = newest_date[0].last_updated
-#        print (newest_date)
+
         newest_date = newest_date + timedelta(hours=-4)
         newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
 
@@ -230,28 +215,20 @@ class View:
         for ownerspointsstatus in Owners_Points_Statuss:
             usernames.append(ownerspointsstatus.fk_owner.username)
 
-
         for ownerspointsstatus in Owners_Points_Statuss:
             travelfrom.append(ownerspointsstatus.Travel_From)
-#            print("travel from = ", travelfrom)
-#        print("travel from at 297", travelfrom)
 
         for ownerspointsstatus in Owners_Points_Statuss:
             expiration.append(ownerspointsstatus.Expiration)
-#            print("expiration = ", expiration)
 
         for ownerspointsstatus in Owners_Points_Statuss:
             pointsdesc.append(ownerspointsstatus.Points_Description)
-#            print("pointsdesc = ", pointsdesc)
 
         for ownerspointsstatus in Owners_Points_Statuss:
             pointsavail.append(ownerspointsstatus.Points_Available)
-#            print("pointsavail = ", pointsavail)
 
         for ownerspointsstatus in Owners_Points_Statuss:
             housekeepingavail.append(ownerspointsstatus.Housekeeping_Available)
-#            print("housekeepingavail = ", housekeepingavail)
-
 
         context = {
             "ownerspointsstatuss": Owners_Points_Statuss,
