@@ -25,7 +25,7 @@ class Owner( models.Model ):
     first_name = models.CharField( blank=True, null=True, max_length=2000)
     last_name = models.CharField( blank=True, null=True, max_length=2000)
     phone_number = models.CharField( blank=True, null=True, max_length=2000)
-    owner_reimbursement_rate = models.DecimalField( blank=True, null=True, decimal_places=0, max_digits=5)
+    owner_reimbursement_rate = models.DecimalField( blank=True, null=True, decimal_places=0, max_digits=3)
 
     def __str__(self):
         return self.username

@@ -47,6 +47,28 @@ class GenerateReport:
         return render(request,"generate_report/index.html", context)
 
 class Report:
+
+    def getMonthName( p_month_number):
+#
+#               CHANGE A MONTH NUMBER TO A monthname
+#
+        switcher = {
+            1: "January",
+            2: "Febuary",
+            3: "March",
+            4: "April",
+            5: "May",
+            6: "June",
+            7: "July",
+            8: "August",
+            9: "September",
+            10: "October",
+            11: "November",
+            12: "December",
+        }
+
+        return switcher.get(p_month_number,"no month")
+
     def removeExcessSummaries():
         all_reports = MonthlyReport.objects.all()
 
@@ -114,15 +136,19 @@ class Report:
 
         reservations = matching_reservations
 
+        n_month = Report.getMonthName(int(p_month))
 
         context = {
             "reservations" : reservations,
             "owner" : desired_summary.owner,
             "year" : p_year,
             "month" : p_month,
+            "monthname" : n_month,
             "monthly_summary" : desired_summary
         }
         return render(request, "report/index.html",context)
+
+
 
     @login_required(redirect_field_name="/admin", login_url="/login/")
     def savePayment(request,p_check_number, p_amt_paid, p_monthly_summary):
@@ -145,3 +171,4 @@ class Report:
         username    = reservation[0].fk_monthly_report.owner.username
 
         return redirect('/report/'+str(username)+"/"+str(month)+"/"+str(year))
+#
