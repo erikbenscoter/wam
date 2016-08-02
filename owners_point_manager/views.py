@@ -11,6 +11,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
 
+
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -18,6 +19,8 @@ from selenium.webdriver.common.keys import Keys
 from .models import Owner
 from .models import Owners_Points_Status
 from .models import OwnerPointsManagerApplicationSettings
+
+
 
 
 # Create your views here.
@@ -62,7 +65,6 @@ class ScrapeWyndham:
         element.click()
 
     def parsePointStatusPage(self, p_owner):
-
 
 # time.sleep(30)
         columns = self.browser.find_elements_by_tag_name("td")
@@ -196,7 +198,6 @@ class Update:
 
 class View:
     def get(request):
-
         usernames = []
         travelfrom = []
         expiration = []
@@ -206,7 +207,6 @@ class View:
 
         newest_date = OwnerPointsManagerApplicationSettings.objects.all()
         newest_date = newest_date[0].last_updated
-
         newest_date = newest_date + timedelta(hours=-4)
         newest_date = newest_date.strftime("%Y-%m-%d %H:%M:%S")
 

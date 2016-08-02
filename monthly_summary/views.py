@@ -136,19 +136,17 @@ class Report:
 
         reservations = matching_reservations
 
-        n_month = Report.getMonthName(int(p_month))
+        month_name = Report.getMonthName(int(p_month))
 
         context = {
             "reservations" : reservations,
             "owner" : desired_summary.owner,
             "year" : p_year,
             "month" : p_month,
-            "monthname" : n_month,
+            "monthname" : month_name,
             "monthly_summary" : desired_summary
         }
         return render(request, "report/index.html",context)
-
-
 
     @login_required(redirect_field_name="/admin", login_url="/login/")
     def savePayment(request,p_check_number, p_amt_paid, p_monthly_summary):
@@ -171,4 +169,3 @@ class Report:
         username    = reservation[0].fk_monthly_report.owner.username
 
         return redirect('/report/'+str(username)+"/"+str(month)+"/"+str(year))
-#
