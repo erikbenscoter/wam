@@ -25,6 +25,9 @@ host_name = socket.gethostname()
 SLEEP_TIMER = 0
 
 if host_name == 'pi' :
+    print( "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" )
+    print( "                  USING PI CONFIGURATION                          " )
+    print( "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" )
     SLEEP_TIMER = 5 #seconds
 
 else :
