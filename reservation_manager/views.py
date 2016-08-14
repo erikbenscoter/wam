@@ -14,6 +14,26 @@ from monthly_summary.models import MonthlyReport
 from monthly_summary.views import Report
 from datetime import timedelta
 from django.contrib.auth.decorators import login_required
+import socket
+
+
+################################################################################
+###  Figure out the timeout based on system it's on
+################################################################################
+
+host_name = socket.gethostname()
+SLEEP_TIMER = 0
+
+if host_name == 'pi' :
+    SLEEP_TIMER = 5 #seconds
+
+else :
+    SLEEP_TIMER = 3
+
+
+################################################################################
+################################################################################
+
 
 def handleOwner(owner):
 
@@ -27,13 +47,13 @@ def handleOwner(owner):
 
     try:
         scrape_wyndham = ScrapeWyndham()
-        time.sleep(2)
+        time.sleep(SLEEP_TIMER)
         scrape_wyndham.login(owner.username, owner.password)
-        time.sleep(2)
+        time.sleep(SLEEP_TIMER)
         scrape_wyndham.getToOwnershipSummaryPage()
-        time.sleep(2)
+        time.sleep(SLEEP_TIMER)
         src = scrape_wyndham.getConfirmationPages(owner, confirmation_numbers_points_dict)
-        time.sleep(2)
+        time.sleep(SLEEP_TIMER)
         scrape_wyndham.logout()
         scrape_wyndham.browser.close()
     except Exception as e:
@@ -104,13 +124,13 @@ class ScrapeWyndham:
         return points
 
     def getToPointsPage(self, p_confirmaion_number):
-        time.sleep(1)
+        time.sleep(SLEEP_TIMER)
         element = self.browser.find_element_by_link_text(str(p_confirmaion_number))
         element.click()
-        time.sleep(3)
+        time.sleep(SLEEP_TIMER)
         points = self.parsePointsPage(self.browser.page_source)
         self.browser.back()
-        time.sleep(1)
+        time.sleep(SLEEP_TIMER)
         return points
 
     def parseConfirmationRow(self,p_row_text,p_owner, p_confirmaion_numbers_pts_dict):
@@ -129,7 +149,7 @@ class ScrapeWyndham:
         if( conf not in p_confirmaion_numbers_pts_dict.keys() or conf == 'N/A'):
 
             if( conf != 'N/A' ):
-                time.sleep(1)
+                time.sleep(SLEEP_TIMER)
                 pts = self.getToPointsPage(conf)
             else:
                 pts = -1
@@ -149,7 +169,7 @@ class ScrapeWyndham:
 
 
     def parseConfirmationPage(self, p_owner, p_confirmaion_numbers_pts_dict):
-        time.sleep(3)
+        time.sleep(SLEEP_TIMER)
         columns = self.browser.find_elements_by_tag_name("td")
 
         columns_text = []
@@ -173,7 +193,7 @@ class ScrapeWyndham:
     def getConfirmationPages(self, p_owner, p_confirmaion_numbers_pts_dict):
         more_pages_exist = True
         while more_pages_exist:
-            time.sleep(2)
+            time.sleep(SLEEP_TIMER)
             self.parseConfirmationPage( p_owner, p_confirmaion_numbers_pts_dict)
             try:
                 element = self.browser.find_element_by_link_text("Next")
