@@ -28,7 +28,7 @@ if host_name == 'pi' :
     print( "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" )
     print( "                  USING PI CONFIGURATION                          " )
     print( "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" )
-    SLEEP_TIMER = 5 #seconds
+    SLEEP_TIMER = 12 #seconds
 
 else :
     SLEEP_TIMER = 3
