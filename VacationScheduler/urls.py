@@ -23,6 +23,8 @@ from guest_reservation_manager.views import makeNewWish3
 from guest_reservation_manager.views import commitLink
 from guest_reservation_manager.views import removeLink
 from guest_reservation_manager.views import summarizeWish
+from guest_reservation_manager.views import showLinkedWishes
+from guest_reservation_manager.views import showUnLinkedWishes
 
 from owners_point_manager.views import Update as update_owners_points_update
 from owners_point_manager.views import View as update_owners_points_view
@@ -53,13 +55,15 @@ urlpatterns = [
 	url(r'^login/$', login_views.login_user),
 	url(r'^$', View.get),
 
-    url(r'^guest/makeWish/$',makeBrandNewWish),
+    url(r'^guest/wish/new/$',makeBrandNewWish),
     url(r'^guest/makeWish/(?P<wish_id>[0-9]*)$',makeNewWish1),
     url(r'^guest/makeWish2/(?P<wish_id>[0-9]*)$',makeNewWish2),
     url(r'^guest/makeWish3/(?P<wish_id>[0-9]*)$',makeNewWish3),
     url(r'^guest/makeWish3/link/(?P<reservation_id>[0-9]*)/(?P<wish_id>[0-9]*)$',commitLink),
     url(r'^guest/wish/remove/(?P<reservation_id>[0-9]*)/(?P<wish_id>[0-9]*)$',removeLink),
     url(r'^guest/wish/dashboard/', summarizeWish),
+    url(r'^guest/wish/view/fulfilledWishes/', showLinkedWishes),
+    url(r'^guest/wish/view/unFulfilledWishes/', showUnLinkedWishes),
 
 
     url(r'^guestreservationview/', guest_reservations_views.get),

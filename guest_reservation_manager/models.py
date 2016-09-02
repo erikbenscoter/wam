@@ -1,5 +1,6 @@
 from django.db import models
 from django.forms import ModelForm
+import datetime
 # Create your models here.
 
 #from reservation_manager.models import Owner
@@ -84,6 +85,44 @@ class GuestReservation(models.Model):
         return reservations_arr
 
 
+    def getLinkedWishes():
+        linked_wishes_arr = []
+        all_wishes_arr = GuestReservation.objects.order_by("beg_date_requested")
+
+
+        for wish in all_wishes_arr :
+            if len(wish.reservations) > 0 :
+                greatest_date = datetime.date(1999,1,1)
+
+                # get the greatest checkin date
+                for reservation in wish.reservations:
+                    if reservation.date_of_reservation > greatest_date :
+                        greatest_date = reservation.date_of_reservation
+
+                print(greatest_date)
+
+                # if the greatest checkin date is greater than now append the wish
+                if greatest_date >= datetime.date.today() :
+                    linked_wishes_arr.append(wish)
+
+        return linked_wishes_arr
+
+
+    def getUnLinkedWishes():
+        non_linked_wishes_arr = []
+        all_wishes_arr = GuestReservation.objects.order_by("beg_date_requested")
+
+        for wish in all_wishes_arr :
+            if len(wish.reservations) == 0 and wish.end_date_requested >= datetime.date.today():
+                non_linked_wishes_arr.append(wish)
+
+        return non_linked_wishes_arr
+
+    def getWishesLinkedToCanceled():
+        pass
+
+    def getPossibleMatches():
+        pass
 
 
 

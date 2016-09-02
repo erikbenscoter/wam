@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from guest_reservation_manager.models import GuestReservation
 import re
 from django.forms import ModelForm
+from datetime import datetime
 
 TRUE_OR_FALSE = (
     (1, "True"),
@@ -110,6 +111,15 @@ class Reservation( models.Model ):
                 value = tup[1]
         return value
 
+
+    def getUnlinkedReservations():
+        non_linked = []
+        all_non_canceled_reservations = Reservation.objects.filter(canceled=False, date_of_reservation__gte=datetime.now())
+        for reservation in all_non_canceled_reservations :
+            if reservation.fk_wish_held_for == None :
+                non_linked.append(reservation)
+
+        return non_linked
 
     def __str__(self):
         return str(self.confirmation_number) + "," +  str(self.fk_owner.username) + " ,  " + str(self.date_of_reservation) + " , " + str(self.location)

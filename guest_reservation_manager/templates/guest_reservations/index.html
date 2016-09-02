@@ -118,9 +118,9 @@
   			<td class = "housekeepingavail">{{ownerspointsstatus.Housekeeping_Available}}</td>
       -->
         <td class = "id">{{guestreservation.id}}</td>
-        <td class = "date_booked">
+        <td class = "date_of_reservation">
           {%for actual_reservation in guestreservation.reservations%}
-            {{actual_reservation.date_booked}}<br>
+            {{actual_reservation.date_of_reservation}}<br>
           {%endfor%}
         </td>
         <td class = "date_rquested">{{guestreservation.beg_date_requested}}</td>

@@ -66,7 +66,7 @@ def displayMatchingReservations(request, wish_id):
 
     return render(request, 'link_wish/index.html', context)
 ########################################
-# url = /guest/makeWish
+# url = /guest/wish/new
 ########################################
 def makeBrandNewWish(request):
     if request.POST:
@@ -148,13 +148,32 @@ def removeLink(request, reservation_id, wish_id):
 #######################################
 def summarizeWish(request):
 
+    context = {
+        "num_fulfilled" : len(GuestReservation.getLinkedWishes()),
+        "num_unFulfilled" : len(GuestReservation.getUnLinkedWishes()),
+        "num_reservations_unLinked" : len(Reservation.getUnlinkedReservations())
+    }
 
-    return render(request,"dashboard/index.html", {})
+    return render(request,"dashboard/index.html", context)
+
+#######################################
+# url = /guest/wish/view/fulfilledWishes/
+#######################################
+def showLinkedWishes(request):
+    return View.get(request, GuestReservation.getLinkedWishes() )
+
+#######################################
+# url = /guest/wish/view/UnFulfilledWishes/
+#######################################
+def showUnLinkedWishes(request):
+    return View.get(request, GuestReservation.getUnLinkedWishes() )
+
+
 
 class View:
 
 #    @login_required(redirect_field_name="/admin", login_url="/login/")
-    def get(request):
+    def get(request, guest_reservations=None):
         guestreservation = []
 
         ad = []
@@ -197,93 +216,95 @@ class View:
 
 #        reservations = Reservation.objects.filter(date_of_reservation__gte=datetime.today())
 
-        GuestReservations = GuestReservation.objects.order_by("beg_date_requested")
+        if not guest_reservations:
+            guest_reservations = GuestReservation.objects.order_by("beg_date_requested")
 
-        for guestreservation in GuestReservations:
+
+        for guestreservation in guest_reservations:
             ad.append(guestreservation.ad)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             addName.append(guestreservation.add_name)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             balanceDue_paid.append(guestreservation.balance_due_paid)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             ccFee.append(guestreservation.cc_fee)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             confirmation_number.append(guestreservation.confirmation_numbers)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             date_booked.append(guestreservation.date_booked)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             beg_date_requested.append(guestreservation.beg_date_requested)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             downDue_paid.append(guestreservation.down_due_paid)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             guest.append(guestreservation.guest)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             guestCertCost.append(guestreservation.guest_cert_cost)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             guestCertYr_number.append(guestreservation.guest_cert_yr_number)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             guestSent.append(guestreservation.guest_sent)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             Jen.append(guestreservation.jen)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             Lauren.append(guestreservation.lauren)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             location.append(guestreservation.location)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             location_requested.append(guestreservation.location_requested)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             netDollars.append(guestreservation.net_dollars)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             netPercent.append(guestreservation.net_percent)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             nights_requested.append(guestreservation.nights_requested)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             notes.append(guestreservation.notes)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             otherFees.append(guestreservation.other_fees)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             points_required_for_reservation.append(guestreservation.points_required_for_reservation)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             pointsCost.append(guestreservation.points_cost)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             RA_Sent_Rec.append(guestreservation.ra_sent_rec)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             rent.append(guestreservation.rent)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             sleeps.append(guestreservation.sleeps)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             totalCost.append(guestreservation.total_cost)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             unit_size.append(guestreservation.unit_size)
 
-        for guestreservation in GuestReservations:
+        for guestreservation in guest_reservations:
             unit_size_notes.append(guestreservation.unit_size_notes)
 
 
@@ -306,7 +327,7 @@ class View:
 
         context = {
 #            "reservations" : reservations.order_by('date_of_reservation'),
-            "guestreservations" : GuestReservations,
+            "guestreservations" : guest_reservations,
 
             "ad" : set(ad),
             "addName" : set(addName),
