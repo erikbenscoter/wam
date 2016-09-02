@@ -143,6 +143,13 @@ def removeLink(request, reservation_id, wish_id):
 
     return redirect("/guest/makeWish3/"+str(wish_id))
 
+#######################################
+# url = /guest/wish/dashboard
+#######################################
+def summarizeWish(request):
+
+
+    return render(request,"dashboard/index.html", {})
 
 class View:
 
