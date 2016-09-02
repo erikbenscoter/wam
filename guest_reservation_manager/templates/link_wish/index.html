@@ -17,7 +17,49 @@
 
   <body>
 
+    <h1> Already Linked Reservations</h1>
 
+    <table class="container">
+    	<thead>
+    		<tr>
+          <th><h1>Owner</h1></th>
+    			<th><h1>Conf#</h1></th>
+    			<th><h1>Checkin</h1></th>
+    			<th><h1>Nights</h1></th>
+    			<th><h1>Resort</h1></th>
+    			<th><h1>Unit Size</h1></th>
+    			<th><h1>Booked</h1></th>
+    			<th><h1>Traveler</h1></th>
+    			<th><h1>Upgrade Status</h1></th>
+    			<th><h1>Points(x1000)</h1></th>
+    		</tr>
+    	</thead>
+    	<tbody>
+        {%for already_linked_reservation in already_linked_reservations%}
+          {%if reservation.canceled%}
+            <tr class = "canceled">
+          {%else%}
+            <tr>
+          {%endif%}
+      			<td class = "username">{{already_linked_reservation.fk_owner.username}}</td>
+      			<td class = "conf">{{already_linked_reservation.confirmation_number}}</td>
+      			<td class = "checkin">{{already_linked_reservation.date_of_reservation}}</td>
+      			<td class = "nights">{{already_linked_reservation.number_of_nights}}</td>
+      			<td class = "location">{{already_linked_reservation.filtered_location}}</td>
+      			<td class = "size">{{already_linked_reservation.unit_size}}</td>
+      			<td class = "booked">{{already_linked_reservation.date_booked}}</td>
+      			<td class = "traveler">{{already_linked_reservation.filtered_guest_certificate}}</td>
+      			<td class = "upgrade">{{already_linked_reservation.upgrade_status}}</td>
+            <td class = "points">{{already_linked_reservation.filtered_points_required_for_reservation}}</td>
+      			<td class = "reason_held">{{already_linked_reservation.filtered_reason_on_hold}}</td>
+            <td class = "remove_it">
+              <a href = "/guest/wish/remove/{{already_linked_reservation.id}}/{{wish_id}}"><button class = "btn btn-large btn-danger">Remove This</button></td></a>
+      		</tr>
+        {%endfor%}
+    	</tbody>
+    </table>
+
+ <h1> Non-Linked Matching Reservations</h1>
 <table class="container">
 	<thead>
 		<tr>
@@ -61,6 +103,21 @@
     {%endfor%}
 	</tbody>
 </table>
+
+  <br>
+  <div class="row">
+    <div class="col-sm-8"></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1">
+      <a href = "/guestreservationview"> <button type="button" class="btn btn-success btn-large" >Finish</button></a>
+    </div>
+    <div class="col-sm-1">
+      <a href = "/guestreservationview"><button type="button" class="btn btn-danger btn-large" >Cancel</button></a>
+    </div>
+    <div class="col-sm-1"></div>
+
+  </div>
+
 
   </body>
 

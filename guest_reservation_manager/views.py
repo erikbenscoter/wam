@@ -43,6 +43,7 @@ def displayMatchingReservations(request, wish_id):
     beg_date = wish.beg_date_requested
     end_date = wish.end_date_requested
 
+    already_linked_reservations = wish.reservations
 
     reservations = FuzzySearch.fuzzySearch(
         location,
@@ -56,6 +57,7 @@ def displayMatchingReservations(request, wish_id):
 
 
     context = {
+        "already_linked_reservations" : already_linked_reservations,
         "reservations" : reservations,
         "wish_id" : wish_id,
         "heldForForm" : ReasonHeldForm()
@@ -129,7 +131,17 @@ def commitLink(request, reservation_id, wish_id):
             reason_held_form.save()
 
 
-    return redirect("/guestreservationview")
+    return redirect("/guest/makeWish3/"+str(wish_id))
+
+#######################################
+# url = /guest/wish/remove/reservation_id
+#######################################
+def removeLink(request, reservation_id, wish_id):
+
+    instance = Reservation.objects.select_related().filter(id=reservation_id)
+    instance.update(fk_wish_held_for=None, reason_on_hold="NH")
+
+    return redirect("/guest/makeWish3/"+str(wish_id))
 
 
 class View:

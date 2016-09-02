@@ -102,7 +102,13 @@ class Reservation( models.Model ):
         ret_val =  format(round(ret_val,3), '.3f')
         return ret_val
 
-
+    @property
+    def filtered_reason_on_hold(self):
+        key = self.reason_on_hold
+        for tup in REASON_ON_HOLD_CHOICES:
+            if tup[0] == key :
+                value = tup[1]
+        return value
 
 
     def __str__(self):
