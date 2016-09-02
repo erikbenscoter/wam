@@ -40,8 +40,9 @@ def displayMatchingReservations(request, wish_id):
     bedroom_range = 2
     nights = wish.nights_requested
     nights_range = 4
-    date = wish.date_requested
-    date_range = 30
+    beg_date = wish.beg_date_requested
+    end_date = wish.end_date_requested
+
 
     reservations = FuzzySearch.fuzzySearch(
         location,
@@ -49,8 +50,8 @@ def displayMatchingReservations(request, wish_id):
         bedroom_range,
         nights,
         nights_range,
-        date,
-        date_range
+        beg_date,
+        end_date
     )
 
 
@@ -143,7 +144,7 @@ class View:
         ccFee = []
         confirmation_number = []
         date_booked = []
-        date_requested = []
+        beg_date_requested = []
         downDue_paid = []
         guest = []
         guestCertCost = []
@@ -177,7 +178,7 @@ class View:
 
 #        reservations = Reservation.objects.filter(date_of_reservation__gte=datetime.today())
 
-        GuestReservations = GuestReservation.objects.order_by("date_requested")
+        GuestReservations = GuestReservation.objects.order_by("beg_date_requested")
 
         for guestreservation in GuestReservations:
             ad.append(guestreservation.ad)
@@ -198,7 +199,7 @@ class View:
             date_booked.append(guestreservation.date_booked)
 
         for guestreservation in GuestReservations:
-            date_requested.append(guestreservation.date_requested)
+            beg_date_requested.append(guestreservation.beg_date_requested)
 
         for guestreservation in GuestReservations:
             downDue_paid.append(guestreservation.down_due_paid)
@@ -294,7 +295,7 @@ class View:
             "ccFee" : set(ccFee),
             # "confirmation_numbers" : set(confirmation_number),
             "date_booked" : set(date_booked),
-            "date_requested" : set(date_requested),
+            "beg_date_requested" : set(beg_date_requested),
             "downDue_paid" : set(downDue_paid),
             "guests" : set(guest),
             "guestCertCost" : set(guestCertCost),
@@ -317,11 +318,6 @@ class View:
             "totalCost" : set(totalCost),
             "unit_size" : set(unit_size),
             "unit_size_notes" : set(unit_size_notes)
-
-
-
-
-
         }
 
 

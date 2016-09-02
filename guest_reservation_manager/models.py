@@ -22,7 +22,9 @@ class GuestReservation(models.Model):
 
 #                 data ruth enters initial
     guest = models.CharField( blank=True, null=True, max_length = 2000)
-    date_requested = models.DateField( blank=True, null=True )
+    beg_date_requested = models.DateField( blank=True, null=True )
+    end_date_requested = models.DateField( blank=True, null=True )
+
     nights_requested = models.IntegerField( blank=True, null=True )
     location_requested = models.CharField( blank=True, null=True, max_length=2000)
     unit_size = models.CharField( blank=True, null=True, max_length=2000)
@@ -82,14 +84,14 @@ class GuestReservation(models.Model):
         return reservations_arr
 
 
-    
+
 
 
     def __str__(self):
-        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_requested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
+        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.beg_date_requested) + " , " + str(self.end_date_requested) + " , " +" , " + str(self.location_requested) + " , " + str(self.id)
 
     def __unicode__(self):
-        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.date_requested) + " , " + " , " + str(self.location_requested) + " , " + str(self.id)
+        return str(self.optional_username_to_aim_for) + "   " + str(self.guest) + " , " + str(self.beg_date_requested) + " , " + str(self.end_date_requested) + " , " +" , " + str(self.location_requested) + " , " + str(self.id)
 
 
 class RuthSheet(models.Model):
@@ -115,7 +117,7 @@ class CreateGuestWishForm(ModelForm):
 class GuestWishForm1(ModelForm):
     class Meta:
         model = GuestReservation
-        fields = ["guest", "date_requested", "nights_requested", "location_requested", "unit_size", "sleeps"]
+        fields = ["guest", "beg_date_requested", "end_date_requested" ,"nights_requested", "location_requested", "unit_size", "sleeps"]
 
 class GuestWishForm2(ModelForm):
     class Meta:
@@ -145,4 +147,4 @@ class GuestWishForm2(ModelForm):
 class GuestWishForm3(ModelForm):
     class Meta:
         model = GuestReservation
-        fields = ["guest", "date_requested", "nights_requested", "location_requested", "unit_size", "sleeps"]
+        fields = ["guest", "beg_date_requested", "end_date_requested", "nights_requested", "location_requested", "unit_size", "sleeps"]

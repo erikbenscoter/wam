@@ -1,5 +1,6 @@
 import re
 from reservation_manager.models import Reservation
+from datetime import datetime
 
 class FuzzySearch:
 
@@ -49,8 +50,21 @@ class FuzzySearch:
 
         return desireable
 
-    def _cleanByDate(date, date_range, objects):
-        return objects
+    def _cleanByDate(beg_date, end_date, objects):
+
+        beg_date = str(beg_date).replace('/', '-')
+        end_date = str(end_date).replace('/', '-')
+
+
+        all_reservation_objs_in_range = Reservation.objects.filter(date_of_reservation__range=[beg_date,end_date])
+
+        matching_reservations = []
+
+        for reservation in objects :
+            if reservation in all_reservation_objs_in_range :
+                matching_reservations.append(reservation)
+
+        return matching_reservations
 
     def _cleanByNights(nights, nights_range, objects):
 
@@ -80,7 +94,7 @@ class FuzzySearch:
 
         return desireable
 
-    def fuzzySearch(location, bedrooms, bedroom_range, nights, nights_range, date, date_range):
+    def fuzzySearch(location, bedrooms, bedroom_range, nights, nights_range, beg_date, end_date):
 
         # Don't put in any reservations that are:
             # already rented
@@ -92,7 +106,7 @@ class FuzzySearch:
         # filter out based on the parameters given
         matching_reservations = FuzzySearch._cleanByLocation(location, matching_reservations)
         matching_reservations = FuzzySearch._cleanByBedrooms(bedrooms, bedroom_range, matching_reservations)
-        matching_reservations = FuzzySearch._cleanByDate(date, date_range, matching_reservations)
+        matching_reservations = FuzzySearch._cleanByDate(beg_date, end_date, matching_reservations)
         matching_reservations = FuzzySearch._cleanByNights(nights, nights_range, matching_reservations)
 
         # return the matching reservations
