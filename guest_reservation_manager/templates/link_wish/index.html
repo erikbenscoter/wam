@@ -96,7 +96,7 @@
           <form method="POST" action = "/guest/makeWish3/link/{{reservation.id}}/{{wish_id}}">
             {%csrf_token%}
             {{heldForForm.as_p}}
-            <td class = "link_it"><button>Link This</button></td>
+            <td class = "link_it"><button class = "btn large-btn btn-success">Link This</button></td>
           </form>
         </td>
   		</tr>
